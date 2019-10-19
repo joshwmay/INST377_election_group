@@ -9,8 +9,12 @@ span {
   background-color: green;
   scroll-behavior: smooth;
 };
+table {
+  border-spacing: 5px;
+}
 th {
-  position: absolute;
+  font-size: +3;
+  cursor: pointer;
 };
 #greet h1 {
   display: flex;
