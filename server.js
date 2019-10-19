@@ -7,7 +7,7 @@ const gen_ballot = [{"measure": "Governor/Lt. Governor",
       "option": "Ben Jealous and Susan Turnbull, Democratic",
       "option": "Shawn Quinn and Christina Smith, Libertarian",
       "option": "Ian Schlakman and Annie Chambers, Green",
-      "option": "or write-in"
+      "option": "or write-in",
     }
 },
 {"measure": "Comptroller",

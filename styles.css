@@ -1,0 +1,21 @@
+span {
+  display: flex;
+  height: 250px;
+  width: 75%;
+  overflow: scroll;
+  justify-content: center;
+  text-align: center;
+  align-content: flex-end;
+  background-color: green;
+  scroll-behavior: smooth;
+};
+th {
+  position: absolute;
+};
+#greet h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-self: center;
+}
