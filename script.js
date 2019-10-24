@@ -28,5 +28,20 @@ function sort_by_column(n) {
       }
     }
   }
-  console.log(table)
+};
+function getRandomIntInclusive(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
+
+function shorten_rands(min, max, i) {
+  // This function acts as a placeholder and is intended to be used within
+  // a loop in conjuntion with an array that is shortened each iteration.
+  // max is shortened each iteration to reflect shortening array.
+  // returns can subsequently be expected to be void of duplicates
+  min = Math.ceil(min);
+  max -= i;
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
