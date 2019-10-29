@@ -1,4 +1,5 @@
 [
+<<<<<<< Updated upstream
 {
   "measure": "Representative in Congress District 5",
   "_measure": "Representante en el Congreso Distrito 5",
@@ -69,5 +70,77 @@
       "option11": "or write-in",
       "option12": "or write-in"
     }
+=======
+  {
+    "measure": "Representative in Congress District 5",
+    "_measure": "Representante en el Congreso Distrito 5",
+    "selections": "01",
+    "candidates":
+      {
+        "option1": "William A. Devine, III, Republican",
+        "option2": "Steny H. Hoyer, Democratic",
+        "option3": "Jacob Pulcher, Libertarian",
+        "option4": "Patrick J. Elder, Green",
+        "option5": "or write-in"
+      }
+  },
+  {
+    "measure": "State Senator District 21",
+    "_measure": "Senador Estatal Distrito 21",
+    "selections": "01",
+    "candidates":
+      {
+        "option1": "Lee Havis. Republican",
+        "option2": "Jim Rosapepe. Democratic",
+        "option3": "or write-in"
+      }
+  },
+  {
+    "measure": "House of Delegates District 21",
+    "_measure": "Cámara de Delegados Distrito 21",
+    "selections": "03",
+    "candidates":
+      {
+        "option1": "Chike Anyanwu, Republican",
+        "option2": "Richard Douglas, Republican",
+        "option3": "Ben Barnes, Democratic",
+        "option4": "Mary A. Lehman, Democratic",
+        "option5": "Joseline Peña-Melnyk, Democratic",
+        "option6": "Ray Ranker, Unaffiliated",
+        "option7": "or write-in",
+        "option8": "or write-in",
+        "option9": "or write-in"
+      }
+  },
+  {
+    "measure": "County Council District 1",
+    "_measure": "Concejo del Condado Distrito 1",
+    "selections": "01",
+    "candidates":
+      {
+        "option1": "Tom Dernoga, Democratic",
+        "option2": "or write-in"
+      }
+  },
+  {
+    "measure": "Judge of the Circuit Court Circuit 7",
+    "_measure": "Juez de la Corte de Circuito Circuito 7",
+    "selections": "06",
+    "candidates":
+      {
+        "option1": "Tiffany H. Anderson",
+        "option2": "Robin Bright",
+        "option3": "Peter Killough",
+        "option4": "William Snoddy",
+        "option5": "Sean D. Wallace",
+        "option6": "Judy Lynn Woodall",
+        "option7": "or write-in",
+        "option8": "or write-in",
+        "option9": "or write-in",
+        "option10": "or write-in",
+        "option11": "or write-in",
+        "option12": "or write-in"
+      }
+>>>>>>> Stashed changes
   }
 ]
