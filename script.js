@@ -1,3 +1,6 @@
+var map = document.getElementById("poll_places").rows[275].cells.length;
+var cell = HTMLTableRowElement.insertCell();
+console.log(places);
 function sort_by_column(n) {
   var table = document.getElementById("poll_places");
   var rows = table.rows;
@@ -45,3 +48,19 @@ function shorten_rands(min, max, i) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+//var tr_items = document.getElementById('poll_places');
+//const places_json = sessionStorage.setItem("Places", JSON.stringify("places"));
+//function location_display(){
+//  var places_js = JSON.parse(sessionStorage.getItem("Places"));
+//  tr_items.innerHTML = "";
+//  for (i = 1; i < 275; i += 1) {
+//    var td_items = tr_items.insertCell(i);
+//    tr_items.appendChild(td_items);
+//    var tr_ = document.createCell(tr_items.rows[i].insertCell(tr_items.rows[i].cells.length), i, 'col');
+//    var tr_txt = document.createTextNode(places[i]);
+//    tr_.appendChild(tr_txt);
+//    td_items.appendChild(tr_);
+//    places_js.splice(i, 1);
+//    }
+//  };
+//location_display()
