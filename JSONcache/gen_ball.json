@@ -3,156 +3,142 @@
   "measure": "Governor/Lt. Governor",
   "_measure": "Gobernador/Vicegobernador",
   "selections":"1",
-  "candidates":
-    {
-      "option1": "Larry Hogan and Boyd K. Rutherford, Republican",
-      "option2": "Ben Jealous and Susan Turnbull, Democratic",
-      "option3": "Shawn Quinn and Christina Smith, Libertarian",
-      "option4": "Ian Schlakman and Annie Chambers, Green",
-      "option5": "or write-in",
-    }
+  "options":[
+    "Larry Hogan and Boyd K. Rutherford, Republican",
+    "Ben Jealous and Susan Turnbull, Democratic",
+    "Shawn Quinn and Christina Smith, Libertarian",
+    "Ian Schlakman and Annie Chambers, Green",
+    "or write-in"
+  ]
 },
 {
   "measure": "Comptroller",
   "_measure": "Contralor",
   "selections":"1",
-  "candidates":
-    {
-      "option1": "Anjali Reed Phukan, Republican",
-      "option2": "Peter Franchot, Democratic",
-      "option3": "or write-in"
-    }
+  "options":[
+      "Anjali Reed Phukan, Republican",
+      "Peter Franchot, Democratic",
+      "or write-in"
+    ]
 },
 {
   "measure": "Attorney General",
   "_measure": "Procurador General",
   "selections":"1",
-  "candidates":
-    {
-      "option1": "Craig Wolf, Republican",
-      "option2": "Brian E. Frosh, Democratic",
-      "option3": "or write-in"
-    }
+  "options":[
+      "Craig Wolf, Republican",
+      "Brian E. Frosh, Democratic",
+      "or write-in"
+    ]
 },
 {
   "measure": "U.S. Senator",
   "_measure": "Senador de EE.UU.",
   "selections":"1",
-  "candidates":
-    {
-      "option1": "Tony Campbell, Republican",
-      "option2": "Ben Cardin, Democratic",
-      "option3": "Arvin Vohra, Libertarian",
-      "option4": "Neal Simon, Unaffiliated",
-      "option5": "or write-in"
-    }
+  "options":[
+      "Tony Campbell, Republican",
+      "Ben Cardin, Democratic",
+      "Arvin Vohra, Libertarian",
+      "Neal Simon, Unaffiliated",
+      "or write-in"
+    ]
 },
 {
   "measure": "County Executive",
   "_measure": "Ejecutivo del Condado",
   "selections":"1",
-  "candidates":
-    {
-      "option1": "Angela Alsobrooks, Democratic",
-      "option2": "or write-in"
-    }
+  "options":[
+      "Angela Alsobrooks, Democratic",
+      "or write-in"
+    ]
 },
 {
   "measure": "County Council At Large",
   "_measure": "Miembro del Concejo Representando el Condado",
   "selections":"2",
-  "candidates":
-    {
-      "option1": "Felicia Folarin, Republican",
-      "option2": "Mel Franklin, Democratic",
-      "option3": "Calvin Hawkins, Democratic",
-      "option4": "or write-in",
-      "option5": "or write-in"
-    }
+  "options":[
+      "Felicia Folarin, Republican",
+      "Mel Franklin, Democratic",
+      "Calvin Hawkins, Democratic",
+      "or write-in",
+      "or write-in"
+    ]
 },
 {
   "measure": "Judge, Court of Special Appeals At Large Donald E. Beachley Vote Yes or No For Continuance in Office",
   "_measure": "Juez, Corte de Apelaciones Especiales Representando el Condado Donald E. Beachley Vote sí o no Para continuar en el cargo",
   "selections":"1",
-  "candidates":
-    {
-      "option1": "Yes",
-      "option2": "No"
-    }
+  "options":[
+      "Yes",
+      "No"
+    ]
 },
 {
   "measure": "Judge, Court of Special Appeals At Large Matthew J. Fader Vote Yes or No For Continuance in Office",
   "_measure": "Juez, Corte de Apelaciones Especiales Representando el Condado Matthew J. Fader Vote sí o no Para continuar en el cargo",
   "selections":"1",
-  "candidates":
-    {
-      "option1": "Yes",
-      "option2": "No"
-    }
+  "options":[
+      "Yes",
+      "No"
+    ]
 },
 {
   "measure": "Judge, Court of Special Appeals Circuit 4 Melanie Shaw Geter Vote Yes or No For Continuance in Office",
   "_measure": "Juez, Corte de Apelaciones Especiales Circuito 4 Melanie Shaw Geter Vote sí o no Para continuar en el cargo",
   "selections":"1",
-  "candidates":
-    {
-      "option1": "Yes",
-      "option2": "No"
-    }
+  "options":[
+      "Yes",
+      "No"
+    ]
 },
 {
   "measure": "State's Attorney",
   "_measure": "Fiscal del Estado",
   "selections":"1",
-  "candidates":
-    {
-      "option1": "Aisha Braveboy, Democratic",
-      "option2": "or write-in"
-    }
+  "options":[
+      "Aisha Braveboy, Democratic",
+      "or write-in"
+    ]
 },
 {
   "measure": "Clerk of the Circuit Court",
   "_measure": "Secretario de la Corte del Circuito",
   "selections":"1",
-  "candidates":
-    {
-      "option1": "Mahasin El Amin, Democratic",
-      "option2": "or write-in"
-    }
+  "options":[
+      "Mahasin El Amin, Democratic",
+      "or write-in"
+    ]
 },
 {
   "measure": "Register of Wills",
   "_measure": "Registrador Testamentario",
   "selections":"1",
-  "candidates":
-    {
-      "option1": "Cereta A. Lee, Democratic",
-      "option2": "or write-in"
-    }
+  "options":[
+      "Cereta A. Lee, Democratic",
+      "or write-in"
+    ]
 },
 {
   "measure": "Judge of the Orphans' Court",
   "_measure": "Juez de la Corte de Huérfanos",
   "selections":"3",
-  "candidates":
-    {
-      "option1": "Wendy Alise Cartwright, Democratic",
-      "option2": "Athena Malloy Groves, Democratic",
-      "option3": "Vicky L. Ivory-Orem, Democratic",
-      "option4": "or write-in",
-      "option5": "or write-in",
-      "option6": "or write-in"
-    }
+  "options":[
+      "Wendy Alise Cartwright, Democratic",
+      "Athena Malloy Groves, Democratic",
+      "Vicky L. Ivory-Orem, Democratic",
+      "or write-in",
+      "or write-in",
+      "or write-in"
+    ]
 },
 {
   "measure": "Sheriff",
   "_measure": "Alguacil",
   "selections":"1",
-  "candidates":
-    {
-      "option1": "Melvin C. High, Democratic",
-      "option2": "or write-in"
-    }
+  "options":[
+      "Melvin C. High, Democratic",
+      "or write-in"
+    ]
 },
 {
   "measure": "Question A Charter Referendum (CB-30-2018) Public Works and Transportation Facilities Bonds",
@@ -160,11 +146,10 @@
   "description": "AN ACT enabling the County to borrow money and issue bonds in an amount not exceeding $148,287,000 to finance the design, construction, reconstruction, extension, acquisition, improvement, enlargement, alteration, renovation, relocation, rehabilitation or repair of Public Works and Transportation Facilities (including roads and bridges, parking lots, and maintenance facilities), as defined therein.",
   "_description": "UN ACTA la cual autoriza al Condado a tomar prestado y emitir bonos por una cantidad no superior a $148,287,000 para financiar el diseño, construcción, reconstrucción, extensión, adquisición, mejora, ampliación, modificación, renovación, reubicación, rehabilitación o reparación de Obras Públicas e Instalaciones de Transportación (la cual incluye carreteras, puentes, estacionamientos e instalaciones de mantenimiento), según allí definidas.",
   "selections":"1",
-  "candidates":
-    {
-      "option1": "For the Charter Referendum / A favor del Referéndum del Estatuto Constitucional",
-      "option2": "Against the Charter Referendum Against the Charter Referendum / En Contra del Referéndum del Estatuto Constitucional"
-    }
+  "options":[
+      "For the Charter Referendum / A favor del Referéndum del Estatuto Constitucional",
+      "Against the Charter Referendum Against the Charter Referendum / En Contra del Referéndum del Estatuto Constitucional"
+    ]
 },
 {
   "measure": "Question B Charter Referendum (CB-31-2018) Library Facilities Bonds",
@@ -172,11 +157,10 @@
   "description": "AN ACT enabling the County to borrow money and issue bonds in an amount not exceeding $16,796,000 to finance the design, construction, reconstruction, extension, acquisition, improvement, enlargement, alteration, renovation, relocation, rehabilitation or repair of Library Facilities, as defined therein.",
   "_description": "UN ACTA la cual autoriza al Condado a tomar prestado y emitir bonos por una cantidad no superior a $16,796,000 para financiar el diseño, construcción, reconstrucción, extensión, adquisición, mejora, ampliación, modificación, renovación, reubicación, rehabilitación o reparación de las Instalaciones de las Bibliotecas según allí definidas.",
   "selections":"1",
-  "candidates":
-    {
-      "option1": "For the Charter Referendum / A favor del Referéndum del Estatuto Constitucional",
-      "option2": "Against the Charter Referendum / En Contra del Referéndum del Estatuto Constitucional"
-    }
+  "options":[
+      "For the Charter Referendum / A favor del Referéndum del Estatuto Constitucional",
+      "Against the Charter Referendum / En Contra del Referéndum del Estatuto Constitucional"
+    ]
 },
 {
   "measure": "Question C Charter Referendum (CB-32-2018) Public Safety Facilities Bonds",
@@ -184,11 +168,10 @@
   "description": "AN ACT enabling the County to borrow money and issue bonds in an amount not exceeding $56,053,000 to finance the design, construction, reconstruction, extension, acquisition, improvement, enlargement, alteration, renovation, relocation, rehabilitation or repair of Public Safety Facilities (including Fire Department Facilities), as defined therein.",
   "_description": "UN ACTA la cual autoriza al Condado a tomar prestado y emitir bonos por una cantidad no superior a $56,053,000 para financiar el diseño, construcción, reconstrucción, extensión, adquisición, mejora, ampliación, modificación, renovación, reubicación, rehabilitación o reparación de las instalaciones de Seguridad Pública (incluyendo las Instalaciones del Cuerpo de Bomberos), según allí definidas.",
   "selections":"1",
-  "candidates":
-    {
-      "option1": "For the Charter Referendum / A favor del Referéndum del Estatuto Constitucional",
-      "option2": "Against the Charter Referendum / En Contra del Referéndum del Estatuto Constitucional"
-    }
+  "options":[
+      "For the Charter Referendum / A favor del Referéndum del Estatuto Constitucional",
+      "Against the Charter Referendum / En Contra del Referéndum del Estatuto Constitucional"
+    ]
 },
 {
   "measure": "Question D Charter Referendum (CB-33-2018) County Buildings Bonds",
@@ -196,11 +179,10 @@
   "description": "AN ACT enabling the County to borrow money and issue bonds in an amount not exceeding $97,564,000 to finance the design, construction, reconstruction, extension, acquisition, improvement, enlargement, alteration, renovation, relocation, rehabilitation or repair of County Buildings, as defined therein.",
   "_description": "UN ACTA la cual autoriza al Condado a tomar prestado y emitir bonos por una cantidad no superior a $97,564,000 para financiar el diseño, construcción, reconstrucción, extensión, adquisición, mejora, ampliación, modificación, renovación, reubicación, rehabilitación o reparación de los Edificios del Condado, según allí definidas.",
   "selections":"1",
-  "candidates":
-    {
-      "option1": "For the Charter Referendum For the Charter Referendum / A favor del Referéndum del Estatuto Constitucional",
-      "option2": "Against the Charter Referendum / En Contra del Referéndum del Estatuto Constitucional"
-    }
+  "options":[
+      "For the Charter Referendum For the Charter Referendum / A favor del Referéndum del Estatuto Constitucional",
+      "Against the Charter Referendum / En Contra del Referéndum del Estatuto Constitucional"
+    ]
 },
 {
   "measure": "Question E Charter Referendum (CB-34-2018) Community College Facilities Bonds",
@@ -208,11 +190,10 @@
   "description": "AN ACT enabling the County to borrow money and issue bonds in an amount not exceeding $81,187,000 to finance the design, construction, reconstruction, extension, acquisition, improvement, enlargement, alteration, renovation, relocation, rehabilitation or repair of Community College Facilities, as defined therein.",
   "_description": "UN ACTA la cual autoriza al Condado a tomar prestado y emitir bonos por una cantidad no superior a $81,187,000 para financiar el diseño, construcción, reconstrucción, extensión, adquisición, mejora, ampliación, modificación, renovación, reubicación, rehabilitación o reparación de las instalaciones del Colegio Comunitario, según allí definidas.",
   "selections":"1",
-  "candidates":
-    {
-      "option1": "For the Charter Referendum / A favor del Referéndum del Estatuto Constitucional",
-      "option2": "Against the Charter Referendum / En Contra del Referéndum del Estatuto Constitucional"
-    }
+  "options":[
+      "For the Charter Referendum / A favor del Referéndum del Estatuto Constitucional",
+      "Against the Charter Referendum / En Contra del Referéndum del Estatuto Constitucional"
+    ]
 },
 {
   "measure": "Question F Charter Amendment (CB-35-2018) (DR-2) Council Member Residency Requirement",
@@ -220,11 +201,10 @@
   "description": "To provide a one-year residency requirement for Council Members and at-large Council Members, to provide that an at-large Council Member shall have been a qualified voter of Prince George's County for at least one year immediately preceding his or her primary election, and to provide that Council Members representing one of the nine Council districts shall have been a qualified voter of their respective Council district for at least one year immediately preceding his or her primary election.",
   "_description": "Para establecer un requisito de residencia de un año para los Miembros del Concejo por Distrito y para Miembros del Concejo por Acumulación, para establecer que un Miembro del Concejo por Acumulación debe de haber sido un votante cualificado en el Condado de Prince George's por un espacio mínimo de un año inmediatamente precedente a su elección primaria, y establecer que los Miembros del Concejo por Distrito que representan uno de los nueve distritos del Concejo debe de haber sido un votante cualificado de su distrito del Concejo respectivo por un espacio mínimo de un año inmediatamente precedente a su elección primaria.",
   "selections":"1",
-  "candidates":
-    {
-      "option1": "For the Charter Amendment / A Favor de la Enmienda del Estatuto Constitucional del Condado",
-      "option2": "Against the Charter Amendment / En Contra de la Enmienda del Estatuto Constitucional del Condado"
-    }
+  "options":[
+      "For the Charter Amendment / A Favor de la Enmienda del Estatuto Constitucional del Condado",
+      "Against the Charter Amendment / En Contra de la Enmienda del Estatuto Constitucional del Condado"
+    ]
 },
 {
   "measure": "Question G Charter Amendment (CB-36-2018) Nondiscrimination - County Personnel and Contracting",
@@ -232,11 +212,10 @@
   "description": "To provide an individual right to nondiscrimination, to provide for nondiscrimination in employment of a contractor doing business with the County, and to provide for nondiscrimination in the County personnel system all based on marital status, familial status, disability, age and sexual orientation.",
   "_description": "Se establece un derecho individual a la no discriminación, se establece medios antidiscriminatorios en el empleo de un contratista que trabaja con el Condado, y para establecer reglamentos antidiscriminatorios en el sistema del departamento de personal del Condado, todos basados en el estado civil, estado familiar, discapacidad, edad y orientación sexual.",
   "selections":"1",
-  "candidates":
-    {
-      "option1": "For the Charter Amendment / A Favor dela Enmienda del Estatuto Constitucional delCondado",
-      "option2": "Against the Charter Amendment / EnContra de la Enmienda del EstatutoConstitucional del Condado"
-    }
+  "options":[
+      "For the Charter Amendment / A Favor dela Enmienda del Estatuto Constitucional delCondado",
+      "Against the Charter Amendment / EnContra de la Enmienda del EstatutoConstitucional del Condado"
+    ]
 },
 {
   "measure": "Question H Charter Amendment (CB-38-2018) County Council Member Full-Time Position",
@@ -244,11 +223,10 @@
   "description": "To provide that membership on the Council shall be considered a full-time position for the purpose of determining compensation.",
   "_description": "Se establece que el puesto como miembro del Concejo se considerará como un puesto a tiempo completo para los fines de determinar la compensación.",
   "selections":"1",
-  "candidates":
-    {
-      "option1": "For the Charter Amendment / A Favor de la Enmienda del Estatuto Constitucional del Condado",
-      "option2": "Against the Charter Amendment / En Contra de la Enmienda del Estatuto Constitucional del Condado"
-    }
+  "options":[
+      "For the Charter Amendment / A Favor de la Enmienda del Estatuto Constitucional del Condado",
+      "Against the Charter Amendment / En Contra de la Enmienda del Estatuto Constitucional del Condado"
+    ]
 },
 {
   "measure": "Question I Charter Amendment (CB-39-2018) County Auditor - Appointment, Responsibilities and Authority",
@@ -256,11 +234,10 @@
   "description": "To provide that the County Auditor be appointed and serve a five-year term, which may be renewed for additional five-year terms, subject to removal for cause, to remain until a successor is appointed and qualifies, to provide that selected agencies that receive or disburse County funds will receive a complete financial audit for the preceding fiscal year; and to provide that the County Auditor be empowered to conduct investigations related to fraud, waste and abuse by the County Executive, Council Members or other County officials and employees.",
   "_description": "Se Dispone que se designe al Auditor del Condado por un plazo de cinco años, renovable por periodos adicionales de cinco años, sujeto a despido con causa, con permanencia hasta que se nombre un sucesor y este califique, se dispone que las agencias selectas que reciben o desembolsan fondos del Condado estarán sujeta a una auditoria financiera completa para el año fiscal precedente; y para disponer que se faculte al Auditor del Condado para conducir investigaciones relacionadas a fraude, desperdicio y abuso por parte del Ejecutivo del Condado, Miembros del Concejo u otros funcionarios y empleados del Condado.",
   "selections":"1",
-  "candidates":
-    {
-      "option1": "For the Charter Amendment / A Favor de la Enmienda del Estatuto Constitucional del Condado",
-      "option2": "Against the Charter Amendment Against the Charter Amendment / En Contra de la Enmienda del Estatuto Constitucional del Condado"
-    }
+  "options":[
+      "For the Charter Amendment / A Favor de la Enmienda del Estatuto Constitucional del Condado",
+      "Against the Charter Amendment Against the Charter Amendment / En Contra de la Enmienda del Estatuto Constitucional del Condado"
+    ]
 },
 {
   "measure": "Question J Charter Amendment (CB-40-2018) County Personnel - Temporary Appointment",
@@ -268,11 +245,10 @@
   "description": "To provide that an individual may be temporarily appointed to fill a vacancy, no more than one year, without an intervening permanent appointment.",
   "_description": "Se dispone a que se pueda designar temporalmente a una persona para cubrir una vacante, por no más de un año, sin que exista un nombramiento permanente.",
   "selections":"1",
-  "candidates":
-    {
-      "option1": "For the Charter Amendment / A Favor de la Enmienda del Estatuto Constitucional del Condado",
-      "option2": "Against the Charter Amendment / En Contra de la Enmienda del Estatuto Constitucional del Condado"
-    }
+  "options":[
+      "For the Charter Amendment / A Favor de la Enmienda del Estatuto Constitucional del Condado",
+      "Against the Charter Amendment / En Contra de la Enmienda del Estatuto Constitucional del Condado"
+    ]
 },
 {
   "measure": "Question K Charter Amendment (CB-41-2018) Charter Review Commission - Length of Term",
@@ -280,10 +256,9 @@
   "description": "To provide for the establishment of a Charter Review Commission, not later than one year prior to the beginning of each fourth year of a term, for the purpose of undertaking a comprehensive study of the Charter and to provide that the Charter Review Commission shall commence its work at the discretion of the Chair of the Commission.",
   "_description": "Se establece una Comisión de Revisión al Estatuto Constitucional del Condado, a no más tardar de un año antes del inicio de cada cuatrienio, con el propósito de realizar un estudio comprensivo del Estatuto Constitucional del Condado y de disponer que la Comisión de Revisión del Estatuto Constitucional del Condado comenzará su trabajo a discreción del Presidente de la Comisión.",
   "selections":"1",
-  "candidates":
-    {
-      "option1": "For the Charter Amendment / A Favor de la Enmienda del Estatuto Constitucional del Condado",
-      "option2": "Against the Charter Amendment Against the Charter Amendment / En Contra de la Enmienda del Estatuto Constitucional del Condado"
-    }
+  "options":[
+      "For the Charter Amendment / A Favor de la Enmienda del Estatuto Constitucional del Condado",
+      "Against the Charter Amendment Against the Charter Amendment / En Contra de la Enmienda del Estatuto Constitucional del Condado"
+    ]
   }
 ]
