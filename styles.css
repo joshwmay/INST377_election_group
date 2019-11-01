@@ -105,5 +105,9 @@ h3 {
 #table {
   display: flex;
   justify-content: center;
-
+  height: 250px;
+  overflow: scroll;
 }
+ #tab_head{
+   cursor: pointer;
+ }
