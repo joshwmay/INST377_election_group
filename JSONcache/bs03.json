@@ -1,12 +1,13 @@
 [
 {
-  "measure": "Representative in Congress District 4",
-  "_measure": "Representante en el Congreso Distrito 4",
+  "measure": "Representative in Congress District 5",
+  "_measure": "Representante en el Congreso Distrito 5",
   "selections":"1",
   "options": [
-       "George McDermott, Republican",
-       "Anthony G. Brown, Democratic",
-       "Dave Bishop, Libertarian",
+       "William A. Devine, III",
+       "Steny H. Hoyer, Democratic",
+       "Jacob Pulcher, Libertarian",
+       "Patrick J. Elder, Green",
        "or write-in"
     ]
 },
@@ -65,17 +66,6 @@
     ]
   },
   {
-    "measure": "Representative in Congress District 4",
-    "_measure": "Representante en el Congreso Distrito 4",
-    "selections": "01",
-    "options": [
-         "George McDermott, Republican",
-         "Anthony G. Brown, Democratic",
-         "Dave Bishop, Libertarian",
-         "or write-in"
-      ]
-  },
-  {
     "measure": "State Senator District 21",
     "_measure": "Senador Estatal Distrito 21",
     "selections": "01",
@@ -126,6 +116,16 @@
          "or write-in",
          "or write-in",
          "or write-in",
+         "or write-in"
+      ]
+  },
+  {
+    "measure": "Board of Education District 2",
+    "_measure": "Junta de Educación Distrito 2",
+    "selections": "01",
+    "options": [
+         "Lupi Grady",
+         "Joshua M. Thomas",
          "or write-in"
       ]
   }
