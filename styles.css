@@ -108,6 +108,13 @@ h3 {
   height: 250px;
   overflow: scroll;
 }
+
  #tab_head{
    cursor: pointer;
- }
+}
+
+iframe{
+	border:none;
+	display: block;
+	margin: 0px auto 25px auto;
+}

@@ -54,14 +54,14 @@ function JSONtable() {
          })
      })
 };
-function search_string(array) {
+function search_string(string) {
   res = "https://www.google.com/maps/place/";
-  for(let i = 0; i < array.length; i += 1) {
-    if(array[i] === " ") {
+  for(let i = 0; i < string.length; i += 1) {
+    if(string[i] === " ") {
       res += "+"
     }
     else {
-      res += array[i]
+      res += string[i]
       }
     }
   return res
@@ -76,8 +76,8 @@ function sort_by_column(n) {
     switching = false;
     for (i = 1; i < (rows.length - 1); i += 1) {
       var shouldSwitch = false;
-      var x = rows[i].getElementsByTagName("TD")[n];
-      var y = rows[i + 1].getElementsByTagName("TD")[n];
+      var x = rows[i].getElementsByTagName("td")[n];
+      var y = rows[i + 1].getElementsByTagName("td")[n];
       if (dir === "asc") {
         if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
           shouldSwitch = true;
