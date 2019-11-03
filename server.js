@@ -1,6 +1,7 @@
 const express = require('express');
 const fetch = require('node-fetch');
 
+
 const app = express();
 const port = 5500;
 
@@ -42,7 +43,7 @@ app.use(express.static('public'));
 // this is, right now, an introduction to Callback Hell
 // but it is okay for a first-level example
 app.get('/api', (req, res) => {
-  const baseURL = './JSONcache/places.json';
+  const baseURL = './json/places.json';
   fetch(baseURL)
     .then((r) => r.json())
     .then((data) => {

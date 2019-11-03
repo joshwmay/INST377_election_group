@@ -422,7 +422,7 @@ function SingleVoter(config){
 
 	// Image!
 	self.img = new Image();
-	self.img.src = "img/voter_face.png";
+	self.img.src = "img\voter_face.png";
 
 	// UPDATE!
 	self.ballot = null;
