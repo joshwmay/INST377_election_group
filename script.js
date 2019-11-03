@@ -1,21 +1,21 @@
 function JSONtable() {
-  fetch('JSONcache/places.json')
+  fetch('json/places.json')
     .then(res => res.json())
     .then(res => res.map(c => c.dis_prec))
     .then(dis_prec => {
-      fetch('JSONcache/places.json')
+      fetch('json/places.json')
         .then(res => res.json())
         .then(res => res.map(c => c.title))
         .then(title => {
-          fetch('JSONcache/places.json')
+          fetch('json/places.json')
             .then(res => res.json())
             .then(res => res.map(c => c.address))
             .then(address => {
-              fetch('JSONcache/places.json')
+              fetch('json/places.json')
                 .then(res => res.json())
                 .then(res => res.map(c => c.zip))
                 .then(zip => {
-                  fetch('JSONcache/places.json')
+                  fetch('json/places.json')
                     .then(res => res.json())
                     .then(res => res.map(c => c.style))
                     .then(style => {
@@ -32,7 +32,7 @@ function JSONtable() {
                         var a1 = document.createElement('a');
                         var link = document.createTextNode(style_sub);
                         a1.title = "Sample ballot for style " + style_sub;
-                        a1.href = "function to be created...";
+                        a1.href = "queCall(style_sub)";
                         a1.appendChild(link);
 
                         var add_sub = address[i].toString();
@@ -53,7 +53,36 @@ function JSONtable() {
              })
          })
      })
-};
+}
+//function qcall(str) {
+//  fetch("json/bs" + str + ".json")
+//      .then(res => res.json())
+//      .then(res => res.map(c => c.measure))
+//      .then(measure => {
+//        var content = document.querySelector(".content");
+//        content.innerText = "";
+//        fetch("json/bs" + str + ".json")
+//          .then(res => res.json())
+//          .then(res => res.map(c => c.measure_))
+//          .then(measure_ => {
+//            fetch("json/bs" + str + ".json")
+//              .then(res => res.json())
+//              .then(res => res.map(c => c.selections))
+//              .then(selections => {
+//                fetch("json/bs" + str + ".json")
+//                  .then(res => res.json())
+//                  .then(res => res.map(c => c.options))
+//                  .then(options => {
+//                    for (let i = 0; i < measure.length; i += 1){
+//                      var m_disp = document.createElement("button");
+//                      m_disp.innerText = measure[i];
+//                      var index = i + 1;
+//                      content.appendChild(m_disp[i]);
+//            }
+//          })
+//       })
+//    })
+//}
 function search_string(string) {
   res = "https://www.google.com/maps/place/";
   for(let i = 0; i < string.length; i += 1) {
@@ -65,7 +94,7 @@ function search_string(string) {
       }
     }
   return res
-};
+}
 function sort_by_column(n) {
   var table = document.getElementById("table");
   var rows = table.rows;
