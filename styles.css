@@ -103,10 +103,11 @@ h3 {
 }
 
 .scroll {
-  display: flex;
-  flex-direction: column;
+  display: grid;  
+  grid-gap: 10%;  
+  grid-template-columns: repeat(15%);  
+  grid-template-rows: repeat(5%); 
   width: 100%;
-  table-layout:fixed;
 }
 
 thead{
@@ -133,11 +134,11 @@ tbody tr {
   justify-content: space-around;
 }
 
-td:nth-child(1), th:nth-child(1) { width: 50px; }
-td:nth-child(2), th:nth-child(2) { min-width: 500px; }
-td:nth-child(3), th:nth-child(3) { min-width: 470px; }
-td:nth-child(4), th:nth-child(4) { width: 40px; }
-td:nth-child(5), th:nth-child(5) { width: 70px; }
+td:nth-child(1), th:nth-child(1) { width: 7%; }
+td:nth-child(2), th:nth-child(2) { width: 30%; min-width: 10%; }
+td:nth-child(3), th:nth-child(3) { width: 30%; min-width: 10%; }
+td:nth-child(4), th:nth-child(4) { width: 10%; }
+td:nth-child(5), th:nth-child(5) { width: 10%; }
 
 tbody tr td{
   display: flex;
