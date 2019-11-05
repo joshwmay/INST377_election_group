@@ -19,9 +19,9 @@ function JSONtable() {
                     .then(res => res.json())
                     .then(res => res.map(c => c.style))
                     .then(style => {
-                      var table = document.getElementById("table");
+                      var table = document.getElementById("body");
                       for(let i = 0; i < style.length; i+=1) {
-                        var row = table.insertRow(i+1);
+                        var row = table.insertRow(i);
                         var col0 = row.insertCell(0);
                         var col1 = row.insertCell(1);
                         var col2 = row.insertCell(2);
