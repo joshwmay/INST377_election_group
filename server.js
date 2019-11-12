@@ -42,7 +42,7 @@ app.use(express.static('public'));
 // this is, right now, an introduction to Callback Hell
 // but it is okay for a first-level example
 app.get('/api', (req, res) => {
-  const baseURL = '/json/places.json';
+  const baseURL = 'json/places.json';
   fetch(baseURL)
     .then(res => res.json())
     .then(res => res.map(c => c.dis_prec + " " + c.title + " " + c.address + " " + c.zip + " " + c.style))
