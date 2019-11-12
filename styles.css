@@ -107,12 +107,12 @@ h3 {
   grid-gap: 10%;  
   grid-template-columns: repeat(15%);  
   grid-template-rows: repeat(5%); 
-  width: 100%;
+  width: 90%;
 }
 
 thead{
-  cursor: pointer;
   display: block;
+  cursor: pointer;
 }
 
 thead tr {
@@ -134,11 +134,11 @@ tbody tr {
   justify-content: space-around;
 }
 
-td:nth-child(1), th:nth-child(1) { width: 7%; }
-td:nth-child(2), th:nth-child(2) { width: 30%; min-width: 10%; }
-td:nth-child(3), th:nth-child(3) { width: 30%; min-width: 10%; }
-td:nth-child(4), th:nth-child(4) { width: 10%; }
-td:nth-child(5), th:nth-child(5) { width: 10%; }
+td:nth-child(1), th:nth-child(1) { width: 7%; display: flex; justify-content: center;}
+td:nth-child(2), th:nth-child(2) { width: 30%; min-width: 10%; overflow: hidden;}
+td:nth-child(3), th:nth-child(3) { width: 30%; min-width: 10%; overflow: hidden;}
+td:nth-child(4), th:nth-child(4) { width: 10%; display: flex; justify-content: center;}
+td:nth-child(5), th:nth-child(5) { width: 10%; display: flex; justify-content: center;}
 
 tbody tr td{
   display: flex;
