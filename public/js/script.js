@@ -71,16 +71,53 @@ function loadData() {
             content.appendChild(button);
             for(let v = 0; v < options[i].length; v += 1) {
               var op = document.createElement("button");
-              op.innerText = options[i][v];
-              content.appendChild(op)
+              var a = document.createElement("a");
+              var inp = document.createElement("input")
+              var sub = options[i][v].toString();
+              a.innerText = sub;
+              if(sub != "or write-in"){
+                a.href = candidate_info(sub);
+                op.appendChild(a);
+                inp.type = "radio";
+                op.appendChild(inp);
+                content.appendChild(op);
+                }
+              else {
+                inp.typ = "text"
+                op.appendChild(a);
+                op.appendChild(inp);
+                content.appendChild(op);
+              }
             }
         }
       })
     })
 };
 
+function candidate_info(string) {
+  var res = "https://ballotpedia.org/";
+  var str = string.replace("Republican", "");
+  str = string.replace("Democratic", "");
+  str = str.replace("Green", "");
+  str = str.replace("Libertarian", "");
+  str = str.replace(".", "");
+  str = str.replace(",", "");
+  str = str.replace("and", "9");
+  for (let i=0; i<str.length; i+= 1) {
+    if(str[i] === " " && str[i+1] != "9"){
+      res += "_"}
+    else if(str[i] === " " && str[i+1] === "9"){
+      return res
+    }
+    else {
+      res += str[i]
+    }
+  }
+  return res
+};
+
 function search_string(string) {
-  res = "https://www.google.com/maps/place/";
+  var res = "https://www.google.com/maps/place/";
   for(let i = 0; i < string.length; i += 1) {
     if(string[i] === " ") {
       res += "+"
@@ -130,5 +167,3 @@ function sort_by_column(n) {
     }
   }
 }
-
-

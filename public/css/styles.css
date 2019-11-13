@@ -73,7 +73,9 @@ h3 {
   padding: 10px;
   overflow-wrap: break-word;
   margin: 25px 50px;
-  max-width: 450px;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
 }
 
 .button {
@@ -103,10 +105,10 @@ h3 {
 }
 
 .scroll {
-  display: grid;  
-  grid-gap: 10%;  
-  grid-template-columns: repeat(15%);  
-  grid-template-rows: repeat(5%); 
+  display: grid;
+  grid-gap: 10%;
+  grid-template-columns: repeat(15%);
+  grid-template-rows: repeat(5%);
   width: 90%;
 }
 
@@ -151,4 +153,3 @@ iframe{
 	display: block;
 	margin: 0px auto 25px auto;
 }
-
