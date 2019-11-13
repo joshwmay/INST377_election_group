@@ -73,9 +73,15 @@ h3 {
   padding: 10px;
   overflow-wrap: break-word;
   margin: 25px 50px;
-  max-width: 250px;
+  max-width: 325px;
+  max-height: 500px;
+  overflow:scroll;
   display: flex;
   flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
 }
 
 .button {

@@ -81,12 +81,21 @@ function loadData() {
                 inp.type = "radio";
                 op.appendChild(inp);
                 content.appendChild(op);
+                if((v+1) === options[i].length){
+                  let br = document.createElement("p");
+                  content.appendChild(br);
+                  }
                 }
               else {
                 inp.typ = "text"
                 op.appendChild(a);
                 op.appendChild(inp);
                 content.appendChild(op);
+                if((v+1) === options[i].length){
+                  let br = document.createElement("p");
+                  content.appendChild(br);
+                  }
+
               }
             }
         }
