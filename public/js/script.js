@@ -32,7 +32,6 @@ function JSONtable() {
                         var a1 = document.createElement('a');
                         var link = document.createTextNode(style_sub);
                         a1.title = "Sample ballot for style " + style_sub;
-                        a1.href = "queCall(style_sub)";
                         a1.appendChild(link);
 
                         var add_sub = address[i].toString();
@@ -53,36 +52,33 @@ function JSONtable() {
              })
          })
      })
-}
-//function qcall(str) {
-//  fetch("json/bs" + str + ".json")
-//      .then(res => res.json())
-//      .then(res => res.map(c => c.measure))
-//      .then(measure => {
-//        var content = document.querySelector(".content");
-//        content.innerText = "";
-//        fetch("json/bs" + str + ".json")
-//          .then(res => res.json())
-//          .then(res => res.map(c => c.measure_))
-//          .then(measure_ => {
-//            fetch("json/bs" + str + ".json")
-//              .then(res => res.json())
-//              .then(res => res.map(c => c.selections))
-//              .then(selections => {
-//                fetch("json/bs" + str + ".json")
-//                  .then(res => res.json())
-//                  .then(res => res.map(c => c.options))
-//                  .then(options => {
-//                    for (let i = 0; i < measure.length; i += 1){
-//                      var m_disp = document.createElement("button");
-//                      m_disp.innerText = measure[i];
-//                      var index = i + 1;
-//                      content.appendChild(m_disp[i]);
-//            }
-//          })
-//       })
-//    })
-//}
+};
+
+
+function loadData() {
+  var content = document.querySelector(".content");
+  fetch("https://joshwmay.github.io/pgc_election_group/public/json/gen_ball.json")
+    .then(res => res.json())
+    .then(res => res.map(c => c.measure))
+    .then(measure => {
+      fetch("https://joshwmay.github.io/pgc_election_group/public/json/gen_ball.json")
+        .then(res => res.json())
+        .then(res => res.map(c => c.options))
+        .then(options => {
+          for(let i=0; i<measure.length; i+= 1) {
+            var button = document.createElement("button");
+            button.innerText = measure[i];
+            content.appendChild(button);
+            for(let v = 0; v < options[i].length; v += 1) {
+              var op = document.createElement("button");
+              op.innerText = options[i][v];
+              content.appendChild(op)
+            }
+        }
+      })
+    })
+};
+
 function search_string(string) {
   res = "https://www.google.com/maps/place/";
   for(let i = 0; i < string.length; i += 1) {
@@ -95,15 +91,16 @@ function search_string(string) {
     }
   res += "+MARYLAND"
   return res
-}
+};
 function sort_by_column(n) {
   var table = document.getElementById("table");
-  var rows = table.rows;
+  var shouldSwitch = true;
   var switching = true;
   var switchcount = 0;
   var dir = "asc";
   while(switching == true) {
     switching = false;
+    var rows = table.rows;
     for (i = 1; i < (rows.length - 1); i += 1) {
       var shouldSwitch = false;
       var x = rows[i].getElementsByTagName("td")[n];
@@ -133,3 +130,5 @@ function sort_by_column(n) {
     }
   }
 }
+
+
