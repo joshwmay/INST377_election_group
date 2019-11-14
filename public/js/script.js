@@ -57,11 +57,11 @@ function JSONtable() {
 
 function loadData() {
   var content = document.querySelector(".content");
-  fetch("https://joshwmay.github.io/pgc_election_group/public/json/gen_ball.json")
+  fetch("json/gen_ball.json")
     .then(res => res.json())
     .then(res => res.map(c => c.measure))
     .then(measure => {
-      fetch("https://joshwmay.github.io/pgc_election_group/public/json/gen_ball.json")
+      fetch("json/gen_ball.json")
         .then(res => res.json())
         .then(res => res.map(c => c.options))
         .then(options => {
@@ -75,7 +75,31 @@ function loadData() {
               var inp = document.createElement("input")
               var sub = options[i][v].toString();
               a.innerText = sub;
-              if(sub != "or write-in"){
+              if (sub === "or write-in") {
+                var radio = document.createElement("input");
+                inp.type = "text";
+                radio.type = "radio";
+                op.appendChild(a);
+                op.appendChild(inp);
+                op.appendChild(radio);
+                content.appendChild(op);
+                if((v+1) === options[i].length){
+                  let br = document.createElement("p");
+                  content.appendChild(br);
+                  }
+
+              }
+              else if(sub === "Yes" || sub === "No" || sub.includes("For ") === true || sub.includes("Against ") === true) {
+                op.innerText = sub;
+                inp.type = "radio";
+                op.appendChild(inp);
+                content.appendChild(op);
+                if((v+1) === options[i].length){
+                  let br = document.createElement("p");
+                  content.appendChild(br);
+                  }
+              }
+              else {
                 a.href = candidate_info(sub);
                 op.appendChild(a);
                 inp.type = "radio";
@@ -86,17 +110,6 @@ function loadData() {
                   content.appendChild(br);
                   }
                 }
-              else {
-                inp.typ = "text"
-                op.appendChild(a);
-                op.appendChild(inp);
-                content.appendChild(op);
-                if((v+1) === options[i].length){
-                  let br = document.createElement("p");
-                  content.appendChild(br);
-                  }
-
-              }
             }
         }
       })
@@ -105,17 +118,49 @@ function loadData() {
 
 function candidate_info(string) {
   var res = "https://ballotpedia.org/";
-  var str = string.replace("Republican", "");
-  str = string.replace("Democratic", "");
-  str = str.replace("Green", "");
-  str = str.replace("Libertarian", "");
+  var str = string.replace("Republican", "9");
+  str = string.replace("Democratic", "9");
+  str = str.replace("Green", "9");
+  str = str.replace("Libertarian", "9");
+  str = str.replace("Unaffiliated", "9");
   str = str.replace(".", "");
-  str = str.replace(",", "");
+  str = str.replace(",", "9");
   str = str.replace("and", "9");
   for (let i=0; i<str.length; i+= 1) {
     if(str[i] === " " && str[i+1] != "9"){
       res += "_"}
-    else if(str[i] === " " && str[i+1] === "9"){
+    else if(str[i+1] === "9"){
+      res += str[i];
+      if(res === "https://ballotpedia.org/Brian_E_Frosh") {
+        res = "https://ballotpedia.org/Brian_Frosh"
+        }
+      else if(res === "https://ballotpedia.org/Angela_Alsobrooks") {
+        res = "http://angelaalsobrooks.com/meet-angela/"
+        }
+      else if(res === "https://ballotpedia.org/Felicia_Folarin") {
+        res = "https://votefeliciafolarin.org/"
+        }
+      else if(res === "https://ballotpedia.org/Mel_Franklin") {
+        res = "https://www.melfranklin.net/"
+        }
+      else if(res === "https://ballotpedia.org/Calvin_Hawkins") {
+        res = "https://act.myngp.com/Forms/1087417065945303808"
+      }
+      else if(res === "https://ballotpedia.org/Melvin_C_High") {
+        res = "https://en.wikipedia.org/wiki/Prince_George%27s_County_Sheriff%27s_Office" 
+      }
+      else if(res === "https://ballotpedia.org/Mahasin_El_Amin") {
+        res = "https://www.princegeorgescourts.org/directory.aspx?eid=5"
+      }
+      else if (res === "https://ballotpedia.org/Cereta_A_Lee") {
+        res = "https://registers.maryland.gov/main/region/princegeorges/pgbio.html"
+      }
+      else if (res === "https://ballotpedia.org/Wendy_Alise_Cartwright") {
+        res = "https://ballotpedia.org/Wendy_A._Cartwright"
+      }
+      else if (res === "https://ballotpedia.org/Vicky_L_Ivory-Orem") {
+        res = "https://ballotpedia.org/Vicky_L._Ivory-Orem"
+      }
       return res
     }
     else {
@@ -175,4 +220,5 @@ function sort_by_column(n) {
       }
     }
   }
-}
+};
+
