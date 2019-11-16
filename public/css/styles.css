@@ -135,6 +135,8 @@ tbody {
   flex-direction: column;
   column-count: 5;
   overflow: scroll;
+  border-collapse: collapse;
+  border: 1px solid #dddd;
 }
 
 tbody tr {
