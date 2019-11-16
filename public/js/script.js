@@ -1,23 +1,23 @@
 function JSONtable() {
-  fetch('json/places.json')
+  fetch('/api')
     .then(res => res.json())
-    .then(res => res.map(c => c.dis_prec))
+    .then(res => res.data.map(c => c.dis_prec))
     .then(dis_prec => {
-      fetch('json/places.json')
+      fetch('/api')
         .then(res => res.json())
-        .then(res => res.map(c => c.title))
+        .then(res => res.data.map(c => c.title))
         .then(title => {
-          fetch('json/places.json')
+          fetch('/api')
             .then(res => res.json())
-            .then(res => res.map(c => c.address))
+            .then(res => res.data.map(c => c.address))
             .then(address => {
-              fetch('json/places.json')
+              fetch('/api')
                 .then(res => res.json())
-                .then(res => res.map(c => c.zip))
+                .then(res => res.data.map(c => c.zip))
                 .then(zip => {
-                  fetch('json/places.json')
+                  fetch('/api')
                     .then(res => res.json())
-                    .then(res => res.map(c => c.style))
+                    .then(res => res.data.map(c => c.style))
                     .then(style => {
                       var table = document.getElementById("body");
                       for(let i = 0; i < style.length; i+=1) {
@@ -67,7 +67,11 @@ function loadData() {
         .then(options => {
           for(let i=0; i<measure.length; i+= 1) {
             var button = document.createElement("button");
-            button.innerText = measure[i];
+            var link = document.createElement("a");
+            var sub = measure[i].toString();
+            link.innerText = sub;
+            link.href = candidate_info(sub);
+            button.appendChild(link);
             content.appendChild(button);
             for(let v = 0; v < options[i].length; v += 1) {
               var op = document.createElement("button");
@@ -88,34 +92,32 @@ function loadData() {
                   content.appendChild(br);
                   }
 
-              }
-              else if(sub === "Yes" || sub === "No" || sub.includes("For ") === true || sub.includes("Against ") === true) {
-                op.innerText = sub;
-                inp.type = "radio";
-                op.appendChild(inp);
-                content.appendChild(op);
-                if((v+1) === options[i].length){
-                  let br = document.createElement("p");
-                  content.appendChild(br);
-                  }
-              }
-              else {
-                a.href = candidate_info(sub);
-                op.appendChild(a);
-                inp.type = "radio";
-                op.appendChild(inp);
-                content.appendChild(op);
-                if((v+1) === options[i].length){
-                  let br = document.createElement("p");
-                  content.appendChild(br);
-                  }
+              } else if(
+                sub === "Yes" || sub === "No" || sub.includes("For ") === true || sub.includes("Against ") === true) {
+                  op.innerText = sub;
+                  inp.type = "radio";
+                  op.appendChild(inp);
+                  content.appendChild(op);
+                  if((v+1) === options[i].length){
+                    let br = document.createElement("p");
+                    content.appendChild(br);
+                    }
+              } else {
+                  a.href = candidate_info(sub);
+                  op.appendChild(a);
+                  inp.type = "radio";
+                  op.appendChild(inp);
+                  content.appendChild(op);
+                  if((v+1) === options[i].length){
+                    let br = document.createElement("p");
+                    content.appendChild(br);
+                    }
                 }
             }
         }
       })
     })
-};
-
+  };
 function candidate_info(string) {
   var res = "https://ballotpedia.org/";
   var str = string.replace("Republican", "9");
@@ -125,11 +127,12 @@ function candidate_info(string) {
   str = str.replace("Unaffiliated", "9");
   str = str.replace(".", "");
   str = str.replace(",", "9");
+  str = str.replace("/", "9");
   str = str.replace("and", "9");
   for (let i=0; i<str.length; i+= 1) {
     if(str[i] === " " && str[i+1] != "9"){
       res += "_"}
-    else if(str[i+1] === "9"){
+    else if(str[i+1] === "9" || i+1 === str.length){
       res += str[i];
       if(res === "https://ballotpedia.org/Brian_E_Frosh") {
         res = "https://ballotpedia.org/Brian_Frosh"
@@ -147,7 +150,7 @@ function candidate_info(string) {
         res = "https://act.myngp.com/Forms/1087417065945303808"
       }
       else if(res === "https://ballotpedia.org/Melvin_C_High") {
-        res = "https://en.wikipedia.org/wiki/Prince_George%27s_County_Sheriff%27s_Office" 
+        res = "https://en.wikipedia.org/wiki/Prince_George%27s_County_Sheriff%27s_Office"
       }
       else if(res === "https://ballotpedia.org/Mahasin_El_Amin") {
         res = "https://www.princegeorgescourts.org/directory.aspx?eid=5"
@@ -161,6 +164,30 @@ function candidate_info(string) {
       else if (res === "https://ballotpedia.org/Vicky_L_Ivory-Orem") {
         res = "https://ballotpedia.org/Vicky_L._Ivory-Orem"
       }
+      else if (res === "https://ballotpedia.org/Governor") {
+        res = "https://ballotpedia.org/Governor_of_Maryland";
+      }
+      else if (res === "https://ballotpedia.org/Comptroller") {
+        res = "https://ballotpedia.org/Maryland_Comptroller";
+      }
+      else if (res === "https://ballotpedia.org/Attorney_General") {
+        res = "https://ballotpedia.org/Attorney_General_of_Maryland";
+      }
+      else if (res === "https://ballotpedia.org/US._Senator") {
+        res = "https://ballotpedia.org/United_States_Senate";
+      }
+      else if (res === "https://ballotpedia.org/County_Executive") {
+        res = "https://www.princegeorgescountymd.gov/775/About-Us";
+      }
+      else if (res === "https://ballotpedia.org/County_Council_At_Large") {
+        res = "https://pgccouncil.us/27/The-Council";
+      }
+      else if (res === "https://ballotpedia.org/State's_Attorney") {
+        res = "https://www.princegeorgescountymd.gov/712/States-Attorney";
+      }
+      else if (res === "https://ballotpedia.org/Register_of_Wills") {
+        res = "http://registers.maryland.gov/main/";
+      }
       return res
     }
     else {
@@ -168,8 +195,7 @@ function candidate_info(string) {
     }
   }
   return res
-};
-
+  };
 function search_string(string) {
   var res = "https://www.google.com/maps/place/";
   for(let i = 0; i < string.length; i += 1) {
@@ -222,3 +248,31 @@ function sort_by_column(n) {
   }
 };
 
+function table_search() {
+  var input, filter, table, body, tr, td1, td2, td3, td4, td5, i, txt1, txt2, txt3, txt4, txt5;
+  input = document.getElementById("filter");
+  filter = input.value.toString();
+  filter = input.value.toUpperCase();
+  table = document.getElementsByTagName("table");
+  body = document.getElementById("body");
+  tr = body.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i += 1) {
+    td1 = tr[i].getElementsByTagName("td")[0];
+    td2 = tr[i].getElementsByTagName("td")[1];
+    td3 = tr[i].getElementsByTagName("td")[2];
+    td4 = tr[i].getElementsByTagName("td")[3];
+    td5 = tr[i].getElementsByTagName("td")[4];
+    if (td1 || td2 || td3 || td4 || td5) {
+      txt1 = td1.textContent || td1.innerText;
+      txt2 = td2.textContent || td2.innerText;
+      txt3 = td3.textContent || td3.innerText;
+      txt4 = td4.textContent || td4.innerText;
+      txt5 = td5.textContent || td5.innerText;
+      if (txt1.toUpperCase().indexOf(filter) > -1 || txt2.toUpperCase().indexOf(filter) > -1 || txt3.toUpperCase().indexOf(filter) > -1 || txt4.toUpperCase().indexOf(filter) > -1 || txt5.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
