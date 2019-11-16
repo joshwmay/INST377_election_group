@@ -41,23 +41,38 @@ app.use(express.static('public'));
 // the simplest format is not necessarily the best one.
 // this is, right now, an introduction to Callback Hell
 // but it is okay for a first-level example
+function dynamicSort(property) {
+  var sortOrder = 1;
 
+  if(property[0] === "-") {
+      sortOrder = -1;
+      property = property.substr(1);
+  }
+
+  return function (a,b) {
+      if(sortOrder == -1){
+          return b[property].localeCompare(a[property]);
+      }else{
+          return a[property].localeCompare(b[property]);
+      }        
+  }
+};
 
 app.get('/api', (req, res) => {
-  const baseURL = 'http://localhost:3000/json/places.json';
+  const baseURL = 'https://joshwmay.github.io/pgc_election_group/public/json/places.json';
   fetch(baseURL)
     .then(res => res.json())
+    .then(res => res.map(c => c.dis_prec + "," + c.title + "," + c.address + "," + c.zip + "," + c.style))
     .then((data) => {
       console.log(data);
       res.send({ data: data });
-        })
-      .catch((err) => {
+    })
+    .catch((err) => {
       console.log(err);
       res.redirect('/error');
-        })
-
+    })
 });
 
-//cd documents/github/inst377_election_group
+  
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
