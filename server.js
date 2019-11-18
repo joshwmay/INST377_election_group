@@ -204,6 +204,4 @@ app.get('/sa', (req, res) => {
 });
 //cd documents/github/inst377_election_group
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
-
-//  cd documents/github/inst377_election_group
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))
