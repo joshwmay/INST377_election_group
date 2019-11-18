@@ -1,7 +1,5 @@
 const express = require('express');
 const fetch = require('node-fetch');
-var https = require('https');
-var http = require('http');
 
 const app = express();
 const port = 3000;
@@ -206,8 +204,4 @@ app.get('/sa', (req, res) => {
 });
 //cd documents/github/inst377_election_group
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}!`);
-  var server = http.createServer(this);
-  return server.listen.apply(server)
-  })
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));

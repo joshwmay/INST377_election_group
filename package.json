@@ -19,6 +19,5 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-import": "^2.18.2",
-    "siteId": "bbe070da-d05c-4fa8-811f-f82a69580870"
   }
 }
