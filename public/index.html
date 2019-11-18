@@ -14,19 +14,19 @@
       <button class="button" onclick="loadData()">View Generic Ballot</button>
       <div class="content"></div>
       <div class="scroll">
-        <input type="text" id="filter" onkeyup="table_search()" placeholder="Search for your polling place"></input>
+        <input type="text" id="filter" onkeyup="table_search()" placeholder="Search for polling place"></input>
         <table class="fixed" id="table">
           <thead>
             <tr>
-              <th onclick="sort_by_column(0)">Dist/Prec</th>
-              <th onclick="sort_by_column(1)">Polling Place</th>
-              <th onclick="sort_by_column(2)">Address</th>
-              <th onclick="sort_by_column(3)">Zip</th>
-              <th onclick="sort_by_column(4)">Ballot</th>
+              <th onclick="JSONtable('/s1', '0')">Dist/Prec</th>
+              <th onclick="JSONtable('/s3', '1')">Polling Place</th>
+              <th onclick="JSONtable('/s5', '2')">Address</th>
+              <th onclick="JSONtable('/s7', '3')">Zip</th>
+              <th onclick="JSONtable('/s9', '4')">Ballot</th>
             </tr>
           </thead>
           <tbody id="body">
-            <script>console.log(JSONtable())</script>
+            <script>console.log(JSONtable("/s1", '0'))</script>
           </tbody>
         </table>
       </div>

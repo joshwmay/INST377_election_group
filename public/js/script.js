@@ -1,26 +1,78 @@
-function JSONtable() {
-  fetch('/api')
-    .then(res => res.json())
-    .then(res => res.data.map(c => c.dis_prec))
-    .then(dis_prec => {
-      fetch('/api')
-        .then(res => res.json())
-        .then(res => res.data.map(c => c.title))
-        .then(title => {
-          fetch('/api')
-            .then(res => res.json())
-            .then(res => res.data.map(c => c.address))
-            .then(address => {
-              fetch('/api')
-                .then(res => res.json())
-                .then(res => res.data.map(c => c.zip))
-                .then(zip => {
-                  fetch('/api')
-                    .then(res => res.json())
-                    .then(res => res.data.map(c => c.style))
-                    .then(style => {
-                      var table = document.getElementById("body");
-                      for(let i = 0; i < style.length; i+=1) {
+
+var sx1 = 0;
+var sx3 = 0;
+var sx5 = 0;
+var sx7 = 0;
+var sx9 = 0;
+var x = null;
+
+function JSONtable(str, n) {
+  if (str === "/s1") {
+    if (sx1 === 0) {
+      sx1 += 1
+    }
+    else {
+      sx1 = 0;
+      str = "/s2"}
+  }
+  else if (str === "/s3") {
+    if (sx3 === 0) {
+      sx3 += 1
+    }
+    else {
+      sx3 = 0;
+      str = "/s4"}
+  }
+  else if (str === "/s5") {
+    if (sx5 === 0) {
+      sx5 += 1
+    }
+    else {
+      sx5 = 0;
+      str = "/s6"}
+  }
+  else if (str === "/s7") {
+    if (sx7 === 0) {
+      sx7 += 1
+    }
+    else {
+      sx7 = 0;
+      str = "/s8"}
+  }
+  else if (str === "/s9") {
+    if (sx9 === 0) {
+      sx9 += 1
+    }
+    else {
+      sx9 = 0;
+      str = "/sa"}
+  }
+  var input = document.getElementById("filter");
+  var filter = input.value.toString();
+  if(filter.length > 0) {
+    fetch(str)
+      .then(res => res.json())
+      .then(res => res.data.map(c => c.dis_prec))
+      .then(dis_prec => {
+        fetch(str)
+          .then(res => res.json())
+          .then(res => res.data.map(c => c.title))
+          .then(title => {
+            fetch(str)
+              .then(res => res.json())
+              .then(res => res.data.map(c => c.address))
+              .then(address => {
+                fetch(str)
+                  .then(res => res.json())
+                  .then(res => res.data.map(c => c.zip))
+                  .then(zip => {
+                    fetch(str)
+                      .then(res => res.json())
+                      .then(res => res.data.map(c => c.style))
+                      .then(style => {
+                        var table = document.getElementById("body");
+                        table.innerText = "";
+                        for(let i = 0; i < style.length; i+=1) {
                         var row = table.insertRow(i);
                         var col0 = row.insertCell(0);
                         var col1 = row.insertCell(1);
@@ -41,19 +93,75 @@ function JSONtable() {
                         a2.href = search_string(address[i]);
                         a2.appendChild(map_link);
 
-                        col0.innerHTML = dis_prec[i];
-                        col1.innerHTML = title[i];
+                        col0.innerText = dis_prec[i];
+                        col1.innerText = title[i];
                         col2.appendChild(a2);
-                        col3.innerHTML = zip[i];
+                        col3.innerText = zip[i];
+                        col4.appendChild(a1);
+                          }
+                        console.log(table_search())
+                       })
+                   })
+               })
+           })
+       })
+  } else {
+    fetch(str)
+      .then(res => res.json())
+      .then(res => res.data.map(c => c.dis_prec))
+      .then(dis_prec => {
+        fetch(str)
+          .then(res => res.json())
+          .then(res => res.data.map(c => c.title))
+          .then(title => {
+            fetch(str)
+              .then(res => res.json())
+              .then(res => res.data.map(c => c.address))
+              .then(address => {
+                fetch(str)
+                  .then(res => res.json())
+                  .then(res => res.data.map(c => c.zip))
+                  .then(zip => {
+                    fetch(str)
+                      .then(res => res.json())
+                      .then(res => res.data.map(c => c.style))
+                      .then(style => {
+                        var table = document.getElementById("body");
+                        table.innerText = "";
+                        for(let i = 0; i < style.length; i+=1) {
+                        var row = table.insertRow(i);
+                        var col0 = row.insertCell(0);
+                        var col1 = row.insertCell(1);
+                        var col2 = row.insertCell(2);
+                        var col3 = row.insertCell(3);
+                        var col4 = row.insertCell(4);
+
+                        var style_sub = style[i].toString();
+                        var a1 = document.createElement('a');
+                        var link = document.createTextNode(style_sub);
+                        a1.title = "Sample ballot for style " + style_sub;
+                        a1.appendChild(link);
+
+                        var add_sub = address[i].toString();
+                        var a2 = document.createElement('a');
+                        var map_link = document.createTextNode(add_sub);
+                        a2.title = "View " + add_sub + " on map";
+                        a2.href = search_string(address[i]);
+                        a2.appendChild(map_link);
+
+                        col0.innerText = dis_prec[i];
+                        col1.innerText = title[i];
+                        col2.appendChild(a2);
+                        col3.innerText = zip[i];
                         col4.appendChild(a1);
                         }
-                     })
-                 })
-             })
-         })
-     })
+                       })
+                   })
+               })
+           })
+       })
+    }
 };
-
 
 function loadData() {
   var content = document.querySelector(".content");
@@ -134,6 +242,7 @@ function candidate_info(string) {
       res += "_"}
     else if(str[i+1] === "9" || i+1 === str.length){
       res += str[i];
+      var sub = "ballotpedia.org";
       if(res === "https://ballotpedia.org/Brian_E_Frosh") {
         res = "https://ballotpedia.org/Brian_Frosh"
         }
@@ -209,51 +318,13 @@ function search_string(string) {
   res += "+MARYLAND"
   return res
 };
-function sort_by_column(n) {
-  var table = document.getElementById("table");
-  var shouldSwitch = true;
-  var switching = true;
-  var switchcount = 0;
-  var dir = "asc";
-  while(switching == true) {
-    switching = false;
-    var rows = table.rows;
-    for (i = 1; i < (rows.length - 1); i += 1) {
-      var shouldSwitch = false;
-      var x = rows[i].getElementsByTagName("td")[n];
-      var y = rows[i + 1].getElementsByTagName("td")[n];
-      if (dir === "asc") {
-        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-          shouldSwitch = true;
-          break;
-        }
-      }
-      else if (dir === "desc") {
-        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-          shouldSwitch = true;
-          break;
-        }
-      }
-    }
-    if (shouldSwitch) {
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-      switchcount += 1;
-    } else {
-      if (switchcount == 0 && dir == "asc") {
-        dir = "desc";
-        switching = true;
-      }
-    }
-  }
-};
-
 function table_search() {
-  var input, filter, table, body, tr, td1, td2, td3, td4, td5, i, txt1, txt2, txt3, txt4, txt5;
+  var input, filter, table, body, tr, td1, td2, td3, td4, td5, i, txt1, txt2,
+  txt3, txt4, txt5;
   input = document.getElementById("filter");
   filter = input.value.toString();
   filter = input.value.toUpperCase();
-  table = document.getElementsByTagName("table");
+  table = document.getElementsByTagName("table")
   body = document.getElementById("body");
   tr = body.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i += 1) {
