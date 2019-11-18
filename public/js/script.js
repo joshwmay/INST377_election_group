@@ -4,8 +4,6 @@ var sx3 = 0;
 var sx5 = 0;
 var sx7 = 0;
 var sx9 = 0;
-var x = null;
-
 function JSONtable(str, n) {
   if (str === "/s1") {
     if (sx1 === 0) {
@@ -161,8 +159,7 @@ function JSONtable(str, n) {
            })
        })
     }
-};
-
+}
 function loadData() {
   var content = document.querySelector(".content");
   fetch("json/gen_ball.json")
@@ -174,23 +171,28 @@ function loadData() {
         .then(res => res.map(c => c.options))
         .then(options => {
           for(let i=0; i<measure.length; i+= 1) {
-            var button = document.createElement("button");
-            var link = document.createElement("a");
-            var sub = measure[i].toString();
+            var button, link, sub;
+            button = document.createElement("button");
+            link = document.createElement("a");
+            sub = measure[i].toString();
             link.innerText = sub;
             link.href = candidate_info(sub);
+            link.title = "Learn more about " + sub;
             button.appendChild(link);
             content.appendChild(button);
             for(let v = 0; v < options[i].length; v += 1) {
-              var op = document.createElement("button");
-              var a = document.createElement("a");
-              var inp = document.createElement("input")
-              var sub = options[i][v].toString();
+              var op, a, inp, sub;
+              op = document.createElement("button");
+              a = document.createElement("a");
+              inp = document.createElement("input")
+              sub = options[i][v].toString();
               a.innerText = sub;
               if (sub === "or write-in") {
                 var radio = document.createElement("input");
                 inp.type = "text";
                 radio.type = "radio";
+                a.title = "Enter write-in choice for " + measure[i] + " here";
+                inp.title = "Enter write-in choice for " + measure[i] + " here";
                 op.appendChild(a);
                 op.appendChild(inp);
                 op.appendChild(radio);
@@ -212,6 +214,7 @@ function loadData() {
                     }
               } else {
                   a.href = candidate_info(sub);
+                  a.title = "Learn more about " + sub;
                   op.appendChild(a);
                   inp.type = "radio";
                   op.appendChild(inp);
@@ -237,6 +240,7 @@ function candidate_info(string) {
   str = str.replace(",", "9");
   str = str.replace("/", "9");
   str = str.replace("and", "9");
+  str = str.replace(" Charter", "9");
   for (let i=0; i<str.length; i+= 1) {
     if(str[i] === " " && str[i+1] != "9"){
       res += "_"}
@@ -259,7 +263,7 @@ function candidate_info(string) {
         res = "https://act.myngp.com/Forms/1087417065945303808"
       }
       else if(res === "https://ballotpedia.org/Melvin_C_High") {
-        res = "https://en.wikipedia.org/wiki/Prince_George%27s_County_Sheriff%27s_Office"
+        res = "http://www.friendsofmelvinchigh.net/"
       }
       else if(res === "https://ballotpedia.org/Mahasin_El_Amin") {
         res = "https://www.princegeorgescourts.org/directory.aspx?eid=5"
@@ -294,8 +298,53 @@ function candidate_info(string) {
       else if (res === "https://ballotpedia.org/State's_Attorney") {
         res = "https://www.princegeorgescountymd.gov/712/States-Attorney";
       }
+      else if (res === "https://ballotpedia.org/Judge_of_the_Orphans'_Court") {
+        res = "https://www.princegeorgescourts.org/257/Orphans-Court"
+      }
+      else if (res === "https://ballotpedia.org/Clerk_of_the_Circuit_Court") {
+        res = "https://www.princegeorgescourts.org/178/Clerk-of-the-Circuit-Court"
+      }
       else if (res === "https://ballotpedia.org/Register_of_Wills") {
         res = "http://registers.maryland.gov/main/";
+      }
+      else if (res === "https://ballotpedia.org/Question_A") {
+        res = "https://bit.ly/2NWop9S";
+      }
+      else if (res === "https://ballotpedia.org/Question_B") {
+        res = "https://bit.ly/2O18h7j";
+      }
+      else if (res === "https://ballotpedia.org/Judge") {
+        res = "https://www.courts.state.md.us/cosappeals"
+      }
+      else if (res === "https://ballotpedia.org/Question_C") {
+        res = "https://bit.ly/340qTJZ";
+      }
+      else if (res === "https://ballotpedia.org/Question_D") {
+        res = "https://bit.ly/2QuInuc";
+      }
+      else if (res === "https://ballotpedia.org/Question_E") {
+        res = "https://bit.ly/32RjhrW";
+      }
+      else if (res === "https://ballotpedia.org/Question_F") {
+        res = "https://bit.ly/35eA35W";
+      }
+      else if (res === "https://ballotpedia.org/Question_G") {
+        res = "https://bit.ly/2NVGYeq";
+      }
+      else if (res === "https://ballotpedia.org/Question_H") {
+        res = "https://bit.ly/2QsJfPN";
+      }
+      else if (res === "https://ballotpedia.org/Question_I") {
+        res = "https://bit.ly/2CVGajq";
+      }
+      else if (res === "https://ballotpedia.org/Question_J") {
+        res = "https://bit.ly/2qsnTr8";
+      }
+      else if (res === "https://ballotpedia.org/Question_K") {
+        res = "https://bit.ly/2QqlckG";
+      }
+      else if (res === "https://ballotpedia.org/Sheriff") {
+        res = "https://www.princegeorgescountymd.gov/622/Sheriff";
       }
       return res
     }
