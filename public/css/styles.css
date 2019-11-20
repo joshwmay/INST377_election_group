@@ -75,7 +75,7 @@ h3 {
   margin: 25px 50px;
   max-width: 400px;
   max-height: 500px;
-  overflow:scroll;
+  overflow:auto;
   display: flex;
   flex-direction: column;
 }
@@ -134,7 +134,7 @@ tbody {
   width: auto;
   flex-direction: column;
   column-count: 5;
-  overflow: scroll;
+  overflow: auto;
 }
 
 tbody tr {
@@ -143,8 +143,8 @@ tbody tr {
 }
 
 td:nth-child(1), th:nth-child(1) { width: 7%; display: flex; justify-content: center;}
-td:nth-child(2), th:nth-child(2) { width: 30%; min-width: 10%; overflow: hidden;}
-td:nth-child(3), th:nth-child(3) { width: 30%; min-width: 10%; overflow: hidden;}
+td:nth-child(2), th:nth-child(2) { width: 30%; min-width: 10%;}
+td:nth-child(3), th:nth-child(3) { width: 30%; min-width: 10%;}
 td:nth-child(4), th:nth-child(4) { width: 10%; display: flex; justify-content: center;}
 td:nth-child(5), th:nth-child(5) { width: 10%; display: flex; justify-content: center;}
 
@@ -156,11 +156,6 @@ tbody tr td{
 
 .content a, button, innerText {
   font-size: 110%
-}
-
-.content input[type=radio]{
-  max-height: 30px;
-  max-width: 30px ;
 }
 
 iframe{
