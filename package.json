@@ -20,5 +20,9 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-html": "^6.0.0",
     "eslint-plugin-import": "^2.18.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joshwmay/pgc_election_group"
+}
 }
