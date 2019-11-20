@@ -73,7 +73,7 @@ h3 {
   padding: 10px;
   overflow-wrap: break-word;
   margin: 25px 50px;
-  max-width: 325px;
+  max-width: 400px;
   max-height: 500px;
   overflow:scroll;
   display: flex;
@@ -154,8 +154,23 @@ tbody tr td{
   align-content: center;
 }
 
+.content a, button, innerText {
+  font-size: 110%
+}
+
+.content input[type=radio]{
+  max-height: 30px;
+  max-width: 30px ;
+}
+
 iframe{
+  padding-top:7.5%;
+  padding-bottom: 5%;
 	border:none;
 	display: block;
 	margin: 0px auto 25px auto;
+}
+
+#draw img {
+  background: none;
 }

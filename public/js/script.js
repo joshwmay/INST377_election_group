@@ -69,7 +69,7 @@ function JSONtable(str, n) {
                       .then(res => res.data.map(c => c.style))
                       .then(style => {
                         var table = document.getElementById("body");
-                        table.innerText = "";
+                        table.innerHTML = "";
                         for(let i = 0; i < style.length; i+=1) {
                         var row = table.insertRow(i);
                         var col0 = row.insertCell(0);
@@ -82,6 +82,7 @@ function JSONtable(str, n) {
                         var a1 = document.createElement('a');
                         var link = document.createTextNode(style_sub);
                         a1.title = "Sample ballot for style " + style_sub;
+                        a1.innerHTML = style_sub;
                         a1.appendChild(link);
 
                         var add_sub = address[i].toString();
@@ -89,12 +90,13 @@ function JSONtable(str, n) {
                         var map_link = document.createTextNode(add_sub);
                         a2.title = "View " + add_sub + " on map";
                         a2.href = search_string(address[i]);
+                        map_link.innerHTML = add_sub;
                         a2.appendChild(map_link);
 
-                        col0.innerText = dis_prec[i];
-                        col1.innerText = title[i];
+                        col0.innerHTML = dis_prec[i];
+                        col1.innerHTML = title[i];
                         col2.appendChild(a2);
-                        col3.innerText = zip[i];
+                        col3.innerHTML = zip[i];
                         col4.appendChild(a1);
                           }
                         console.log(table_search())
@@ -125,7 +127,7 @@ function JSONtable(str, n) {
                       .then(res => res.data.map(c => c.style))
                       .then(style => {
                         var table = document.getElementById("body");
-                        table.innerText = "";
+                        table.innerHTML = "";
                         for(let i = 0; i < style.length; i+=1) {
                         var row = table.insertRow(i);
                         var col0 = row.insertCell(0);
@@ -137,20 +139,22 @@ function JSONtable(str, n) {
                         var style_sub = style[i].toString();
                         var a1 = document.createElement('a');
                         var link = document.createTextNode(style_sub);
+                        link.innerHTML = style_sub;
                         a1.title = "Sample ballot for style " + style_sub;
                         a1.appendChild(link);
 
                         var add_sub = address[i].toString();
                         var a2 = document.createElement('a');
                         var map_link = document.createTextNode(add_sub);
+                        map_link.innerHTML = add_sub;
                         a2.title = "View " + add_sub + " on map";
                         a2.href = search_string(address[i]);
                         a2.appendChild(map_link);
 
-                        col0.innerText = dis_prec[i];
-                        col1.innerText = title[i];
+                        col0.innerHTML = dis_prec[i];
+                        col1.innerHTML = title[i];
                         col2.appendChild(a2);
-                        col3.innerText = zip[i];
+                        col3.innerHTML = zip[i];
                         col4.appendChild(a1);
                         }
                        })
@@ -175,7 +179,7 @@ function loadData() {
             button = document.createElement("button");
             link = document.createElement("a");
             sub = measure[i].toString();
-            link.innerText = sub;
+            link.innerHTML = sub;
             link.href = candidate_info(sub);
             link.title = "Learn more about " + sub;
             button.appendChild(link);
@@ -186,7 +190,7 @@ function loadData() {
               a = document.createElement("a");
               inp = document.createElement("input")
               sub = options[i][v].toString();
-              a.innerText = sub;
+              a.innerHTML = sub;
               if (sub === "or write-in") {
                 var radio = document.createElement("input");
                 inp.type = "text";
@@ -204,7 +208,7 @@ function loadData() {
 
               } else if(
                 sub === "Yes" || sub === "No" || sub.includes("For ") === true || sub.includes("Against ") === true) {
-                  op.innerText = sub;
+                  op.innerHTML = sub;
                   inp.type = "radio";
                   op.appendChild(inp);
                   content.appendChild(op);
@@ -383,11 +387,11 @@ function table_search() {
     td4 = tr[i].getElementsByTagName("td")[3];
     td5 = tr[i].getElementsByTagName("td")[4];
     if (td1 || td2 || td3 || td4 || td5) {
-      txt1 = td1.textContent || td1.innerText;
-      txt2 = td2.textContent || td2.innerText;
-      txt3 = td3.textContent || td3.innerText;
-      txt4 = td4.textContent || td4.innerText;
-      txt5 = td5.textContent || td5.innerText;
+      txt1 = td1.textContent || td1.innerHTML;
+      txt2 = td2.textContent || td2.innerHTML;
+      txt3 = td3.textContent || td3.innerHTML;
+      txt4 = td4.textContent || td4.innerHTML;
+      txt5 = td5.textContent || td5.innerHTML;
       if (txt1.toUpperCase().indexOf(filter) > -1 || txt2.toUpperCase().indexOf(filter) > -1 || txt3.toUpperCase().indexOf(filter) > -1 || txt4.toUpperCase().indexOf(filter) > -1 || txt5.toUpperCase().indexOf(filter) > -1) {
         tr[i].style.display = "";
       } else {
