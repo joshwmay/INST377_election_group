@@ -1,9 +1,12 @@
+var sx1, sx3, sx5, sx7, sx9, lang;
+sx1 = 0;
+sx3 = 0;
+sx5 = 0;
+sx7 = 0;
+sx9 = 0;
+lang = 0;
 
-var sx1 = 0;
-var sx3 = 0;
-var sx5 = 0;
-var sx7 = 0;
-var sx9 = 0;
+
 function JSONtable(str, n) {
   if (str === "/s1") {
     if (sx1 === 0) {
@@ -80,10 +83,8 @@ function JSONtable(str, n) {
 
                         var style_sub = style[i].toString();
                         var a1 = document.createElement('a');
-                        var link = document.createTextNode(style_sub);
-                        a1.title = "Sample ballot for style " + style_sub;
+                        a1.title = "Sample ballot for style " + style_sub
                         a1.innerHTML = style_sub;
-                        a1.appendChild(link);
 
                         var add_sub = address[i].toString();
                         var a2 = document.createElement('a');
@@ -166,6 +167,15 @@ function JSONtable(str, n) {
 }
 function loadData() {
   var content = document.querySelector(".content");
+  if(lang === 1) {
+    lang = 0;
+    content.innerHTML = "";
+    return loadData_()
+  }
+  else {
+    content.innerHTML = "";
+    lang = 1
+  };
   fetch("/ball")
     .then(res => res.json())
     .then(res => res.data.map(c => c.measure))
@@ -400,3 +410,53 @@ function table_search() {
     }
   }
 }
+function loadData_() {
+  var content = document.querySelector(".content");
+  fetch("/ball_")
+    .then(res => res.json())
+    .then(res => res.data.map(c => c.measure))
+    .then(measure => {
+      fetch("/ball_")
+        .then(res => res.json())
+        .then(res => res.data.map(c => c.options))
+        .then(options => {
+          for(let i=0; i<measure.length; i+= 1) {
+            var button, sub;
+            button = document.createElement("button");
+            sub = measure[i].toString();
+            button.innerHTML = sub;
+            content.appendChild(button);
+            for(let v = 0; v < options[i].length; v += 1) {
+              var op, inp, sub, radio;
+              op = document.createElement("button");
+              inp = document.createElement("input")
+              sub = options[i][v].toString();
+              radio = document.createElement("input");
+              radio.type = "radio";
+              if (sub === "o escribir en") {
+                inp.type = "text";
+                inp.title = "Ingrese la opción de escritura para " + measure[i] + "aquí";
+                op.innerHTML = sub;
+                op.appendChild(inp);
+                op.appendChild(radio);
+                content.appendChild(op);
+                if((v+1) === options[i].length){
+                  let br = document.createElement("p");
+                  content.appendChild(br);
+                    }
+                 }
+               else {
+                  op.innerHTML = sub;
+                  op.appendChild(radio);
+                  content.appendChild(op);
+                  if((v+1) === options[i].length){
+                    let br = document.createElement("p");
+                    content.appendChild(br);
+                      }
+                }
+              }
+            }
+
+     })
+   })
+};

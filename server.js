@@ -207,6 +207,21 @@ app.get('/ball', (req, res) => {
         })
 
 });
+
+app.get('/ball_', (req, res) => {
+  const baseURL = 'https://joshwmay.github.io/pgc_election_group/public/json/gen_ball_.json';
+  fetch(baseURL)
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      res.send({ data: data });
+        })
+      .catch((err) => {
+      console.log(err);
+      res.redirect('/error');
+        })
+
+});
 //cd documents/github/inst377_election_group
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
