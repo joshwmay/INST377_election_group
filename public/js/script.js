@@ -166,13 +166,13 @@ function JSONtable(str, n) {
 }
 function loadData() {
   var content = document.querySelector(".content");
-  fetch("json/gen_ball.json")
+  fetch("/ball")
     .then(res => res.json())
-    .then(res => res.map(c => c.measure))
+    .then(res => res.data.map(c => c.measure))
     .then(measure => {
-      fetch("json/gen_ball.json")
+      fetch("/ball")
         .then(res => res.json())
-        .then(res => res.map(c => c.options))
+        .then(res => res.data.map(c => c.options))
         .then(options => {
           for(let i=0; i<measure.length; i+= 1) {
             var button, link, sub;

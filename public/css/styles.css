@@ -140,6 +140,9 @@ tbody {
 tbody tr {
   display:flex;
   justify-content: space-around;
+  height:10%;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 td:nth-child(1), th:nth-child(1) { width: 7%; display: flex; justify-content: center;}
@@ -164,8 +167,4 @@ iframe{
 	border:none;
 	display: block;
 	margin: 0px auto 25px auto;
-}
-
-#draw img {
-  background: none;
 }
