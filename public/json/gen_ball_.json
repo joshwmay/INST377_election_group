@@ -1,0 +1,228 @@
+[
+{
+  "measure": "Gobernador/Vicegobernador",
+  "selections":"1",
+  "options":[
+    "Larry Hogan y Boyd K. Rutherford, Republicano",
+    "Ben Jealous y Susan Turnbull, Democrático",
+    "Shawn Quinn y Christina Smith, Libertarian",
+    "Ian Schlakman y Annie Chambers, Green",
+    "o escribir en"
+  ]
+},
+{
+  "measure": "Contralor",
+  "selections":"1",
+  "options":[
+      "Anjali Reed Phukan, Republicano",
+      "Peter Franchot, Democrático",
+      "o escribir en"
+    ]
+},
+{
+  "measure": "Procurador General",
+  "selections":"1",
+  "options":[
+      "Craig Wolf, Republicano",
+      "Brian E. Frosh, Democrático",
+      "o escribir en"
+    ]
+},
+{
+  "measure": "Senador de EE.UU.",
+  "selections":"1",
+  "options":[
+      "Tony Campbell, Republicano",
+      "Ben Cardin, Democrático",
+      "Arvin Vohra, Libertarian",
+      "Neal Simon, Unaffiliated",
+      "o escribir en"
+    ]
+},
+{
+  "measure": "Ejecutivo del Condado",
+  "selections":"1",
+  "options":[
+      "Angela Alsobrooks, Democrático",
+      "o escribir en"
+    ]
+},
+{
+  "measure": "Miembro del Concejo Representyo el Condado",
+  "selections":"2",
+  "options":[
+      "Felicia Folarin, Republicano",
+      "Mel Franklin, Democrático",
+      "Calvin Hawkins, Democrático",
+      "o escribir en",
+      "o escribir en"
+    ]
+},
+{
+  "measure": "Juez, Corte de Apelaciones Especiales Representyo el Condado Donald E. Beachley Vote sí o no Para continuar en el cargo",
+  "selections":"1",
+  "options":[
+      "Si",
+      "No"
+    ]
+},
+{
+  "measure": "Juez, Corte de Apelaciones Especiales Representyo el Condado Matthew J. Fader Vote sí o no Para continuar en el cargo",
+  "selections":"1",
+  "options":[
+      "Si",
+      "No"
+    ]
+},
+{
+  "measure": "Juez, Corte de Apelaciones Especiales Circuito 4 Melanie Shaw Geter Vote sí o no Para continuar en el cargo",
+  "selections":"1",
+  "options":[
+      "Si",
+      "No"
+    ]
+},
+{
+  "measure": "Fiscal del Estado",
+  "selections":"1",
+  "options":[
+      "Aisha Braveboy, Democrático",
+      "o escribir en"
+    ]
+},
+{
+  "measure": "Secretario de la Corte del Circuito",
+  "selections":"1",
+  "options":[
+      "Mahasin El Amin, Democrático",
+      "o escribir en"
+    ]
+},
+{
+  "measure": "Registrador Testamentario",
+  "selections":"1",
+  "options":[
+      "Cereta A. Lee, Democrático",
+      "o escribir en"
+    ]
+},
+{
+  "measure": "Juez de la Corte de Huérfanos",
+  "selections":"3",
+  "options":[
+      "Wendy Alise Cartwright, Democrático",
+      "Athena Malloy Groves, Democrático",
+      "Vicky L. Ivory-Orem, Democrático",
+      "o escribir en",
+      "o escribir en",
+      "o escribir en"
+    ]
+},
+{
+  "measure": "Alguacil",
+  "selections":"1",
+  "options":[
+      "Melvin C. High, Democrático",
+      "o escribir en"
+    ]
+},
+{
+  "measure": "Pregunta A Referéndum Requerido por el Estatuto Constitucional del Condado (CB-30-2018) Bonos para Obras Públicas y Servicios de Transporte",
+  "description": "UN ACTA la cual autoriza al Condado a tomar prestado y emitir bonos por una cantidad no superior a $148,287,000 para financiar el diseño, construcción, reconstrucción, extensión, adquisición, mejora, ampliación, modificación, renovación, reubicación, rehabilitación o reparación de Obras Públicas e Instalaciones de Transportación (la cual incluye carreteras, puentes, estacionamientos e instalaciones de mantenimiento), según allí definidas.",
+  "selections":"1",
+  "options":[
+      "A favor del Referéndum del Estatuto Constitucional",
+      "En Contra del Referéndum del Estatuto Constitucional"
+    ]
+},
+{
+  "measure": "Pregunta B Referéndum Requerido por el Estatuto Constitucional del Condado (CB-31-2018) Bonos para Instalaciones de Bibliotecas",
+  "description": "UN ACTA la cual autoriza al Condado a tomar prestado y emitir bonos por una cantidad no superior a $16,796,000 para financiar el diseño, construcción, reconstrucción, extensión, adquisición, mejora, ampliación, modificación, renovación, reubicación, rehabilitación o reparación de las Instalaciones de las Bibliotecas según allí definidas.",
+  "selections":"1",
+  "options":[
+      "A favor del Referéndum del Estatuto Constitucional",
+      "En Contra del Referéndum del Estatuto Constitucional"
+    ]
+},
+{
+  "measure": "Pregunta C Referéndum Requerido por el Estatuto Constitucional del Condado (CB-32-2018) Bonos para Instalaciones de Seguridad Pública",
+  "description": "UN ACTA la cual autoriza al Condado a tomar prestado y emitir bonos por una cantidad no superior a $56,053,000 para financiar el diseño, construcción, reconstrucción, extensión, adquisición, mejora, ampliación, modificación, renovación, reubicación, rehabilitación o reparación de las instalaciones de Seguridad Pública (incluyendo las Instalaciones del Cuerpo de Bomberos), según allí definidas.",
+  "selections":"1",
+  "options":[
+      "A favor del Referéndum del Estatuto Constitucional",
+      "En Contra del Referéndum del Estatuto Constitucional"
+    ]
+},
+{
+  "measure": "Pregunta D Referéndum Requerido por el Estatuto Constitucional del Condado (CB-33-2018) Bonos para Edificios del Condado",
+  "description": "UN ACTA la cual autoriza al Condado a tomar prestado y emitir bonos por una cantidad no superior a $97,564,000 para financiar el diseño, construcción, reconstrucción, extensión, adquisición, mejora, ampliación, modificación, renovación, reubicación, rehabilitación o reparación de los Edificios del Condado, según allí definidas.",
+  "selections":"1",
+  "options":[
+      "A favor del Referéndum del Estatuto Constitucional",
+      "En Contra del Referéndum del Estatuto Constitucional"
+    ]
+},
+{
+  "measure": "Pregunta E Referéndum Requerido por el Estatuto Constitucional del Condado (CB-34-2018) Bonos para las Instalaciones del Colegio Comunitario",
+  "description": "UN ACTA la cual autoriza al Condado a tomar prestado y emitir bonos por una cantidad no superior a $81,187,000 para financiar el diseño, construcción, reconstrucción, extensión, adquisición, mejora, ampliación, modificación, renovación, reubicación, rehabilitación o reparación de las instalaciones del Colegio Comunitario, según allí definidas.",
+  "selections":"1",
+  "options":[
+      "A favor del Referéndum del Estatuto Constitucional",
+      "En Contra del Referéndum del Estatuto Constitucional"
+    ]
+},
+{
+  "measure": "Pregunta F Enmienda al Estatuto Constitucional del Condado (CB-35-2018) (DR-2) Requisito de Residencia para Miembro del Concejo",
+  "description": "Para establecer un requisito de residencia de un año para los Miembros del Concejo por Distrito y para Miembros del Concejo por Acumulación, para establecer que un Miembro del Concejo por Acumulación debe de haber sido un votante cualificado en el Condado de Prince George's por un espacio mínimo de un año inmediatamente precedente a su elección primaria, y establecer que los Miembros del Concejo por Distrito que representan uno de los nueve distritos del Concejo debe de haber sido un votante cualificado de su distrito del Concejo respectivo por un espacio mínimo de un año inmediatamente precedente a su elección primaria.",
+  "selections":"1",
+  "options":[
+      "A Favor de la Enmienda del Estatuto Constitucional del Condado",
+      "En Contra de la Enmienda del Estatuto Constitucional del Condado"
+    ]
+},
+{
+  "measure": "Pregunta G Enmienda al Estatuto Constitucional del Condado (CB-36-2018) Antidiscriminación - Personal del Condado y Contratante",
+  "description": "Se establece un derecho individual a la no discriminación, se establece medios antidiscriminatorios en el empleo de un contratista que trabaja con el Condado, y para establecer reglamentos antidiscriminatorios en el sistema del departamento de personal del Condado, todos basados en el estado civil, estado familiar, discapacidad, edad y orientación sexual.",
+  "selections":"1",
+  "options":[
+      "For the Charter Amendment / A Favor dela Enmienda del Estatuto Constitucional delCondado",
+      "Against the Charter Amendment / EnContra de la Enmienda del EstatutoConstitucional del Condado"
+    ]
+},
+{
+  "measure": "Pregunta H Enmienda al Estatuto Constitucional del Condado (CB-38-2018) Puesto a Tiempo Completo de los Miembros del Concejo del Condado",
+  "description": "Se establece que el puesto como miembro del Concejo se considerará como un puesto a tiempo completo para los fines de determinar la compensación.",
+  "selections":"1",
+  "options":[
+      "A Favor de la Enmienda del Estatuto Constitucional del Condado",
+      "En Contra de la Enmienda del Estatuto Constitucional del Condado"
+    ]
+},
+{
+  "measure": "Pregunta I Enmienda al Estatuto Constitucional del Condado (CB-39-2018) Auditor del Condado - Designación, Responsabilidades y Autoridad",
+  "description": "Se Dispone que se designe al Auditor del Condado por un plazo de cinco años, renovable por periodos adicionales de cinco años, sujeto a despido con causa, con permanencia hasta que se nombre un sucesor y este califique, se dispone que las agencias selectas que reciben o desembolsan fondos del Condado estarán sujeta a una auditoria financiera completa para el año fiscal precedente; y para disponer que se faculte al Auditor del Condado para conducir investigaciones relacionadas a fraude, desperdicio y abuso por parte del Ejecutivo del Condado, Miembros del Concejo u otros funcionarios y empleados del Condado.",
+  "selections":"1",
+  "options":[
+      "A Favor de la Enmienda del Estatuto Constitucional del Condado",
+      "En Contra de la Enmienda del Estatuto Constitucional del Condado"
+    ]
+},
+{
+  "measure": "Pregunta J Enmienda al Estatuto Constitucional del Condado (CB-40-2018) Personal del Condado - Designación Temporal",
+  "description": "Se dispone a que se pueda designar temporalmente a una persona para cubrir una vacante, por no más de un año, sin que exista un nombramiento permanente.",
+  "selections":"1",
+  "options":[
+      "A Favor de la Enmienda del Estatuto Constitucional del Condado",
+      "En Contra de la Enmienda del Estatuto Constitucional del Condado"
+    ]
+},
+{
+  "measure": "Pregunta K Enmienda al Estatuto Constitucional del Condado (CB-41-2018) Comisión de Revisión del Estatuto Constitucional del Condado - Duración del Periodo",
+  "description": "Se establece una Comisión de Revisión al Estatuto Constitucional del Condado, a no más tardar de un año antes del inicio de cada cuatrienio, con el propósito de realizar un estudio comprensivo del Estatuto Constitucional del Condado y de disponer que la Comisión de Revisión del Estatuto Constitucional del Condado comenzará su trabajo a discreción del Presidente de la Comisión.",
+  "selections":"1",
+  "options":[
+      "A Favor de la Enmienda del Estatuto Constitucional del Condado",
+      "En Contra de la Enmienda del Estatuto Constitucional del Condado"
+    ]
+  }
+]
