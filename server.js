@@ -1,9 +1,12 @@
 const express = require('express');
 const fetch = require('node-fetch');
+const bodyParser = require('body-parser')
 
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.use(bodyParser.urlencoded({ extended: false}));
+app.use(bodyParser.json())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -56,7 +59,6 @@ app.get('/s1', (req, res) => {
       console.log(err);
       res.redirect('/error');
         })
-
 });
 
 app.get('/s2', (req, res) => {
@@ -71,7 +73,6 @@ app.get('/s2', (req, res) => {
       console.log(err);
       res.redirect('/error');
         })
-
 });
 
 app.get('/s3', (req, res) => {
@@ -86,7 +87,6 @@ app.get('/s3', (req, res) => {
       console.log(err);
       res.redirect('/error');
         })
-
 });
 
 app.get('/s4', (req, res) => {
@@ -101,7 +101,6 @@ app.get('/s4', (req, res) => {
       console.log(err);
       res.redirect('/error');
         })
-
 });
 
 app.get('/s5', (req, res) => {
@@ -116,7 +115,6 @@ app.get('/s5', (req, res) => {
       console.log(err);
       res.redirect('/error');
         })
-
 });
 
 app.get('/s6', (req, res) => {
@@ -131,7 +129,6 @@ app.get('/s6', (req, res) => {
       console.log(err);
       res.redirect('/error');
         })
-
 });
 
 app.get('/s7', (req, res) => {
@@ -146,7 +143,6 @@ app.get('/s7', (req, res) => {
       console.log(err);
       res.redirect('/error');
         })
-
 });
 
 app.get('/s8', (req, res) => {
@@ -175,7 +171,6 @@ app.get('/s9', (req, res) => {
       console.log(err);
       res.redirect('/error');
         })
-
 });
 
 app.get('/sa', (req, res) => {
@@ -190,7 +185,6 @@ app.get('/sa', (req, res) => {
       console.log(err);
       res.redirect('/error');
         })
-
 });
 
 app.get('/ball', (req, res) => {
@@ -205,7 +199,6 @@ app.get('/ball', (req, res) => {
       console.log(err);
       res.redirect('/error');
         })
-
 });
 
 app.get('/ball_', (req, res) => {
@@ -220,8 +213,9 @@ app.get('/ball_', (req, res) => {
       console.log(err);
       res.redirect('/error');
         })
-
 });
-//cd documents/github/inst377_election_group
+
+
+
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

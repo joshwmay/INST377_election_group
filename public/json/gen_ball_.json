@@ -1,6 +1,7 @@
 [
 {
   "measure": "Gobernador/Vicegobernador",
+  "description": "",
   "selections":"1",
   "options":[
     "Larry Hogan y Boyd K. Rutherford, Republicano",
@@ -12,6 +13,7 @@
 },
 {
   "measure": "Contralor",
+  "description": "",
   "selections":"1",
   "options":[
       "Anjali Reed Phukan, Republicano",
@@ -21,6 +23,7 @@
 },
 {
   "measure": "Procurador General",
+  "description": "",
   "selections":"1",
   "options":[
       "Craig Wolf, Republicano",
@@ -30,6 +33,7 @@
 },
 {
   "measure": "Senador de EE.UU.",
+  "description": "",
   "selections":"1",
   "options":[
       "Tony Campbell, Republicano",
@@ -41,6 +45,7 @@
 },
 {
   "measure": "Ejecutivo del Condado",
+  "description": "",
   "selections":"1",
   "options":[
       "Angela Alsobrooks, Democrático",
@@ -49,6 +54,7 @@
 },
 {
   "measure": "Miembro del Concejo Representyo el Condado",
+  "description": "",
   "selections":"2",
   "options":[
       "Felicia Folarin, Republicano",
@@ -60,6 +66,7 @@
 },
 {
   "measure": "Juez, Corte de Apelaciones Especiales Representyo el Condado Donald E. Beachley Vote sí o no Para continuar en el cargo",
+  "description": "",
   "selections":"1",
   "options":[
       "Si",
@@ -68,6 +75,7 @@
 },
 {
   "measure": "Juez, Corte de Apelaciones Especiales Representyo el Condado Matthew J. Fader Vote sí o no Para continuar en el cargo",
+  "description": "",
   "selections":"1",
   "options":[
       "Si",
@@ -76,6 +84,7 @@
 },
 {
   "measure": "Juez, Corte de Apelaciones Especiales Circuito 4 Melanie Shaw Geter Vote sí o no Para continuar en el cargo",
+  "description": "",
   "selections":"1",
   "options":[
       "Si",
@@ -84,6 +93,7 @@
 },
 {
   "measure": "Fiscal del Estado",
+  "description": "",
   "selections":"1",
   "options":[
       "Aisha Braveboy, Democrático",
@@ -92,6 +102,7 @@
 },
 {
   "measure": "Secretario de la Corte del Circuito",
+  "description": "",
   "selections":"1",
   "options":[
       "Mahasin El Amin, Democrático",
@@ -100,6 +111,7 @@
 },
 {
   "measure": "Registrador Testamentario",
+  "description": "",
   "selections":"1",
   "options":[
       "Cereta A. Lee, Democrático",
@@ -108,6 +120,7 @@
 },
 {
   "measure": "Juez de la Corte de Huérfanos",
+  "description": "",
   "selections":"3",
   "options":[
       "Wendy Alise Cartwright, Democrático",
@@ -120,6 +133,7 @@
 },
 {
   "measure": "Alguacil",
+  "description": "",
   "selections":"1",
   "options":[
       "Melvin C. High, Democrático",

@@ -6,7 +6,6 @@ sx7 = 0;
 sx9 = 0;
 lang = 0;
 
-
 function JSONtable(str, n) {
   if (str === "/s1") {
     if (sx1 === 0) {
@@ -167,82 +166,90 @@ function JSONtable(str, n) {
 }
 function loadData() {
   var content = document.querySelector(".content");
-  if(lang === 1) {
-    lang = 0;
-    content.innerHTML = "";
-    return loadData_()
-  }
-  else {
-    content.innerHTML = "";
-    lang = 1
-  };
+  content.innerHTML = "";
   fetch("/ball")
     .then(res => res.json())
     .then(res => res.data.map(c => c.measure))
     .then(measure => {
       fetch("/ball")
         .then(res => res.json())
-        .then(res => res.data.map(c => c.options))
-        .then(options => {
-          for(let i=0; i<measure.length; i+= 1) {
-            var button, link, sub;
-            button = document.createElement("button");
-            link = document.createElement("a");
-            sub = measure[i].toString();
-            link.innerHTML = sub;
-            link.href = candidate_info(sub);
-            link.title = "Learn more about " + sub;
-            button.appendChild(link);
-            content.appendChild(button);
-            for(let v = 0; v < options[i].length; v += 1) {
-              var op, a, inp, sub;
-              op = document.createElement("button");
-              a = document.createElement("a");
-              inp = document.createElement("input")
-              sub = options[i][v].toString();
-              a.innerHTML = sub;
-              if (sub === "or write-in") {
-                var radio = document.createElement("input");
-                inp.type = "text";
-                radio.type = "radio";
-                a.title = "Enter write-in choice for " + measure[i] + " here";
-                inp.title = "Enter write-in choice for " + measure[i] + " here";
-                op.appendChild(a);
-                op.appendChild(inp);
-                op.appendChild(radio);
-                content.appendChild(op);
-                if((v+1) === options[i].length){
-                  let br = document.createElement("p");
-                  content.appendChild(br);
-                  }
-
-              } else if(
-                sub === "Yes" || sub === "No" || sub.includes("For ") === true || sub.includes("Against ") === true) {
-                  op.innerHTML = sub;
-                  inp.type = "radio";
-                  op.appendChild(inp);
-                  content.appendChild(op);
-                  if((v+1) === options[i].length){
-                    let br = document.createElement("p");
-                    content.appendChild(br);
-                    }
-              } else {
-                  a.href = candidate_info(sub);
-                  a.title = "Learn more about " + sub;
-                  op.appendChild(a);
-                  inp.type = "radio";
-                  op.appendChild(inp);
-                  content.appendChild(op);
-                  if((v+1) === options[i].length){
-                    let br = document.createElement("p");
-                    content.appendChild(br);
-                    }
+        .then(res => res.data.map(c => c.description))
+        .then(description => {
+          fetch("/ball")
+            .then(res => res.json())
+            .then(res => res.data.map(c => c.selections))
+            .then(selections => {
+              fetch("/ball")
+                .then(res => res.json())
+                .then(res => res.data.map(c => c.options))
+                .then(options => {
+                  for(let i=0; i<measure.length; i+= 1) {
+                    var button, link, sub;
+                    button = document.createElement("button");
+                    link = document.createElement("a");
+                    sub = measure[i].toString();
+                    link.innerHTML = sub;
+                    link.href = candidate_info(sub);
+                    link.title = "Learn more about " + sub;
+                    button.appendChild(link);
+                    content.appendChild(button);
+                    for(let v = 0; v < options[i].length; v += 1) {
+                      var op, a, inp, sub;
+                      op = document.createElement("button");
+                      a = document.createElement("a");
+                      inp = document.createElement("input")
+                      sub = options[i][v].toString();
+                      a.innerHTML = sub;
+                      if (sub === "or write-in") {
+                        var radio = document.createElement("input");
+                        radio.value = measure[i];
+                        inp.type = "text";
+                        radio.type = "radio";
+                        a.title = "Enter write-in choice for " +
+                                  measure[i] + " here";
+                        inp.title = "Enter write-in choice for " +
+                                  measure[i] + " here";
+                        op.appendChild(a);
+                        op.appendChild(inp);
+                        op.appendChild(radio);
+                        content.appendChild(op);
+                        if((v+1) === options[i].length){
+                          let br = document.createElement("p");
+                          content.appendChild(br);
+                          }
+                      } else if(
+                      sub === "Yes" || sub === "No" ||
+                      sub.includes("For ") === true ||
+                      sub.includes("Against ") === true) {
+                        op.innerHTML = sub;
+                        inp.type = "radio";
+                        inp.value = measure[i];
+                        op.appendChild(inp);
+                        content.appendChild(op);
+                        if((v+1) === options[i].length){
+                          let br = document.createElement("p");
+                          content.appendChild(br);
+                          }
+                      } else {
+                        a.href = candidate_info(sub);
+                        a.title = "Learn more about " + sub;
+                        op.appendChild(a);
+                        inp.type = "radio";
+                        inp.value = measure[i];
+                        op.appendChild(inp);
+                        content.appendChild(op);
+                        if((v+1) === options[i].length){
+                          let br = document.createElement("p");
+                          content.appendChild(br);
                 }
+              }
             }
-        }
+          }
+        })
       })
     })
-  };
+  })
+};
 function candidate_info(string) {
   var res = "https://ballotpedia.org/";
   var str = string.replace("Republican", "9");
@@ -412,6 +419,7 @@ function table_search() {
 }
 function loadData_() {
   var content = document.querySelector(".content");
+  content.innerHTML = "";
   fetch("/ball_")
     .then(res => res.json())
     .then(res => res.data.map(c => c.measure))
@@ -435,7 +443,8 @@ function loadData_() {
               radio.type = "radio";
               if (sub === "o escribir en") {
                 inp.type = "text";
-                inp.title = "Ingrese la opción de escritura para " + measure[i] + "aquí";
+                inp.title = "Ingrese la opción de escritura para " +
+                          measure[i] + "aquí";
                 op.innerHTML = sub;
                 op.appendChild(inp);
                 op.appendChild(radio);

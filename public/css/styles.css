@@ -123,6 +123,16 @@ thead{
   cursor: pointer;
 }
 
+thead th:hover {
+  background: #bbb;
+	border-bottom-color: #999;
+}
+
+thead th:active {
+  background: #4334eb;
+	border-bottom-color: #999;
+}
+
 thead tr {
   display:flex;
   justify-content: space-around;
@@ -141,13 +151,18 @@ tbody tr {
   display:flex;
   justify-content: space-around;
   height:10%;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+tbody tr:hover {
+  background: #bbb;
+	border-bottom-color: #999;
 }
 
 td:nth-child(1), th:nth-child(1) { width: 7%; display: flex; justify-content: center;}
-td:nth-child(2), th:nth-child(2) { width: 30%; min-width: 10%;}
-td:nth-child(3), th:nth-child(3) { width: 30%; min-width: 10%;}
+td:nth-child(3), th:nth-child(3) { width: 30%; min-width: 10%;overflow-wrap: break-word;}
+td:nth-child(2), th:nth-child(2) { width: 30%; min-width: 10%; overflow-wrap: break-word;}
 td:nth-child(4), th:nth-child(4) { width: 10%; display: flex; justify-content: center;}
 td:nth-child(5), th:nth-child(5) { width: 10%; display: flex; justify-content: center;}
 

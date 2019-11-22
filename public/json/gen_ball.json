@@ -1,6 +1,7 @@
 [
 {
   "measure": "Governor/Lt. Governor",
+  "description": "",
   "selections":"1",
   "options":[
     "Larry Hogan and Boyd K. Rutherford, Republican",
@@ -12,6 +13,7 @@
 },
 {
   "measure": "Comptroller",
+  "description": "",
   "selections":"1",
   "options":[
       "Anjali Reed Phukan, Republican",
@@ -21,6 +23,7 @@
 },
 {
   "measure": "Attorney General",
+  "description": "",
   "selections":"1",
   "options":[
       "Craig Wolf, Republican",
@@ -30,6 +33,7 @@
 },
 {
   "measure": "U.S. Senator",
+  "description": "",
   "selections":"1",
   "options":[
       "Tony Campbell, Republican",
@@ -41,6 +45,7 @@
 },
 {
   "measure": "County Executive",
+  "description": "",
   "selections":"1",
   "options":[
       "Angela Alsobrooks, Democratic",
@@ -49,6 +54,7 @@
 },
 {
   "measure": "County Council At Large",
+  "description": "",
   "selections":"2",
   "options":[
       "Felicia Folarin, Republican",
@@ -60,6 +66,7 @@
 },
 {
   "measure": "Judge, Court of Special Appeals At Large Donald E. Beachley Vote Yes or No For Continuance in Office",
+  "description": "",
   "selections":"1",
   "options":[
       "Yes",
@@ -68,6 +75,7 @@
 },
 {
   "measure": "Judge, Court of Special Appeals At Large Matthew J. Fader Vote Yes or No For Continuance in Office",
+  "description": "",
   "selections":"1",
   "options":[
       "Yes",
@@ -76,6 +84,7 @@
 },
 {
   "measure": "Judge, Court of Special Appeals Circuit 4 Melanie Shaw Geter Vote Yes or No For Continuance in Office",
+  "description": "",
   "selections":"1",
   "options":[
       "Yes",
@@ -84,6 +93,7 @@
 },
 {
   "measure": "State's Attorney",
+  "description": "",
   "selections":"1",
   "options":[
       "Aisha Braveboy, Democratic",
@@ -92,6 +102,7 @@
 },
 {
   "measure": "Clerk of the Circuit Court",
+  "description": "",
   "selections":"1",
   "options":[
       "Mahasin El Amin, Democratic",
@@ -100,6 +111,7 @@
 },
 {
   "measure": "Register of Wills",
+  "description": "",
   "selections":"1",
   "options":[
       "Cereta A. Lee, Democratic",
@@ -108,6 +120,7 @@
 },
 {
   "measure": "Judge of the Orphans' Court",
+  "description": "",
   "selections":"3",
   "options":[
       "Wendy Alise Cartwright, Democratic",
@@ -120,6 +133,7 @@
 },
 {
   "measure": "Sheriff",
+  "description": "",
   "selections":"1",
   "options":[
       "Melvin C. High, Democratic",
@@ -128,7 +142,6 @@
 },
 {
   "measure": "Question A Charter Referendum (CB-30-2018) Public Works and Transportation Facilities Bonds",
-  "_measure": "Pregunta A Referéndum Requerido por el Estatuto Constitucional del Condado (CB-30-2018) Bonos para Obras Públicas y Servicios de Transporte",
   "description": "AN ACT enabling the County to borrow money and issue bonds in an amount not exceeding $148,287,000 to finance the design, construction, reconstruction, extension, acquisition, improvement, enlargement, alteration, renovation, relocation, rehabilitation or repair of Public Works and Transportation Facilities (including roads and bridges, parking lots, and maintenance facilities), as defined therein.",
   "selections":"1",
   "options":[

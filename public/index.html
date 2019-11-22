@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang = "en-US">
 <head>
-  <meta charset = "utf-8" content = ”width=device-width, initial-scale=1″>
+  <meta charset = "utf-8">
   <title> PGC Voter Info Project</title>
-  <meta name = "Tamia Green, Joshua May, Tony Persaud, Ayesha Raza, Lorraine Siochi" content = "Group Project for INST 377">
+  <meta name = "Tamia Green, Joshua May, Tony Persaud, Ayesha Raza,
+  Lorraine Siochi" content = "Group Project for INST 377">
   <link rel  = "stylesheet" href  = "css/styles.css">
   <script src="js/script.js"></script>
 </head>
@@ -11,7 +12,10 @@
   <div class="container">
     <div class="wrapper">
       <div class="header">PGC Election Hub</div>
-      <button class="button" onclick="loadData()">View Generic Ballot</button>
+      <button class="button" onclick="loadData()">
+        View Generic Ballot in English</button>
+      <button class="button" onclick="loadData_()">
+        Ver boleta genérica en Español</button>
       <div class="content"></div>
       <input type="text" id="first" placeholder="First Name"></input>
       <input type="text" id="last" placeholder="Last Name"></input>
@@ -19,9 +23,10 @@
       <input type="text" id="day" placeholder="Day"></input>
       <input type="text" id="year" placeholder="Year"></input>
       <input type="text" id="zip" placeholder="Zip"></input>
-      <input type="submit"> </input>
+      <input type="submit" id="submit"> </input>
       <div class="scroll">
-        <input type="text" id="filter" onkeyup="table_search()" placeholder="Search for polling place"></input>
+        <input type="text" id="filter" onkeyup="table_search()"
+        placeholder="Search for polling place"></input>
         <table class="fixed" id="table">
           <thead>
             <tr>
@@ -39,7 +44,8 @@
       </div>
       <div class="sim-intro" rel = "stylesheet" href = "css/index.css">
         <p class="caption">
-        <iframe src="election.html" width="320" height="460" scrolling="no"></iframe>
+        <iframe src="election.html" width="320" height="460" scrolling="no">
+        </iframe>
         <div class="box" id="thanks"> <a href = "https://ncase.me/ballot/"
           title="Click here for more voting visualizations and information">
           Thanks to ncase and company who made the
