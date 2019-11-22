@@ -80,10 +80,11 @@ h3 {
   flex-direction: column;
 }
 
-.content a, button, innerHTML{
-  font-size: 110%
+.content button {
+  font-size: 22px ;
+  -moz-border-radius: 11px;
+  -webkit-border-radius: 11px;
 }
-
 ::-webkit-scrollbar {
   width: 0px;
 }
