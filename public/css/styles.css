@@ -1,12 +1,4 @@
 /* Set document default styles for text */
-body {
-  line-height: 1.6;
-  font-size: 18px;
-  color: #444;
-  padding: 0 10px;
-  background: #eee;
-}
-
 h1,
 h2,
 h3 {
@@ -171,10 +163,10 @@ tbody tr:hover {
 
 td:nth-child(1), th:nth-child(1) {
   width: 7%; display: flex; justify-content: center;}
-td:nth-child(3), th:nth-child(3) {
-  width: 30%; min-width: 10%;overflow-wrap: break-word; word-wrap: break-word;}
 td:nth-child(2), th:nth-child(2) {
-  width: 30%; min-width: 10%; overflow-wrap: break-word;word-wrap: break-word;}
+  max-width: 30%; min-width: 10%; overflow-wrap: break-word;word-wrap: break-word;}
+td:nth-child(3), th:nth-child(3) {
+  max-width: 30%; min-width: 10%;overflow-wrap: break-word; word-wrap: break-word;}
 td:nth-child(4), th:nth-child(4) {
   width: 10%; display: flex; justify-content: center;}
 td:nth-child(5), th:nth-child(5) {
