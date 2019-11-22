@@ -67,17 +67,21 @@ h3 {
 }
 
 .content {
-  background: #fff;
-  border: 2px dotted #444;
-  flex-grow: auto;
-  padding: 10px;
-  overflow-wrap: break-word;
-  margin: 25px 50px;
-  max-width: 400px;
-  max-height: 500px;
-  overflow:auto;
   display: flex;
+  background: #fff;
+  border: 1px dotted #444;
+  flex-grow: auto;
+  padding: 2%;
+  overflow-wrap: break-word;
+  margin: 2% 5%;
+  max-width: 30%;
+  max-height: 400px;
+  overflow: scroll;
   flex-direction: column;
+}
+
+.content a, button, innerHTML{
+  font-size: 110%
 }
 
 ::-webkit-scrollbar {
@@ -155,6 +159,10 @@ tbody tr {
   padding-bottom: 2%;
 }
 
+tbody th {
+  height: auto;
+}
+
 tbody tr:hover {
   background: #bbb;
 	border-bottom-color: #999;
@@ -175,10 +183,6 @@ tbody tr td{
   display: flex;
   justify-content: left;
   align-content: center;
-}
-
-.content a, button, innerText {
-  font-size: 110%
 }
 
 iframe{
