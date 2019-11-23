@@ -66,14 +66,14 @@ h3 {
   padding: 2%;
   overflow-wrap: break-word;
   margin: 2% 5%;
-  max-width: 30%;
+  max-width: 40%;
   max-height: 400px;
   overflow: scroll;
   flex-direction: column;
 }
 
 .content button {
-  font-size: 22px ;
+  font-size: 1.5em ;
   -moz-border-radius: 11px;
   -webkit-border-radius: 11px;
 }
@@ -144,11 +144,6 @@ tbody {
   overflow: scroll;
 }
 
-tbody td[2]{
-  display: flex;
-  align-content: center;
-  word-wrap: break-word;
-}
 
 tbody tr {
   display:flex;
@@ -158,6 +153,7 @@ tbody tr {
   padding-top: 2%;
   padding-bottom: 2%;
 }
+
 
 tbody tr:hover {
   background: #bbb;

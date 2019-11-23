@@ -1,10 +1,9 @@
-var sx1, sx3, sx5, sx7, sx9, lang;
+var sx1, sx3, sx5, sx7, sx9;
 sx1 = 0;
 sx3 = 0;
 sx5 = 0;
 sx7 = 0;
 sx9 = 0;
-lang = 0;
 
 function JSONtable(str, n) {
   if (str === "/s1") {
@@ -385,6 +384,7 @@ function search_string(string) {
       res += string[i]
       }
     }
+  res = res.replace("U+MARLBORO","UPPER+MARLBORO")
   res += "+MARYLAND"
   return res
 };
