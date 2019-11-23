@@ -141,19 +141,22 @@ tbody {
   width: auto;
   flex-direction: column;
   column-count: 5;
-  overflow: auto;
+  overflow: scroll;
+}
+
+tbody td[2]{
+  display: flex;
+  align-content: center;
+  word-wrap: break-word;
 }
 
 tbody tr {
   display:flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  align-content: space-evenly;
   height:10%;
   padding-top: 2%;
   padding-bottom: 2%;
-}
-
-tbody th {
-  height: auto;
 }
 
 tbody tr:hover {
@@ -161,21 +164,13 @@ tbody tr:hover {
 	border-bottom-color: #999;
 }
 
-td:nth-child(1), th:nth-child(1) {
-  width: 7%; display: flex; justify-content: center;}
-td:nth-child(2), th:nth-child(2) {
-  max-width: 30%; min-width: 10%; overflow-wrap: break-word;word-wrap: break-word;}
-td:nth-child(3), th:nth-child(3) {
-  max-width: 30%; min-width: 10%;overflow-wrap: break-word; word-wrap: break-word;}
-td:nth-child(4), th:nth-child(4) {
-  width: 10%; display: flex; justify-content: center;}
-td:nth-child(5), th:nth-child(5) {
-  width: 10%; display: flex; justify-content: center;}
 
-tbody tr td{
+
+tbody td{
   display: flex;
   justify-content: left;
   align-content: center;
+  vertical-align: middle;
 }
 
 iframe{
