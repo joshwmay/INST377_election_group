@@ -54,12 +54,11 @@ h3 {
   flex-wrap: nowrap;
 }
 
-.instructions {
-  padding: 0 25px;
-}
+
 
 .content {
   display: flex;
+  flex-direction: column;
   background: #fff;
   border: 1px dotted #444;
   flex-grow: auto;
@@ -69,6 +68,11 @@ h3 {
   max-width: 40%;
   max-height: 400px;
   overflow: scroll;
+
+}
+
+.content li {
+  display: flex;
   flex-direction: column;
 }
 

@@ -183,7 +183,8 @@ function loadData() {
                 .then(res => res.data.map(c => c.options))
                 .then(options => {
                   for(let i=0; i<measure.length; i+= 1) {
-                    var button, link, sub;
+                    var button, link, sub, line;
+                    line = document.createElement("li");
                     button = document.createElement("button");
                     link = document.createElement("a");
                     sub = measure[i].toString();
@@ -191,7 +192,8 @@ function loadData() {
                     link.href = candidate_info(sub);
                     link.title = "Learn more about " + sub;
                     button.appendChild(link);
-                    content.appendChild(button);
+                    line.appendChild(button);
+                    content.appendChild(line);
                     for(let v = 0; v < options[i].length; v += 1) {
                       var op, a, inp, sub;
                       op = document.createElement("button");
@@ -211,7 +213,8 @@ function loadData() {
                         op.appendChild(a);
                         op.appendChild(inp);
                         op.appendChild(radio);
-                        content.appendChild(op);
+                        line.appendChild(op);
+                        content.appendChild(line);
                         if((v+1) === options[i].length){
                           let br = document.createElement("p");
                           content.appendChild(br);
@@ -224,7 +227,8 @@ function loadData() {
                         inp.type = "radio";
                         inp.value = measure[i];
                         op.appendChild(inp);
-                        content.appendChild(op);
+                        line.appendChild(op);
+                        content.appendChild(line);
                         if((v+1) === options[i].length){
                           let br = document.createElement("p");
                           content.appendChild(br);
@@ -236,7 +240,8 @@ function loadData() {
                         inp.type = "radio";
                         inp.value = measure[i];
                         op.appendChild(inp);
-                        content.appendChild(op);
+                        line.appendChild(op);
+                        content.appendChild(line);
                         if((v+1) === options[i].length){
                           let br = document.createElement("p");
                           content.appendChild(br);
@@ -429,11 +434,13 @@ function loadData_() {
         .then(res => res.data.map(c => c.options))
         .then(options => {
           for(let i=0; i<measure.length; i+= 1) {
-            var button, sub;
+            var button, sub, line;
+            line = document.createElement("li");
             button = document.createElement("button");
             sub = measure[i].toString();
             button.innerHTML = sub;
-            content.appendChild(button);
+            line.appendChild(button);
+            content.appendChild(line);
             for(let v = 0; v < options[i].length; v += 1) {
               var op, inp, sub, radio;
               op = document.createElement("button");
@@ -448,7 +455,8 @@ function loadData_() {
                 op.innerHTML = sub;
                 op.appendChild(inp);
                 op.appendChild(radio);
-                content.appendChild(op);
+                line.appendChild(op);
+                content.appendChild(line);
                 if((v+1) === options[i].length){
                   let br = document.createElement("p");
                   content.appendChild(br);
@@ -457,7 +465,8 @@ function loadData_() {
                else {
                   op.innerHTML = sub;
                   op.appendChild(radio);
-                  content.appendChild(op);
+                  line.appendChild(op);
+                  content.appendChild(line);
                   if((v+1) === options[i].length){
                     let br = document.createElement("p");
                     content.appendChild(br);
