@@ -183,20 +183,20 @@ function loadData() {
                 .then(res => res.data.map(c => c.options))
                 .then(options => {
                   for(let i=0; i<measure.length; i+= 1) {
-                    var button, link, sub, line;
+                    var p, link, sub, line;
                     line = document.createElement("li");
-                    button = document.createElement("button");
+                    p = document.createElement("p");
                     link = document.createElement("a");
                     sub = measure[i].toString();
                     link.innerHTML = sub;
                     link.href = candidate_info(sub);
                     link.title = "Learn more about " + sub;
-                    button.appendChild(link);
-                    line.appendChild(button);
+                    p.appendChild(link);
+                    line.appendChild(p);
                     content.appendChild(line);
                     for(let v = 0; v < options[i].length; v += 1) {
                       var op, a, inp, sub;
-                      op = document.createElement("button");
+                      op = document.createElement("p");
                       a = document.createElement("a");
                       inp = document.createElement("input")
                       sub = options[i][v].toString();
@@ -434,16 +434,16 @@ function loadData_() {
         .then(res => res.data.map(c => c.options))
         .then(options => {
           for(let i=0; i<measure.length; i+= 1) {
-            var button, sub, line;
+            var p, sub, line;
             line = document.createElement("li");
-            button = document.createElement("button");
+            p = document.createElement("p");
             sub = measure[i].toString();
-            button.innerHTML = sub;
-            line.appendChild(button);
+            p.innerHTML = sub;
+            line.appendChild(p);
             content.appendChild(line);
             for(let v = 0; v < options[i].length; v += 1) {
               var op, inp, sub, radio;
-              op = document.createElement("button");
+              op = document.createElement("p");
               inp = document.createElement("input")
               sub = options[i][v].toString();
               radio = document.createElement("input");
