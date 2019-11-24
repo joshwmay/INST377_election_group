@@ -1,6 +1,6 @@
 const express = require('express');
 const fetch = require('node-fetch');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -187,8 +187,8 @@ app.get('/sa', (req, res) => {
         })
 });
 
-app.get('/ball', (req, res) => {
-  const baseURL = 'https://joshwmay.github.io/pgc_election_group/public/json/gen_ball.json';
+app.get('/sb', (req, res) => {
+  const baseURL = 'https://joshwmay.github.io/pgc_election_group/public/json/places5.json';
   fetch(baseURL)
     .then(res => res.json())
     .then(data => {
@@ -201,8 +201,8 @@ app.get('/ball', (req, res) => {
         })
 });
 
-app.get('/ball_', (req, res) => {
-  const baseURL = 'https://joshwmay.github.io/pgc_election_group/public/json/gen_ball_.json';
+app.get('/sc', (req, res) => {
+  const baseURL = 'https://joshwmay.github.io/pgc_election_group/public/json/places5_.json';
   fetch(baseURL)
     .then(res => res.json())
     .then(data => {
@@ -214,8 +214,4 @@ app.get('/ball_', (req, res) => {
       res.redirect('/error');
         })
 });
-
-
-
-
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))
