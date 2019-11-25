@@ -14,7 +14,6 @@ window.addEventListener('load', () => {
   function end() {
     painting = false;
   }
-
   function draw(e) {
     if(!painting) return;
     ctx.lineWidth = 20;
@@ -23,11 +22,23 @@ window.addEventListener('load', () => {
     ctx.beginPath();
     ctx.moveTo(e.clientX, e.clientY);
   }
-  canvas.addEventListener('mousedown', start);
-  canvas.addEventListener('mouseup', end);
-  canvas.addEventListener('mousemove', draw);
-
+  function draw_(e) {
+    if(!painting) return;
+    ctx.lineWidth = 20;
+    ctx.lineTo(e.targetTouches[0].pageX, e.targetTouches[0].pageY);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(e.targetTouches[0].pageX, e.targetTouches[0].pageY);
+    e.preventDefault();
+  }
+  canvas.addEventListener('mousedown', start, false);
+  canvas.addEventListener('mouseup', end, false);
+  canvas.addEventListener('mousemove', draw, false);
+  canvas.addEventListener('touchstart', start, false);
+  canvas.addEventListener('touchmove', draw_, false);
+  canvas.addEventListener('touchend', end, false);
 });
+
 function reset() {
   const canvas = document.querySelector("#pencil");
   const ctx = canvas.getContext("2d");
