@@ -74,6 +74,7 @@ function stringer(str) {
     };
   }
 }
+
 function JSONtable(str) {
   var input = document.getElementById("filter");
   var filter = input.value.toString();
@@ -102,40 +103,42 @@ function JSONtable(str) {
                           .then(res => res.json())
                           .then(res => res.data.map(c => c.style))
                           .then(style => {
-                            var table = document.getElementById("body");
-                            table.innerHTML = "";
-                            for(let i = 0; i < style.length; i+=1) {
-                              var row, col0, col1, col2, col3, col4, col5;
-                              row = table.insertRow(i);
-                              col0 = row.insertCell(0);
-                              col1 = row.insertCell(1);
-                              col2 = row.insertCell(2);
-                              col3 = row.insertCell(3);
-                              col4 = row.insertCell(4);
-                              col5 = row.insertCell(5);
+      // This wavy if/else promise string creates a table with links and
+      // searchable criteria.
+      var table = document.getElementById("body");
+      table.innerHTML = "";
+      for(let i = 0; i < style.length; i+=1) {
+        var row, col0, col1, col2, col3, col4, col5;
+        row = table.insertRow(i);
+        col0 = row.insertCell(0);
+        col1 = row.insertCell(1);
+        col2 = row.insertCell(2);
+        col3 = row.insertCell(3);
+        col4 = row.insertCell(4);
+        col5 = row.insertCell(5);
 
-                              let style_sub, a1, add_sub, a2, map_link;
-                              style_sub = style[i].toString();
-                              a1 = document.createElement('a');
-                              a1.title = "Sample ballot for style " + style_sub
-                              a1.innerHTML = style_sub;
+        let style_sub, a1, add_sub, a2, map_link;
+        style_sub = style[i].toString();
+        a1 = document.createElement('a');
+        a1.title = "Sample ballot for style " + style_sub
+        a1.innerHTML = style_sub;
 
-                              add_sub = address[i].toString();
-                              a2 = document.createElement('a');
-                              map_link = document.createTextNode(add_sub);
-                              a2.title = "View " + add_sub + " on map";
-                              a2.href = search_string(address[i]);
-                              map_link.innerHTML = add_sub;
-                              a2.appendChild(map_link);
+        add_sub = address[i].toString();
+        a2 = document.createElement('a');
+        map_link = document.createTextNode(add_sub);
+        a2.title = "View " + add_sub + " on map";
+        a2.href = search_string(address[i]);
+        map_link.innerHTML = add_sub;
+        a2.appendChild(map_link);
 
-                              col0.innerHTML = dis_prec[i];
-                              col1.innerHTML = title[i];
-                              col2.appendChild(a2);
-                              col3.innerHTML = city[i];
-                              col4.innerHTML = zip[i];
-                              col5.appendChild(a1);
+        col0.innerHTML = dis_prec[i];
+        col1.innerHTML = title[i];
+        col2.appendChild(a2);
+        col3.innerHTML = city[i];
+        col4.innerHTML = zip[i];
+        col5.appendChild(a1);
                             }
-                            table_search()
+        console.log(table_search())
                           })
                        })
                    })
@@ -209,7 +212,7 @@ function JSONtable(str) {
            })
        })
     }
-}
+};
 function loadData(str) {
   var content = document.querySelector(".content");
   if(str === "none") {
@@ -537,4 +540,4 @@ function loadData_() {
 
      })
    })
-}
+};
