@@ -21,7 +21,12 @@ h3 {
   align-items: flex-start;
   font-family: Helvetica, Geneva, Tahoma, sans-serif;
 }
-
+#sim-fill .caption {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  align-self: flex-end;
+}
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -138,29 +143,42 @@ thead th:active {
 
 thead tr {
   display:flex;
-  justify-content: space-around;
+  justify-content: space-between;
+
+  column-count: 5;
+  font-size: 25px;
+  height:20px;
 }
 
 tbody {
-  display: flex;
+  display: grid;
   height: 400px;
-  width: auto;
+  width: 100%;
   flex-direction: column;
   column-count: 5;
+  column-gap: space;
   overflow: scroll;
 }
 
 
+
 tbody tr {
   display:flex;
-  justify-content: space-evenly;
-  align-content: space-evenly;
+  justify-content: space-between;
+  align-content: space-between;
   height:10%;
   padding-top: 2%;
   padding-bottom: 2%;
+
+  column-count: 5;
+  column-gap: space;
 }
 
 
+tbody tr td {
+  display: flex;
+  text-align: left;
+}
 tbody tr:hover {
   background: #bbb;
 	border-bottom-color: #999;
@@ -173,12 +191,24 @@ tbody td{
   justify-content: left;
   align-content: center;
   vertical-align: middle;
+  -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+  -moz-column-gap: 40px; /* Firefox */
+  column-gap: 2rem;
 }
 
 iframe{
   padding-top:7.5%;
+  padding-left, padding-right: 15;
   padding-bottom: 5%;
 	border:none;
 	display: block;
 	margin: 0px auto 25px auto;
 }
+
+
+tbody p {
+  cursor: pointer;
+}
+ .content li p{
+
+ }
