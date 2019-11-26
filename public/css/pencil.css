@@ -1,0 +1,6 @@
+#pencil {
+  background-size: cover;
+}
+canvas {
+  cursor: url('/img/pencilright.png'), auto;
+}
