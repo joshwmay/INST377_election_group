@@ -250,24 +250,25 @@ function loadData(str) {
                     line.appendChild(p);
                     content.appendChild(line);
                     for(let v = 0; v < options[i].length; v += 1) {
-                      var op, a, inp, sub;
+                      var op, a, inp, sub, iframe;
                       op = document.createElement("p");
                       a = document.createElement("a");
                       inp = document.createElement("input")
                       sub = options[i][v].toString();
+                      iframe = document.createElement("iframe");
+                      iframe.class = "sim-fill";
+                      iframe.src = "pencil2.html";
+                      iframe.scrolling = "no";
                       a.innerHTML = sub;
                       if (sub === "or write-in") {
-                        var radio = document.createElement("input");
-                        radio.value = measure[i];
                         inp.type = "text";
-                        radio.type = "radio";
                         a.title = "Enter write-in choice for " +
                                   measure[i] + " here";
                         inp.title = "Enter write-in choice for " +
                                   measure[i] + " here";
                         op.appendChild(a);
                         op.appendChild(inp);
-                        op.appendChild(radio);
+                        op.appendChild(iframe);
                         line.appendChild(op);
                         content.appendChild(line);
                         if((v+1) === options[i].length){
@@ -279,9 +280,7 @@ function loadData(str) {
                       sub.includes("For ") === true ||
                       sub.includes("Against ") === true) {
                         op.innerHTML = sub;
-                        inp.type = "radio";
-                        inp.value = measure[i];
-                        op.appendChild(inp);
+                        op.appendChild(iframe);
                         line.appendChild(op);
                         content.appendChild(line);
                         if((v+1) === options[i].length){
@@ -292,9 +291,7 @@ function loadData(str) {
                         a.href = candidate_info(sub);
                         a.title = "Learn more about " + sub;
                         op.appendChild(a);
-                        inp.type = "radio";
-                        inp.value = measure[i];
-                        op.appendChild(inp);
+                        op.appendChild(iframe);
                         line.appendChild(op);
                         content.appendChild(line);
                         if((v+1) === options[i].length){
@@ -505,19 +502,21 @@ function loadData_() {
             line.appendChild(p);
             content.appendChild(line);
             for(let v = 0; v < options[i].length; v += 1) {
-              var op, inp, sub, radio;
+              var op, inp, sub, iframe;
               op = document.createElement("p");
               inp = document.createElement("input")
               sub = options[i][v].toString();
-              radio = document.createElement("input");
-              radio.type = "radio";
+              iframe = document.createElement("iframe");
+              iframe.class = "sim-fill";
+              iframe.src = "pencil2.html";
+              iframe.scrolling = "no";
               if (sub === "o escribir en") {
                 inp.type = "text";
                 inp.title = "Ingrese la opción de escritura para " +
                           measure[i] + "aquí";
                 op.innerHTML = sub;
                 op.appendChild(inp);
-                op.appendChild(radio);
+                op.appendChild(iframe);
                 line.appendChild(op);
                 content.appendChild(line);
                 if((v+1) === options[i].length){
@@ -527,7 +526,7 @@ function loadData_() {
                  }
                else {
                   op.innerHTML = sub;
-                  op.appendChild(radio);
+                  op.appendChild(iframe);
                   line.appendChild(op);
                   content.appendChild(line);
                   if((v+1) === options[i].length){
