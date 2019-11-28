@@ -39,9 +39,8 @@ One thing we aimed to do was present polling place locations in a way that was e
 
 #
 ## Technical system decision rationale:
- 
 
-    MISSING INFORMATION
+For our API, we used data from 2018 sample ballots that have been converted to JSON. We utilized various API’s present within PGC sites as it appeared naturally embedded within our pages and site. We featured an interactive voting terminal in our self-designed API and used additional information scraped from PGC.gov sites for other contextual information. A  major portion of our project is HTM, CSS, and JavaScript oriented as they created a large portion of our front end. As far as the design of the site is concerned, we have used interactive graphics, Tableau/Gephi tools in specific are used along with the further implementation of API resources provided by PGC. Most part of our data has been gathered form PGC sites before it was cleaned and formatted to our specifications and stored that within our file structures. Our reason for compiling everything in this manner was to keep things efficient within the system by preprocessing data so it is ready for use when needed. This way, it doesn’t expend unnecessary resources in fetching or retrieval processes from outside sources. Our targeted devices are computers, laptops, and mobile phones and we made all possible efforts in making things more presentable to other end devices in the given time-frame. We are providing our users with interactive sample ballots that are useable for a website or an application. 
 
 #
 ## How our final system helps to address the problem:
@@ -54,10 +53,8 @@ Unmentioned in previous submissions and our initial presentation, is the idea th
 We faced a number of challenges that impacted our final design overall. For instance, displaying data in a tabular form was challenging and it was not displaying properly in the box. To fix this issue, we used flexbox so that the box expands the data to fill available free space or perhaps shrink to prevent overflow. We also had a similar issue where the data was not displaying properly inside the box in the mobile version. One of the reasons for that was the radio buttons inside the box where it wasn’t resizing and overlapping. We used flexbox for that as well to wrap the text onto multiple lines from top to bottom using the flex-wrap property. Initially, we also wanted to add a general search bar on top of the webpage but we didn’t want to confuse our users due to having another search bar to filter polling locations. Moving on, in our initial wireframe,  the layout of our site consisted of a navigation bar that can direct the user to about six different pages. However, due to time constraints and complexity of the problem itself, we created a navigation bar that by clicking directs the user to the specific part of the page than having separate pages. Lastly, another challenge we faced was our for-loop which was not difficult to read but also doing too many things once per item as there were loops inside for-loops. We decided to refactor the loops using functions like map, find, filter instead. 
 #
 ## Possible future work directions with this problem:
-
-    MISSING INFORMATION
-    
-
+#
+For future work directions related to this information problem, we will be reformatting the site to match the criteria of the pending election in PGC. 
 
 
 
