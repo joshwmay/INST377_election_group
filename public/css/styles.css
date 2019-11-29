@@ -1,3 +1,17 @@
+#mySidebar {
+  z-index:3;
+  width:250px;
+  font-weight:bold;
+  color: white;
+  background-color: #1A4287;
+}
+
+#topBar {
+  font-weight:bold;
+  color: white;
+  background-color: #1A4287;
+}
+
 /* Set document default styles for text */
 h1,
 h2,
@@ -20,13 +34,35 @@ h3 {
   justify-content: center;
   align-items: flex-start;
   font-family: Helvetica, Geneva, Tahoma, sans-serif;
+  margin-left:300px;
+  margin-right:40px;
 }
+
+/*Used when changing width of browser
+Collapses menu into a navigation button
+Forces top title bar to appear
+
+*/
+@media (max-width:992px) { 
+	.w3-sidebar.w3-collapse {
+		display: none
+	}
+	.container {
+		margin-left: 0;
+		margin-right: 0t
+	}
+	.w3-auto {
+		max-width: 100%
+	}
+}
+
 #sim-fill .caption {
   display: flex;
   justify-content: center;
   align-items: flex-end;
   align-self: flex-end;
 }
+
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -36,29 +72,12 @@ h3 {
   flex-wrap: wrap;
   flex-direction: column;
   background: #fefefe;
-  border: 1px dashed #ccc;
   margin: 25px;
-
 }
 
 .wrapper div {
   border-radius: 14px;
 }
-
-.header {
-  margin: 20px 50px;
-  padding: 0 20px;
-  min-height: 75px;
-  background: lightblue;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 1.5em;
-  text-transform: capitalize;
-  flex-wrap: nowrap;
-}
-
 
 
 .content {
@@ -209,6 +228,3 @@ iframe{
 tbody p {
   cursor: pointer;
 }
- .content li p{
-
- }

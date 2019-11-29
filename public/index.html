@@ -12,21 +12,33 @@
   <script src="js/script.js"></script>
 </head>
 <body>
-<<<<<<< HEAD
-  <div class="nav">
-  <nav>
-      <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="index.html">Index</a></li>
-        <li><a href="documentation.html">Documentation</a</li>
-      </ul>
-    </nav>
-  </div>
-=======
->>>>>>> 1020d13900d8763520cca5d4ee3377cae3ab743b
-  <div class="container">
+
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding" id="mySidebar"><br>
+    <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+    <div class="w3-container">
+      <h3 class="w3-padding-64"><b>PG County<br>Election Hub</b></h3>
+    </div>
+    <div class="w3-bar-block">
+      <a href="#" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+      <a href="#about" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">About</a> 
+      <a href="#index" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">Index</a> 
+      <a href="#documentation" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">Documentation</a> 
+    </div>
+  </nav>
+
+  <!-- Top menu on small screens -->
+  <header class="w3-container w3-top w3-hide-large w3-xlarge w3-padding" id="topBar">
+    <a href="javascript:void(0)" class="w3-button w3-margin-right" onclick="openNav()">☰</a>
+    <span>Prince George's County Election Hub</span>
+  </header>
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="closeNav()" style="cursor:pointer" title="Close Side Menu" id="myOverlay"></div>
+
+
+  <div class="container" id="index">
     <div class="wrapper">
-      <div class="header">PGC Election Hub</div>
       <button class="button" onclick="loadData_()">
         Ver boleta genérica en Español</button>
       <div class="content" id="content"><script>loadData("none")</script></div>
@@ -72,5 +84,19 @@
       </div>
       <div class="footer"></div>
     </div>
+
+    <script>
+      // Script to open and close sidebar
+      function openNav() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+       
+      function closeNav() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+      
+      </script>
   </body>
 </html>
