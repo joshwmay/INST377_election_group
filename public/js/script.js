@@ -74,7 +74,6 @@ function stringer(str) {
     };
   }
 }
-
 function JSONtable(str) {
   var input = document.getElementById("filter");
   var filter = input.value.toString();
@@ -127,7 +126,7 @@ function JSONtable(str) {
         a2 = document.createElement('a');
         map_link = document.createTextNode(add_sub);
         a2.title = "View " + add_sub + " on map";
-        a2.href = search_string(address[i]);
+        a2.href = search_string(address[i], city[i]);
         map_link.innerHTML = add_sub;
         a2.appendChild(map_link);
 
@@ -195,7 +194,7 @@ function JSONtable(str) {
                               map_link = document.createTextNode(add_sub);
                               map_link.innerHTML = add_sub;
                               a2.title = "View " + add_sub + " on map";
-                              a2.href = search_string(address[i]);
+                              a2.href = search_string(address[i], city[i]);
                               a2.appendChild(map_link);
 
                               col0.innerHTML = dis_prec[i];
@@ -213,102 +212,6 @@ function JSONtable(str) {
        })
     }
 };
-function loadData(str) {
-  var content = document.querySelector(".content");
-  if(str === "none") {
-    address = "json/gen_ball.json";
-  } else {
-    address = "json/bs" + str + ".json"
-  };
-  content.innerHTML = "";
-  fetch(address)
-    .then(res => res.json())
-    .then(res => res.map(c => c.measure))
-    .then(measure => {
-      fetch(address)
-        .then(res => res.json())
-        .then(res => res.map(c => c.description))
-        .then(description => {
-          fetch(address)
-            .then(res => res.json())
-            .then(res => res.map(c => c.selections))
-            .then(selections => {
-              fetch(address)
-                .then(res => res.json())
-                .then(res => res.map(c => c.options))
-                .then(options => {
-                  for(let i=0; i<measure.length; i+= 1) {
-                    var p, link, sub, line;
-                    line = document.createElement("li");
-                    p = document.createElement("p");
-                    link = document.createElement("a");
-                    sub = measure[i].toString();
-                    link.innerHTML = sub;
-                    link.href = candidate_info(sub);
-                    link.title = "Learn more about " + sub;
-                    p.appendChild(link);
-                    line.appendChild(p);
-                    content.appendChild(line);
-                    for(let v = 0; v < options[i].length; v += 1) {
-                      var op, a, inp, sub;
-                      op = document.createElement("p");
-                      a = document.createElement("a");
-                      inp = document.createElement("input")
-                      sub = options[i][v].toString();
-                      a.innerHTML = sub;
-                      if (sub === "or write-in") {
-                        var radio = document.createElement("input");
-                        radio.value = measure[i];
-                        inp.type = "text";
-                        radio.type = "radio";
-                        a.title = "Enter write-in choice for " +
-                                  measure[i] + " here";
-                        inp.title = "Enter write-in choice for " +
-                                  measure[i] + " here";
-                        op.appendChild(a);
-                        op.appendChild(inp);
-                        op.appendChild(radio);
-                        line.appendChild(op);
-                        content.appendChild(line);
-                        if((v+1) === options[i].length){
-                          let br = document.createElement("p");
-                          content.appendChild(br);
-                          }
-                      } else if(
-                      sub === "Yes" || sub === "No" ||
-                      sub.includes("For ") === true ||
-                      sub.includes("Against ") === true) {
-                        op.innerHTML = sub;
-                        inp.type = "radio";
-                        inp.value = measure[i];
-                        op.appendChild(inp);
-                        line.appendChild(op);
-                        content.appendChild(line);
-                        if((v+1) === options[i].length){
-                          let br = document.createElement("p");
-                          content.appendChild(br);
-                          }
-                      } else {
-                        a.href = candidate_info(sub);
-                        a.title = "Learn more about " + sub;
-                        op.appendChild(a);
-                        inp.type = "radio";
-                        inp.value = measure[i];
-                        op.appendChild(inp);
-                        line.appendChild(op);
-                        content.appendChild(line);
-                        if((v+1) === options[i].length){
-                          let br = document.createElement("p");
-                          content.appendChild(br);
-                }
-              }
-            }
-          }
-        })
-      })
-    })
-  })
-}
 function candidate_info(string) {
   var res = "https://ballotpedia.org/";
   var str = string.replace("Republican", "9");
@@ -433,17 +336,19 @@ function candidate_info(string) {
     }
   }
   return res
-  }
-function search_string(string) {
+}
+function search_string(string1, string2) {
+  var comb = string1 + " " + string2;
   var res = "https://www.google.com/maps/place/";
-  for(let i = 0; i < string.length; i += 1) {
-    if(string[i] === " ") {
+  for(let i = 0; i < comb.length; i += 1) {
+    if(comb[i] === " ") {
       res += "+"
     }
     else {
-      res += string[i]
+      res += comb[i]
       }
     }
+  res += string2;
   res = res.replace("U+MARLBORO","UPPER+MARLBORO");
   res = res.replace("Fort+Wash","Fort+Washington");
   res += "+MARYLAND";
@@ -498,38 +403,30 @@ function loadData_() {
         .then(options => {
           for(let i=0; i<measure.length; i+= 1) {
             var p, sub, line;
-            line = document.createElement("li");
             p = document.createElement("p");
             sub = measure[i].toString();
             p.innerHTML = sub;
-            line.appendChild(p);
-            content.appendChild(line);
+            content.appendChild(p);
             for(let v = 0; v < options[i].length; v += 1) {
-              var op, inp, sub, radio;
-              op = document.createElement("p");
+              var op, inp, sub;
+              op = document.createElement("div");
               inp = document.createElement("input")
               sub = options[i][v].toString();
-              radio = document.createElement("input");
-              radio.type = "radio";
               if (sub === "o escribir en") {
                 inp.type = "text";
                 inp.title = "Ingrese la opción de escritura para " +
                           measure[i] + "aquí";
                 op.innerHTML = sub;
                 op.appendChild(inp);
-                op.appendChild(radio);
-                line.appendChild(op);
-                content.appendChild(line);
+                content.appendChild(op);
                 if((v+1) === options[i].length){
-                  let br = document.createElement("p");
+                  let br = document.createElement("br");
                   content.appendChild(br);
                     }
                  }
                else {
                   op.innerHTML = sub;
-                  op.appendChild(radio);
-                  line.appendChild(op);
-                  content.appendChild(line);
+                  content.appendChild(op);
                   if((v+1) === options[i].length){
                     let br = document.createElement("p");
                     content.appendChild(br);
@@ -540,4 +437,76 @@ function loadData_() {
 
      })
    })
+};
+function loadData(str) {
+  var content = document.querySelector(".content");
+  if(str === "none") {
+    address = "json/gen_ball.json";
+  } else {
+    address = "json/bs" + str + ".json"
+  };
+  content.innerHTML = "";
+  fetch(address)
+    .then(res => res.json())
+    .then(res => res.map(c => c.measure))
+    .then(measure => {
+        fetch(address)
+            .then(res => res.json())
+            .then(res => res.map(c => c.options))
+            .then(options => {
+              for(let i=0; i<measure.length; i+= 1) {
+                var p, link, sub;
+                p = document.createElement("p");
+                link = document.createElement("a");
+                sub = measure[i].toString();
+                link.innerHTML = sub;
+                link.href = candidate_info(sub);
+                link.title = "Learn more about " + sub;
+                p.appendChild(link);
+                content.appendChild(p);
+                for(let v = 0; v < options[i].length; v += 1) {
+                  var op, a, inp, sub, br;
+                  op = document.createElement("div");
+                  op.class = "ball_lines";
+                  a = document.createElement("a");
+                  inp = document.createElement("input")
+                  sub = options[i][v].toString();
+                  a.innerHTML = sub;
+                  if (sub === "or write-in") {
+                    inp.type = "text";
+                    a.title = "Enter write-in choice for " +
+                              measure[i] + " here";
+                    inp.title = "Enter write-in choice for " +
+                              measure[i] + " here";
+                    op.appendChild(a);
+                    op.appendChild(inp);
+                    content.appendChild(op);
+                    if((v+1) === options[i].length){
+                      let br = document.createElement("p");
+                      content.appendChild(br);
+                      }
+                  } else if(
+                  sub === "Yes" || sub === "No" ||
+                  sub.includes("For ") === true ||
+                  sub.includes("Against ") === true) {
+                    op.innerHTML = sub;
+                    content.appendChild(op);
+                    if((v+1) === options[i].length){
+                      let br = document.createElement("p");
+                      content.appendChild(br);
+                      }
+                  } else {
+                    a.href = candidate_info(sub);
+                    a.title = "Learn more about " + sub;
+                    op.appendChild(a);
+                    content.appendChild(op);
+                    if((v+1) === options[i].length){
+                      let br = document.createElement("p");
+                      content.appendChild(br);
+         }
+        }
+       }
+      }
+    })
+  })
 };
