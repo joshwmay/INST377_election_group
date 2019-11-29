@@ -1,3 +1,6 @@
+// These first few lines act as switches
+// They are used in sorting the table element
+// Generated from JSONtable()
 var sx1, sx3, sx5, sx7, sx9, sxb;
 sx1 = 0;
 sx3 = 0;
@@ -7,6 +10,9 @@ sx9 = 0;
 sxb = 0;
 
 function stringer(str) {
+  // This function is intended for use as a parameter
+  // in JSONtable()
+  // It allows the switching needed for the table's sort method
   if (str === "/s1") {
     if (sx1 === 0) {
       sx1 += 1;
@@ -75,6 +81,9 @@ function stringer(str) {
   }
 }
 function JSONtable(str) {
+  // This function generates a table
+  // It is dependent upon a string parameter
+  // The string should allude to an API within the server
   var input = document.getElementById("filter");
   var filter = input.value.toString();
   if(filter.length > 0) {
@@ -102,8 +111,6 @@ function JSONtable(str) {
                           .then(res => res.json())
                           .then(res => res.data.map(c => c.style))
                           .then(style => {
-      // This wavy if/else promise string creates a table with links and
-      // searchable criteria.
       var table = document.getElementById("body");
       table.innerHTML = "";
       for(let i = 0; i < style.length; i+=1) {
@@ -213,6 +220,9 @@ function JSONtable(str) {
     }
 };
 function candidate_info(string) {
+  // This function returns links based on a string parameter
+  // Many of the links are specific, but ideally a string
+  // Will be able to automatically open a landing page on ballotpedia.org
   var res = "https://ballotpedia.org/";
   var str = string.replace("Republican", "9");
   str = string.replace("Democratic", "9");
@@ -338,6 +348,9 @@ function candidate_info(string) {
   return res
 }
 function search_string(string1, string2) {
+  // This function is used to create map links
+  // string1 should represent an address
+  // string2 should represent a city
   var comb = string1 + " " + string2;
   var res = "https://www.google.com/maps/place/";
   for(let i = 0; i < comb.length; i += 1) {
@@ -355,6 +368,9 @@ function search_string(string1, string2) {
   return res
 }
 function table_search() {
+  // This function allows the JSONtable to be searchable
+  // The JSONtable function also relies on this function
+  // To stay current based on search criteria and sorting
   var input, filter, table, body, tr, td1, td2, td3, td4, td5, i, txt1, txt2,
   txt3, txt4, txt5;
   input = document.getElementById("filter");
@@ -391,6 +407,7 @@ function table_search() {
   }
 }
 function loadData_() {
+  // This function generates a ballot in Spanish
   var content = document.querySelector(".content");
   content.innerHTML = "";
   fetch("json/gen_ball_.json")
@@ -439,6 +456,8 @@ function loadData_() {
    })
 };
 function loadData(str) {
+  // This function generates an English ballot
+  // And contains methods for generating helpful links for users
   var content = document.querySelector(".content");
   if(str === "none") {
     address = "json/gen_ball.json";
