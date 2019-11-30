@@ -197,6 +197,7 @@ Forces top title bar to appear
   grid-template-columns: repeat(15%);
   grid-template-rows: repeat(5%);
   width: 90%;
+  margin-right: auto;
 }
 
 thead{
@@ -292,5 +293,5 @@ tbody p {
   color: #1A4287;
   border: 3px dotted #1A4287;
   border-radius: 25px;
-}
 
+}
