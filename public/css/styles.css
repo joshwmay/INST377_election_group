@@ -151,6 +151,7 @@ Forces top title bar to appear
   flex-direction: column;
   height: auto;
   padding: 2%;
+  color: #1A4287;
 }
 
 .content p {
