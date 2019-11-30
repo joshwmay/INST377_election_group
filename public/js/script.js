@@ -1,13 +1,11 @@
 // These first few lines act as switches
 // They are used in sorting the table element
 // Generated from JSONtable()
-var sx1, sx3, sx5, sx7, sx9, sxb;
+var sx1, sx3, sx5, sx7;
 sx1 = 0;
 sx3 = 0;
 sx5 = 0;
 sx7 = 0;
-sx9 = 0;
-sxb = 0;
 
 // Script to open and close sidebar
 function openNav() {
@@ -68,28 +66,6 @@ function stringer(str) {
       return str;
     }
   }
-  else if (str === "/s9" ) {
-    if (sx9 === 0) {
-      sx9 += 1;
-      return str;
-    }
-    else {
-      sx9 = 0;
-      str = "/sa";
-      return str;
-    }
-  }
-  else if (str === "/sb" ) {
-    if (sxb === 0) {
-      sxb += 1;
-      return str;
-    }
-    else {
-      sxb = 0;
-      str = "/sc"
-      return str;
-    };
-  }
 }
 function JSONtable(str) {
   // This function generates a table
@@ -100,28 +76,20 @@ function JSONtable(str) {
   if(filter.length > 0) {
     fetch(str)
       .then(res => res.json())
-      .then(res => res.data.map(c => c.dis_prec))
-      .then(dis_prec => {
+      .then(res => res.data.map(c => c.title))
+      .then(title => {
         fetch(str)
           .then(res => res.json())
-          .then(res => res.data.map(c => c.title))
-          .then(title => {
+          .then(res => res.data.map(c => c.address))
+          .then(address => {
             fetch(str)
               .then(res => res.json())
-              .then(res => res.data.map(c => c.address))
-              .then(address => {
+              .then(res => res.data.map(c => c.city))
+              .then(city => {
                 fetch(str)
                   .then(res => res.json())
-                  .then(res => res.data.map(c => c.city))
-                  .then(city => {
-                    fetch(str)
-                      .then(res => res.json())
-                      .then(res => res.data.map(c => c.zip))
-                      .then(zip => {
-                        fetch(str)
-                          .then(res => res.json())
-                          .then(res => res.data.map(c => c.style))
-                          .then(style => {
+                  .then(res => res.data.map(c => c.zip))
+                  .then(zip => {
       var table = document.getElementById("body");
       table.innerHTML = "";
       for(let i = 0; i < style.length; i+=1) {
@@ -131,99 +99,69 @@ function JSONtable(str) {
         col1 = row.insertCell(1);
         col2 = row.insertCell(2);
         col3 = row.insertCell(3);
-        col4 = row.insertCell(4);
-        col5 = row.insertCell(5);
 
-        let style_sub, a1, add_sub, a2, map_link;
-        style_sub = style[i].toString();
-        a1 = document.createElement('a');
-        a1.title = "Sample ballot for style " + style_sub
-        a1.innerHTML = style_sub;
+        let add_sub, a, map_link;
 
         add_sub = address[i].toString();
-        a2 = document.createElement('a');
+        a = document.createElement('a');
         map_link = document.createTextNode(add_sub);
-        a2.title = "View " + add_sub + " on map";
-        a2.href = search_string(address[i], city[i]);
+        a.title = "View " + add_sub + " on map";
+        a.href = search_string(address[i], city[i]);
         map_link.innerHTML = add_sub;
-        a2.appendChild(map_link);
+        a.appendChild(map_link);
 
-        col0.innerHTML = dis_prec[i];
-        col1.innerHTML = title[i];
-        col2.appendChild(a2);
-        col3.innerHTML = city[i];
-        col4.innerHTML = zip[i];
-        col5.appendChild(a1);
+        col0.innerHTML = title[i];
+        col1.appendChild(a);
+        col2.innerHTML = city[i];
+        col3.innerHTML = zip[i];
                             }
         console.log(table_search())
-                          })
-                       })
                    })
                })
            })
        })
   } else {
-    fetch(str)
-      .then(res => res.json())
-      .then(res => res.data.map(c => c.dis_prec))
-      .then(dis_prec => {
-        fetch(str)
-          .then(res => res.json())
-          .then(res => res.data.map(c => c.title))
-          .then(title => {
-            fetch(str)
-              .then(res => res.json())
-              .then(res => res.data.map(c => c.address))
-              .then(address => {
-                fetch(str)
-                  .then(res => res.json())
-                  .then(res => res.data.map(c => c.city))
-                  .then(city => {
-                    fetch(str)
-                      .then(res => res.json())
-                      .then(res => res.data.map(c => c.zip))
-                      .then(zip => {
-                        fetch(str)
-                          .then(res => res.json())
-                          .then(res => res.data.map(c => c.style))
-                          .then(style => {
-                            var table = document.getElementById("body");
-                            table.innerHTML = "";
-                            for(let i = 0; i < style.length; i+=1) {
-                              var row, col0, col1, col2, col3, col4, col5;
-                              row = table.insertRow(i);
-                              col0 = row.insertCell(0);
-                              col1 = row.insertCell(1);
-                              col2 = row.insertCell(2);
-                              col3 = row.insertCell(3);
-                              col4 = row.insertCell(4);
-                              col5 = row.insertCell(5);
+      fetch(str)
+        .then(res => res.json())
+        .then(res => res.data.map(c => c.title))
+        .then(title => {
+          fetch(str)
+            .then(res => res.json())
+            .then(res => res.data.map(c => c.address))
+            .then(address => {
+              fetch(str)
+                .then(res => res.json())
+                .then(res => res.data.map(c => c.city))
+                .then(city => {
+                  fetch(str)
+                    .then(res => res.json())
+                    .then(res => res.data.map(c => c.zip))
+                    .then(zip => {
+                        var table = document.getElementById("body");
+                        table.innerHTML = "";
+                        for(let i = 0; i < style.length; i+=1) {
+                          var row, col0, col1, col2, col3, col4, col5;
+                          row = table.insertRow(i);
+                          col0 = row.insertCell(0);
+                          col1 = row.insertCell(1);
+                          col2 = row.insertCell(2);
+                          col3 = row.insertCell(3);
 
-                              let style_sub, a1, link, add_sub, a2, map_link;
-                              style_sub = style[i].toString();
-                              a1 = document.createElement('a');
-                              link = document.createTextNode(style_sub);
-                              link.innerHTML = style_sub;
-                              a1.title = "Sample ballot for style " + style_sub;
-                              a1.appendChild(link);
+                          let a, add_sub, map_link;
 
-                              add_sub = address[i].toString();
-                              a2 = document.createElement('a');
-                              map_link = document.createTextNode(add_sub);
-                              map_link.innerHTML = add_sub;
-                              a2.title = "View " + add_sub + " on map";
-                              a2.href = search_string(address[i], city[i]);
-                              a2.appendChild(map_link);
+                          add_sub = address[i].toString();
+                          a = document.createElement('a');
+                          map_link = document.createTextNode(add_sub);
+                          map_link.innerHTML = add_sub;
+                          a.title = "View " + add_sub + " on map";
+                          a.href = search_string(address[i], city[i]);
+                          a.appendChild(map_link);
 
-                              col0.innerHTML = dis_prec[i];
-                              col1.innerHTML = title[i];
-                              col2.appendChild(a2);
-                              col3.innerHTML = city[i];
-                              col4.innerHTML = zip[i];
-                              col5.appendChild(a1);
-                             }
-                          })
-                       })
+                          col0.innerHTML = title[i];
+                          col1.appendChild(a);
+                          col2.innerHTML = city[i];
+                          col3.innerHTML = zip[i];
+                        }
                    })
                })
            })
@@ -382,8 +320,8 @@ function table_search() {
   // This function allows the JSONtable to be searchable
   // The JSONtable function also relies on this function
   // To stay current based on search criteria and sorting
-  var input, filter, table, body, tr, td1, td2, td3, td4, td5, i, txt1, txt2,
-  txt3, txt4, txt5;
+  var input, filter, table, body, tr, td1, td2, td3, td4, i, txt1, txt2,
+  txt3, txt4;
   input = document.getElementById("filter");
   filter = input.value.toString();
   filter = input.value.toUpperCase();
@@ -395,21 +333,15 @@ function table_search() {
     td2 = tr[i].getElementsByTagName("td")[1];
     td3 = tr[i].getElementsByTagName("td")[2];
     td4 = tr[i].getElementsByTagName("td")[3];
-    td5 = tr[i].getElementsByTagName("td")[4];
-    td6 = tr[i].getElementsByTagName("td")[4];
-    if (td1 || td2 || td3 || td4 || td5 || td6) {
+    if (td1 || td2 || td3 || td4) {
       txt1 = td1.textContent || td1.innerHTML;
       txt2 = td2.textContent || td2.innerHTML;
       txt3 = td3.textContent || td3.innerHTML;
       txt4 = td4.textContent || td4.innerHTML;
-      txt5 = td5.textContent || td5.innerHTML;
-      txt6 = td6.textContent || td6.innerHTML;
       if (txt1.toUpperCase().indexOf(filter) > -1 ||
           txt2.toUpperCase().indexOf(filter) > -1 ||
           txt3.toUpperCase().indexOf(filter) > -1 ||
-          txt4.toUpperCase().indexOf(filter) > -1 ||
-          txt5.toUpperCase().indexOf(filter) > -1 ||
-          txt6.toUpperCase().indexOf(filter) > -1) {
+          txt4.toUpperCase().indexOf(filter) > -1) {
         tr[i].style.display = "";
       } else {
         tr[i].style.display = "none";
