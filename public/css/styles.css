@@ -289,9 +289,9 @@ tbody p {
 }
 .button {
   background-color: #CC6116;
-  margin-right: auto;
+  margin-right: 605px;
   color: #1A4287;
   border: 3px dotted #1A4287;
   border-radius: 25px;
-
+  margin-bottom:20px;
 }
