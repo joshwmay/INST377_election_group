@@ -288,5 +288,7 @@ tbody p {
 }
 .button {
   background-color: #CC6116;
+  margin-right: auto;
+  padding: auto;
 }
 
