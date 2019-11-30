@@ -18,7 +18,7 @@
     <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
 
     <div class="w3-container">
-      <h3 class="w3-padding-64"><b>PG County<br>Election Hub</b></h3>
+      <h3 class="w3-padding-64"><b>PGC County<br>Election Hub</b></h3>
     </div>
 
     <div class="w3-bar-block">
@@ -42,7 +42,6 @@
   <div class="w3-overlay w3-hide-large" onclick="closeNav()" style="cursor:pointer" title="Close Side Menu" id="myOverlay"></div>
 
   <!--START OF PAGE CONTENT-->
-
   <div class="main">
     <!--Header-->
     <h1 id="title"><b>Prince George's County Election Hub</b></h1>
@@ -74,9 +73,9 @@
 
     <div class="container">
       <div class="wrapper">
-        <button class="button" onclick="loadData_()">
-          Ver boleta genérica en Español</button>
-        <div class="content" id="content"><script>loadData("none")</script></div>
+        <button class="button" id="trans" onclick="loadData(stringer('lang'))">
+          Haga clic para traducir la boleta al Español</button>
+        <div class="content" id="content"><script>loadData(stringer("lang"))</script></div>
         <form  method="post">
         <input type="text" id="month" placeholder="Month"></input>
         <input type="text" id="day" placeholder="Day"></input>
@@ -152,17 +151,19 @@
           as you would for any page. You can click on some of the elements in this box for more resources. For instance, you can click on
           the position title, for information about what that position is and what they do. You can also click on any candidate to
           navigate to that candidate's page. You will also see a write in input box in this section. This is meant to appear as it would
-          on a real ballot, but it is not meant to be submitted. 
+          on a real ballot, but it is not meant to be submitted. At this point in time, link functionality is not in place for the Spanish
+          version of the ballot. All ballot data contained on this site reflects the 2018 Gubernatorial Ballot in the state of Maryland.
         </p>
         <img src="img/BallotCandidateTable.png" alt=BallotCandidateTable height="300" width="300">
       <h2>Translation Button</h2>
-      <p>THe translation button allows you to see the candidate table in spanish. This functionality is quite simple. You will see 
-        a button over the ballot candidate table with the prompt, "Ver boleta genérica en Español." Clicking this will allow you to
-        see all of the candidates and titles in spanish.
+      <p>The translation button allows you to see the candidate table in spanish. This functionality is quite simple. You will see
+        a button over the ballot candidate table with the prompt, "Haga clic para traducir la boleta al Español." Clicking this will allow you to
+        see all of the candidates and titles in spanish. Once translated to Spanish, the button will appear with the text, "Click to translate ballot to English";
+        once clicked the ballot will revert to the English version.
       </p>
-      <img src="img/TranslationButton.png" alt=TranslationButton height="300" width="300">
+      <img src="img/TranslationButton.png" alt=TranslationButton height="300" width="800">
       <h2>Search Bar</h2>
-      <p>The search bar is meant to search through all oof the polling places in Prince George's County.
+      <p>The search bar is meant to search through all of the polling places in Prince George's County.
         If you know of a polling place in the county, you can type it in to the search bar, and it will display all of the relevant
         places in the search. If what you type in does not match a polling place on the list, nothing will show up. 
       </p>
