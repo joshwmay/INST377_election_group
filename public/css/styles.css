@@ -23,6 +23,7 @@
   display: flex;
   align-items: flex-start;
   display: block;
+  font-style: oblique;
 }
 
 #about {
