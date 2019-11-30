@@ -9,6 +9,17 @@ sx7 = 0;
 sx9 = 0;
 sxb = 0;
 
+// Script to open and close sidebar
+function openNav() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
 function stringer(str) {
   // This function is intended for use as a parameter
   // in JSONtable()
