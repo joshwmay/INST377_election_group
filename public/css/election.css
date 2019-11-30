@@ -66,7 +66,7 @@ Election/Sandbox design:
     transition: all 0.1s;
 }
 .button:hover{
-	background: #ddd;
+	background: #CC6116;
 }
 .button:active{
 	background: #aaa;
@@ -76,7 +76,7 @@ Election/Sandbox design:
 	color: #fff;
 }
 .button[on=yes]:hover{
-	background: #555;
+	background: #CC6116;
 }
 .button[on=yes]:active{
 	background: #111;
