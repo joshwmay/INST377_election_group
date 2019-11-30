@@ -112,6 +112,15 @@ Forces top title bar to appear
   align-self: flex-end;
 }
 
+.sim-intro {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: flex-end;
+
+}
+
 .wrapper {
   min-height: 100%;
   display: flex;
