@@ -7,9 +7,66 @@
 }
 
 #topBar {
+  font-size: 24px;
   font-weight:bold;
   color: white;
   background-color: #1A4287;
+}
+
+#title {
+  font-size: 64px;
+  margin: 10px;
+  margin-top:85px;
+  right: 0;
+  left: 0;
+  justify-content: center;
+  display: flex;
+  align-items: flex-start;
+  display: block;
+
+}
+
+#about {
+  margin-top:80px;
+}
+
+.main {
+  margin-left:340px;
+  margin-right:40px
+}
+
+.sectionName {
+  margin-top: 75px;
+  font-size:48px;
+  color: #1A4287;
+}
+
+.sectionDivider {
+  border-radius: 5px;
+  width:50px;
+  border:5px solid #1A4287;
+}
+
+body,h1,h2,h3,h4,h5 {
+  font-family: "Poppins", sans-serif
+} 
+
+h2 {
+  font-size: 30px;
+  color: #CC6116;
+}
+
+@media (max-width:992px) {
+	.w3-sidebar.w3-collapse {
+		display: none
+	}
+	.main {
+		margin-left: 40px!important;
+		margin-right: 40px!important
+	}
+	.w3-auto {
+		max-width: 100%
+	}
 }
 
 /* Set document default styles for text */
@@ -34,9 +91,10 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  font-family: Helvetica, Geneva, Tahoma, sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-left:300px;
   margin-right:40px;
+
 }
 
 /*Used when changing width of browser
@@ -50,7 +108,7 @@ Forces top title bar to appear
 	}
 	.container {
 		margin-left: 0;
-		margin-right: 0t
+		margin-right: 0;
 	}
 	.w3-auto {
 		max-width: 100%
