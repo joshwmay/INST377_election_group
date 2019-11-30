@@ -92,7 +92,7 @@ function JSONtable(str) {
                   .then(zip => {
       var table = document.getElementById("body");
       table.innerHTML = "";
-      for(let i = 0; i < style.length; i+=1) {
+      for(let i = 0; i < zip.length; i+=1) {
         var row, col0, col1, col2, col3, col4, col5;
         row = table.insertRow(i);
         col0 = row.insertCell(0);
@@ -139,7 +139,7 @@ function JSONtable(str) {
                     .then(zip => {
                         var table = document.getElementById("body");
                         table.innerHTML = "";
-                        for(let i = 0; i < style.length; i+=1) {
+                        for(let i = 0; i < zip.length; i+=1) {
                           var row, col0, col1, col2, col3, col4, col5;
                           row = table.insertRow(i);
                           col0 = row.insertCell(0);
