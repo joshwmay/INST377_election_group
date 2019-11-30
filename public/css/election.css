@@ -51,11 +51,12 @@ Election/Sandbox design:
 	cursor: pointer;
     background: #bbb;
     color: #555;
-    font-size: 18px;
+    font-size: 27px;
     font-weight: 300;
-	text-align: center;
-	margin-right: auto;
+    text-align: center;
+    margin-bottom: 5px;
     padding: 2px 0;
+
     position: relative;
     top:0;
 
