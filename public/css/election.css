@@ -53,7 +53,8 @@ Election/Sandbox design:
     color: #555;
     font-size: 18px;
     font-weight: 300;
-    text-align: center;
+	text-align: center;
+	margin-right: auto;
     margin-bottom: 5px;
     padding: 2px 0;
 
