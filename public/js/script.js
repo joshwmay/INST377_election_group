@@ -6,24 +6,9 @@ sx1 = 0;
 sx3 = 0;
 sx5 = 0;
 sx7 = 0;
+lang = -1;
 
-var countDownDate = new Date("Dec 16, 2019 00:00:00").getTime();
 
-// set refresh interval of count
-var x = setInterval(function() {
-  // get current time
-  var now = new Date().getTime();
-  // calculate time left
-  var timeleft = countDownDate - now;
-  // convert time left to days, hours, minutes, seconds
-  var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
-  // Append time to clock
-  document.getElementById("clock").innerHTML = days + " Days" + "<br>" + hours + " Hours" + "<br>"
-  + minutes + " Minutes" + "<br>" + seconds + " seconds";
-}, 1000);
 
 // Script to open and close sidebar
 function openNav() {
@@ -81,6 +66,23 @@ function stringer(str) {
     else {
       sx7 = 0;
       str = "/s8";
+      return str;
+    }
+  }
+  else if (str === "lang") {
+    if (lang === 0) {
+      lang += 1;
+      str = "0";
+      return str;
+    }
+    else if(lang === -1) {
+      lang = 1;
+      str = "0";
+      return str;
+    }
+    else {
+      lang = 0;
+      str = "1";
       return str;
     }
   }
@@ -369,7 +371,8 @@ function table_search() {
 }
 function loadData_() {
   // This function generates a ballot in Spanish
-  var content = document.querySelector(".content");
+  var content, button;
+  content = document.querySelector(".content");
   content.innerHTML = "";
   fetch("json/gen_ball_.json")
     .then(res => res.json())
@@ -408,11 +411,10 @@ function loadData_() {
                   if((v+1) === options[i].length){
                     let br = document.createElement("p");
                     content.appendChild(br);
-                      }
-                }
               }
             }
-
+          }
+        }
      })
    })
 };
@@ -420,10 +422,14 @@ function loadData(str) {
   // This function generates an English ballot
   // And contains methods for generating helpful links for users
   var content = document.querySelector(".content");
-  if(str === "none") {
+  if(str === "0") {
     address = "json/gen_ball.json";
+    button = document.getElementById("trans");
+    button.innerHTML = "Haga clic para traducir la boleta al Español";
   } else {
-    address = "json/bs" + str + ".json"
+    button = document.getElementById("trans");
+    button.innerHTML = "Click to translate ballot to English";
+    return loadData_();
   };
   content.innerHTML = "";
   fetch(address)
@@ -490,3 +496,21 @@ function loadData(str) {
     })
   })
 };
+
+var countDownDate = new Date("Dec 16, 2019 00:00:00").getTime();
+
+// set refresh interval of count
+var x = setInterval(function() {
+  // get current time
+  var now = new Date().getTime();
+  // calculate time left
+  var timeleft = countDownDate - now;
+  // convert time left to days, hours, minutes, seconds
+  var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((timeleft % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((timeleft % (1000 * 60)) / 1000);
+  // Append time to clock
+  document.getElementById("clock").innerHTML = days + " Days" + "<br>" + hours + " Hours" + "<br>"
+  + minutes + " Minutes" + "<br>" + seconds + " seconds";
+}, 1000);

@@ -18,7 +18,7 @@
     <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
 
     <div class="w3-container">
-      <h3 class="w3-padding-64"><b>PG County<br>Election Hub</b></h3>
+      <h3 class="w3-padding-64"><b>PGC County<br>Election Hub</b></h3>
     </div>
 
     <div class="w3-bar-block">
@@ -42,7 +42,6 @@
   <div class="w3-overlay w3-hide-large" onclick="closeNav()" style="cursor:pointer" title="Close Side Menu" id="myOverlay"></div>
 
   <!--START OF PAGE CONTENT-->
-
   <div class="main">
     <!--Header-->
     <h1 id="title"><b>Prince George's County Election Hub</b></h1>
@@ -86,9 +85,9 @@
 
     <div class="container">
       <div class="wrapper">
-        <button class="button" onclick="loadData_()">
-          Ver boleta genérica en Español</button>
-        <div class="content" id="content"><script>loadData("none")</script></div>
+        <button class="button" id="trans" onclick="loadData(stringer('lang'))">
+          Haga clic para traducir la boleta al español</button>
+        <div class="content" id="content"><script>loadData(stringer("lang"))</script></div>
         <form  method="post">
         <input type="text" id="month" placeholder="Month"></input>
         <input type="text" id="day" placeholder="Day"></input>
