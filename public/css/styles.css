@@ -286,11 +286,4 @@ tbody p {
 .w3-bar-block a:hover{
   background-color: #CC6116;
 }
-.button {
-  background-color: #CC6116;
-  margin-right: auto;
-  color: #1A4287;
-  border: 3px dotted #1A4287;
-  border-radius: 25px;
-}
 
