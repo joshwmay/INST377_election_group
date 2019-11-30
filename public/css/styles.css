@@ -253,8 +253,8 @@ tbody tr td {
   text-align: left;
 }
 tbody tr:hover {
-  background: #bbb;
-	border-bottom-color: #999;
+  background: #CC6116;
+	border-bottom-color:#CC6116;
 }
 
 
@@ -284,5 +284,9 @@ tbody p {
 }
 
 .w3-bar-block a:hover{
-  background-color: #CC6116; 
+  background-color: #CC6116;
 }
+.button {
+  background-color: #CC6116;
+}
+
