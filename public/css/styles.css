@@ -138,6 +138,7 @@ Forces top title bar to appear
   padding: 2%;
   overflow-wrap: break-word;
   margin-right: auto;
+  margin-bottom: 20px;
   max-width: 40%;
   max-height: 400px;
   overflow: scroll;
