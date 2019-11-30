@@ -16,15 +16,18 @@
   <!-- Sidebar/menu -->
   <nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding" id="mySidebar"><br>
     <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+    
     <div class="w3-container">
       <h3 class="w3-padding-64"><b>PG County<br>Election Hub</b></h3>
     </div>
+
     <div class="w3-bar-block">
       <a href="#" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">Home</a>
       <a href="#about" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">About</a> 
       <a href="#index" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">Index</a> 
       <a href="#documentation" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">Documentation</a> 
     </div>
+
   </nav>
 
   <!-- Top menu on small screens -->
@@ -34,58 +37,95 @@
   </header>
 
   <!-- Overlay effect when opening sidebar on small screens -->
-    <div class="w3-overlay w3-hide-large" onclick="closeNav()" style="cursor:pointer" title="Close Side Menu" id="myOverlay"></div>
+  <div class="w3-overlay w3-hide-large" onclick="closeNav()" style="cursor:pointer" title="Close Side Menu" id="myOverlay"></div>
 
+  <!--START OF PAGE CONTENT-->
 
-  <div class="container" id="index">
-    <div class="wrapper">
-      <button class="button" onclick="loadData_()">
-        Ver boleta genérica en Español</button>
-      <div class="content" id="content"><script>loadData("none")</script></div>
-      <form  method="post">
-      <input type="text" id="first" placeholder="First Name"></input>
-      <input type="text" id="last" placeholder="Last Name"></input>
-      <input type="text" id="month" placeholder="Month"></input>
-      <input type="text" id="day" placeholder="Day"></input>
-      <input type="text" id="year" placeholder="Year"></input>
-      <input type="text" id="zip" placeholder="Zip"></input>
-      <button type="submit" id="submit">Submit</button>
-      </form>
-      <div class="scroll">
-        <input type="text" id="filter" onkeyup="table_search()"
-        placeholder="Search for polling place"></input>
-        <table class="fixed" id="table">
-          <thead>
-            <tr>
-              <th onclick='JSONtable(stringer("/s1"))'>Dist/Prec</th>
-              <th onclick='JSONtable(stringer("/s3"))'>Polling Place</th>
-              <th onclick='JSONtable(stringer("/s5"))'>Address</th>
-              <th onclick='JSONtable(stringer("/s7"))'>City</th>
-              <th onclick='JSONtable(stringer("/s9"))'>Zip</th>
-              <th onclick='JSONtable(stringer("/sb"))'>Ballot</th>
-            </tr>
-          </thead>
-          <tbody id="body">
-            <script>JSONtable(stringer("/s1"))</script>
-          </tbody>
-        </table>
-      </div>
-      <div class="sim-intro" rel = "stylesheet" href = "css/index.css">
-        <p class="caption">
-        <iframe src="election.html" width="320" height="460" scrolling="no">
-        </iframe>
-        <div class="box" id="thanks"> <a href = "https://ncase.me/ballot/"
-          title="Click here for more voting visualizations and information">
-          Thanks to ncase and company who made the
-          box seen above an open and amazing resource </a><div>
-      </div>
-      <div class="sim-intro" rel = "stylesheet" href = "css/index.css">
-        <p class="caption">
-        <iframe src="pencil.html" width="320" height="460" scrolling="no">
-        </iframe>
-      </div>
+  <div class="main">
+    <!--Header-->
+    <h1 id="title"><b>PG County Election Hub</b></h1>
+
+    <!--About-->
+    <div id="about">
+
+      <h1 class="sectionName"><b>About.</b></h1>
+      <hr class="sectionDivider">
+
+      <h2>What's the problem?</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <h2>Who's our target?</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    </div>
+  
+
+  <!--Index-->
+  <div id="index">
+    <h1 class="sectionName"><b>Index.</b></h1>
+    <hr class="sectionDivider">
+
+    <div class="container">
+      <div class="wrapper">
+        <button class="button" onclick="loadData_()">
+          Ver boleta genérica en Español</button>
+        <div class="content" id="content"><script>loadData("none")</script></div>
+        <form  method="post">
+        <input type="text" id="month" placeholder="Month"></input>
+        <input type="text" id="day" placeholder="Day"></input>
+        <input type="text" id="year" placeholder="Year"></input>
+        <input type="text" id="zip" placeholder="Zip"></input>
+        <button type="submit" id="submit">Submit</button>
+          </form>
+
+        <div class="scroll">
+          <input type="text" id="filter" onkeyup="table_search()"
+          placeholder="Search for polling place"></input>
+          <table class="fixed" id="table">
+            <thead>
+              <tr>
+                <th onclick='JSONtable(stringer("/s1"))'>Dist/Prec</th>
+                <th onclick='JSONtable(stringer("/s3"))'>Polling Place</th>
+                <th onclick='JSONtable(stringer("/s5"))'>Address</th>
+                <th onclick='JSONtable(stringer("/s7"))'>City</th>
+                <th onclick='JSONtable(stringer("/s9"))'>Zip</th>
+                <th onclick='JSONtable(stringer("/sb"))'>Ballot</th>
+              </tr>
+            </thead>
+            <tbody id="body">
+            <script>JSONtable(stringer("/s1"))</script></tbody>
+          </table>
+        </div>
+
+        <div class="sim-intro" rel = "stylesheet" href = "css/index.css">
+          <p class="caption">
+          <iframe src="election.html" width="320" height="460" scrolling="no"></iframe>
+          <div class="box" id="thanks"> <a href = "https://ncase.me/ballot/"
+            title="Click here for more voting visualizations and information">
+            Thanks to ncase and company who made the
+            box seen above an open and amazing resource </a><div>
+        </div>
+
+        <div class="sim-intro" rel = "stylesheet" href = "css/index.css">
+          <p class="caption">
+          <iframe src="pencil.html" width="320" height="460" scrolling="no"></iframe>
+        </div>
       <div class="footer"></div>
     </div>
+  </div>
+
+    <!--Documentaiton-->
+    <div id="documentation">
+      <h1 class="sectionName"><b>Documentation.</b></h1>
+      <hr class="sectionDivider">
+
+      <h2>What's the problem?</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <h2>Who's our target?</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
 
     <script>
       // Script to open and close sidebar
