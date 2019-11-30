@@ -10,11 +10,11 @@
 
 | Names          | Contributions| 
 | :---           |    :----:   |
-| Ayesha Raza    | HTML, POST request, CSS, file.md, Powerpoint| 
+| Ayesha Raza    | HTML, POST request, CSS, file.md, Powerpoint, Powerpoint notes| 
 | Josh May       |  Advanced Excel, HTML/CSS, JAVA| 
-| Lorraine Siochi|  CSS, Meeting Notes, Wireframes, Powerpoint| 
-| Tony Persaud   |  HTML, POST request, CSS, README.md, Powerpoint| 
-| Tamia Green    |  CSS, Powerpoint| 
+| Lorraine Siochi|  CSS, Meeting Notes, Wireframes| 
+| Tony Persaud   |  HTML, POST request, CSS, README.md| 
+| Tamia Green    |  CSS| 
 
 #
 ## Link to our app
