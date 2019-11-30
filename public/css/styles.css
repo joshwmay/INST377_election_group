@@ -23,7 +23,6 @@
   display: flex;
   align-items: flex-start;
   display: block;
-
 }
 
 #about {
@@ -92,7 +91,6 @@ h3 {
 /*Used when changing width of browser
 Collapses menu into a navigation button
 Forces top title bar to appear
-
 */
 @media (max-width:992px) { 
 	.w3-sidebar.w3-collapse {
@@ -283,4 +281,8 @@ iframe{
 
 tbody p {
   cursor: pointer;
+}
+
+.w3-bar-block a:hover{
+  background-color: #CC6116; 
 }
