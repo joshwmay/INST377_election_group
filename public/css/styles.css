@@ -197,6 +197,7 @@ Forces top title bar to appear
   grid-template-columns: repeat(15%);
   grid-template-rows: repeat(5%);
   width: 90%;
+  margin-right: auto;
 }
 
 thead{
