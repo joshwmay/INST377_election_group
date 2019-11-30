@@ -10,7 +10,7 @@
   font-size: 24px;
   font-weight:bold;
   color: white;
-  background-color: #1A4287;
+  background-color: rgb(78, 99, 136);
 }
 
 #title {
@@ -23,7 +23,6 @@
   display: flex;
   align-items: flex-start;
   display: block;
-
 }
 
 #about {
@@ -126,7 +125,7 @@ Forces top title bar to appear
 }
 
 .wrapper div {
-  border-radius: 14px;
+  border-radius: 25px;
 }
 
 
@@ -134,11 +133,11 @@ Forces top title bar to appear
   display: flex;
   flex-direction: column;
   background: #fff;
-  border: 1px dotted #444;
+  border: 3px dotted #1A4287;
   flex-grow: auto;
   padding: 2%;
   overflow-wrap: break-word;
-  margin: 2% 5%;
+  margin-right: auto;
   max-width: 40%;
   max-height: 400px;
   overflow: scroll;
@@ -150,12 +149,17 @@ Forces top title bar to appear
   flex-direction: column;
   height: auto;
   padding: 2%;
+  color: #1A4287;
+  
 }
 
 .content p {
-  font-size: 1.5em ;
+  font-size: 1.5em;
   -moz-border-radius: 11px;
   -webkit-border-radius: 11px;
+  color: #CC6116;
+  font-style: oblique;
+  font-weight: bold;
 }
 ::-webkit-scrollbar {
   width: 0px;
@@ -193,6 +197,7 @@ Forces top title bar to appear
   grid-template-columns: repeat(15%);
   grid-template-rows: repeat(5%);
   width: 90%;
+  margin-right: auto;
 }
 
 thead{
@@ -249,8 +254,8 @@ tbody tr td {
   text-align: left;
 }
 tbody tr:hover {
-  background: #bbb;
-	border-bottom-color: #999;
+  background: #CC6116;
+	border-bottom-color:#CC6116;
 }
 
 
@@ -277,4 +282,16 @@ iframe{
 
 tbody p {
   cursor: pointer;
+}
+
+.w3-bar-block a:hover{
+  background-color: #CC6116;
+}
+.button {
+  background-color: #CC6116;
+  margin-right: auto;
+  color: #1A4287;
+  border: 3px dotted #1A4287;
+  border-radius: 25px;
+
 }
