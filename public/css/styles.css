@@ -158,7 +158,8 @@ Forces top title bar to appear
   -moz-border-radius: 11px;
   -webkit-border-radius: 11px;
   color: #CC6116;
-  font-style: italic;
+  font-style: oblique;
+  font-weight: bold;
 }
 ::-webkit-scrollbar {
   width: 0px;
