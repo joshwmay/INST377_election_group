@@ -78,17 +78,11 @@
         <button class="button" id="trans" onclick="loadData(stringer('lang'))">
           Haga clic para traducir la boleta al Español</button>
         <div class="content"><script>loadData(stringer("lang"))</script></div>
-        <form id="form"  action="http://localhost:3000/#" method="post">
-        <input type="text" id="name" placeholder="Name">
-        <br>
+        <form  method="post">
         <input type="text" id="month" placeholder="Month"></input>
-        <br>
         <input type="text" id="day" placeholder="Day"></input>
-        <br>
         <input type="text" id="year" placeholder="Year"></input>
-        <br>
         <input type="text" id="zip" placeholder="Zip"></input>
-        <br>
         <button type="submit" id="submit">Submit</button>
           </form>
 
@@ -122,8 +116,6 @@
           <iframe src="pencil.html" width="320" height="490" scrolling="no"
           title="pencil"></iframe>
         </div>
-
-
 
 
     <!--Documentaiton-->
@@ -182,7 +174,7 @@
           All ballot data contained on this site reflects the 2018 Gubernatorial
           Ballot in the state of Maryland.
         </p>
-        <a href="#ballot" onclick="closeNav()"
+        <a id="ballotTable" href="#ballot" onclick="closeNav()"
         class="w3-bar-item w3-button w3-hover-white">
           <img src="img/BallotCandidateTable.png" alt=BallotCandidateTable>
         </a>
@@ -198,7 +190,6 @@
 
         <button class="button" id="reps" alt="Translation button (go to section)">
           <a href="#trans" onclick="closeNav()">Haga clic para traducir la boleta al Español</a></button>
-
       <h2>Search Bar</h2>
       <p>The search bar is meant to search through all of the polling places in
         Prince George's County. If you know of a polling place in the county,
@@ -206,7 +197,7 @@
         relevant places in the search. If what you type in does not match a
         polling place on the list, nothing will show up.
       </p>
-      <img src="img/SeacrhbarAndlist.png" alt=SearchBar>
+      <a id="searchList"><img src="img/SeacrhbarAndlist.png" alt=SearchBar></a>
       <h2>Polling Places List</h2>
       <p>The polling place lists all of the polling places available in Prince
         George's county. Each place has a District/Precinct number, location
@@ -232,7 +223,9 @@
         illustrate that the candidate who has the most color, or most votes, will
         win.
       </p>
-      <img src="img/VotingCountSimulator.png" alt=VotingCountSimulator>
+      <div id="countSim">
+        <img src="img/VotingCountSimulator.png" alt=VotingCountSimulator>
+      </div>
       <h2>Ballot Bubble Simulator</h2>
       <p>The Ballot Bubble Simulator is meant to practice fillinf in the bubbles
         that you will find when voting. As you hold your screen over the box,
@@ -242,8 +235,9 @@
         red. You can reset the box by pressing the reset button located to the
         right of the box.
       </p>
-      <img src="img/Bubblesimulator.png" alt=Bubblesimulator height="300" width="350">
-
+      <div id="bubbleSim">
+        <img src="img/Bubblesimulator.png" alt=Bubblesimulator height="300" width="350">
+      </div>
     </div>
     <div id="contributors">
       <h1 class="sectionName"><b>Page Contributors.</b></h1>
