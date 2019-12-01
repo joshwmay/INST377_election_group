@@ -117,10 +117,21 @@ Forces top title bar to appear
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-evenly;
-  align-items: flex-end;
+  justify-content: space-between;
 
 }
+
+.caption {
+  align-self: space-between;
+}
+
+
+.box {
+  margin-left: 20px;
+
+
+}
+
 
 .wrapper {
   min-height: 100%;
