@@ -141,7 +141,9 @@
           <li>Vote Count Simulator</li>
           <li>Ballot Bubble Simulator</li>
         </ol>
-      <h2>Navigation Bar</h2>
+      <a href="javascript:void(0)" class="w3-button w3-margin-right"
+      onclick="openNav()"><h2>Navigation Bar</h2>
+    </a>
       <p>The navigation bar serves to help you find your way around the site.
         You will see there are four sections to our navigation bar. These
         sections are home, about, ballot, and documentation. Clicking "Home"
@@ -155,8 +157,10 @@
         bubble simulator. Finally, clicking "Documentation" will take you to the
         part of our website with any instructions one would need to use the site.
       </p>
-      <img src="img/navigationbarpic.png" alt="navbar" height="400" width="300">
-      <h2>Ballot Candidate Table</h2>
+      <a href="#ballot" onclick="closeNav()"
+      class="w3-bar-item w3-button w3-hover-white">
+        <h2>Ballot Candidate Table</h2>
+      </a>
         <p>In the Ballot Candidate table, you will find all of the candidates
           running for office, as they would appear in the ballot. You will also
           see their political party. You will see that they are separated by the
@@ -172,7 +176,10 @@
           All ballot data contained on this site reflects the 2018 Gubernatorial
           Ballot in the state of Maryland.
         </p>
-        <img src="img/BallotCandidateTable.png" alt=BallotCandidateTable height="300" width="300">
+        <a href="#ballot" onclick="closeNav()"
+        class="w3-bar-item w3-button w3-hover-white">
+          <img src="img/BallotCandidateTable.png" alt=BallotCandidateTable>
+        </a>
       <h2>Translation Button</h2>
       <p>The translation button allows you to see the candidate table in
         spanish. This functionality is quite simple. You will see a button over
@@ -182,8 +189,10 @@
         button will appear with the text, "Click to translate ballot to English";
         once clicked the ballot will revert to the English version.
       </p>
-      <button class="button" id="reps" alt="Translation button (display only)">
-        Haga clic para traducir la boleta al Español</button>
+
+        <button class="button" id="reps" alt="Translation button (go to section)">
+          <a href="#trans" onclick="closeNav()">Haga clic para traducir la boleta al Español</a></button>
+
       <h2>Search Bar</h2>
       <p>The search bar is meant to search through all of the polling places in
         Prince George's County. If you know of a polling place in the county,
@@ -191,7 +200,7 @@
         relevant places in the search. If what you type in does not match a
         polling place on the list, nothing will show up.
       </p>
-      <img src="img/SeacrhbarAndlist.png" alt=SearchBar height="350" width="450">
+      <img src="img/SeacrhbarAndlist.png" alt=SearchBar>
       <h2>Polling Places List</h2>
       <p>The polling place lists all of the polling places available in Prince
         George's county. Each place has a District/Precinct number, location
@@ -205,7 +214,7 @@
         sort all places by city. Clicking by Zip will sort all polling places by
         zip code. Finally, clicking ballot will sort places by number of ballots.
       </p>
-      <img src="img/SeacrhbarAndlist1.png" alt=Placelist height="350" width="450">
+      <img src="img/SeacrhbarAndlist1.png" alt=Placelist>
       <h2>Vote Count Simulator</h2>
       <p>The Voting Count Simulator is a resource that is publically provided
         by ncase and company. This resource allows you to play arounf and
@@ -217,7 +226,7 @@
         illustrate that the candidate who has the most color, or most votes, will
         win.
       </p>
-      <img src="img/VotingCountSimulator.png" alt=VotingCountSimulator height="350" width="300">
+      <img src="img/VotingCountSimulator.png" alt=VotingCountSimulator>
       <h2>Ballot Bubble Simulator</h2>
       <p>The Ballot Bubble Simulator is meant to practice fillinf in the bubbles
         that you will find when voting. As you hold your screen over the box,
