@@ -155,7 +155,11 @@ Forces top title bar to appear
 
 .content div {
   font-size: 1em auto;
-  word-wrap: break-word;
+  padding-top: 1%;
+}
+
+.content input[type=text] {
+  width: 20px auto;
 }
 
 .content p {
@@ -227,7 +231,6 @@ thead th:active {
 thead tr {
   display:flex;
   justify-content: space-between;
-
   column-count: 5;
   font-size: 25px auto;
   height:20px;
