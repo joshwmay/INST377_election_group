@@ -53,12 +53,7 @@ body,h1,h2,h3,h4,h5 {
 
 h2 {
   font-size: 30px;
-  margin-top: 25px;
   color: #CC6116;
-}
-
-p, ol {
-  font-size: 20px;
 }
 
 @media (max-width:992px) {
@@ -122,21 +117,10 @@ Forces top title bar to appear
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-items: flex-end;
 
 }
-
-.caption {
-  align-self: space-between;
-}
-
-
-.box {
-  margin-left: 20px;
-
-
-}
-
 
 .wrapper {
   min-height: 100%;
@@ -169,13 +153,14 @@ Forces top title bar to appear
   overflow: scroll;
 }
 
+
 .content div {
   font-size: 1em auto;
   padding-top: 1%;
 }
 
 .content input[type=text] {
-  width: 20px auto;
+  width: 10px auto;
 }
 
 .content p {
@@ -295,8 +280,19 @@ tbody td{
   column-gap: 2rem;
 }
 
+
+.scroll p{
+  padding: .125;
+  margin: 0;
+}
+
+
+#sim-fill {
+  padding-top: .025;
+}
+
 iframe{
-  padding-top:7.5%;
+  padding-top:10%;
   padding-left, padding-right: 15;
   padding-bottom: 5%;
 	border:none;
@@ -316,7 +312,7 @@ tbody p {
 .button {
   background-color: #deac2f;
   color: #1A4287;
-  border: 1px dotted #1A4287;
+  border: 7px dotted #1A4287;
   border-radius: 30px;
   margin-bottom:2%;
 }
@@ -333,33 +329,6 @@ tbody p {
 
 #clock {
   margin-top: 20px;
-  margin-left: 20px;
   color: #CC6116;
 
-}
-
-.sectionWImage img {
-  float:right;
-  margin:20px; 
-}
-
-.sectionWImage h2 {
-  color: #CCA916;
-
-}
-
-.sectionWImage::before,
-.sectionWImage::after {
-  content: "";
-  display: table;
-}
-
-.sectionWImage::after {
-  clear:both;
-}
-
-.sectionWImage {
-  clear:both;
-  zoom:1;
-  margin-left: 15px;
 }
