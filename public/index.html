@@ -18,13 +18,16 @@
     <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
 
     <div class="w3-container">
+      <a href="https://www.princegeorgescountymd.gov/"><img src="img/PJ_flag.png"
+      title="Seal of Prince George's County Maryland"></a>
       <h3 class="w3-padding-64"><b>PGC County<br>Election Hub</b></h3>
     </div>
 
     <div class="w3-bar-block">
       <a href="#" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">Home</a>
       <a href="#about" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">About</a>
-      <a href="#index" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">Index</a>
+      <a href="#ballot" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">Ballot</a>
+      <a href="#sim-fill" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">Interactive Tools</a>
       <a href="#documentation" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">Documentation</a>
       <a href="#contributors" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">Page Contributors</a>
       <a href="#references" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">References</a>
@@ -65,9 +68,9 @@
       </p>
     </div>
 
-  <!--Index-->
-  <div id="index">
-    <h1 class="sectionName"><b>Index.</b></h1>
+  <!--ballot-->
+  <div id="ballot">
+    <h1 class="sectionName"><b>Ballot.</b></h1>
     <hr class="sectionDivider">
 
     <div class="container">
@@ -106,14 +109,15 @@
           <div class="box" id="thanks"> <a href = "https://ncase.me/ballot/"
             title="Click here for more voting visualizations and information">
             </a>
+          </div>
+        </div>
         <div id="sim-fill" class="sim-intro" rel = "stylesheet" href = "css/index.css">
           <p class="caption">
           <iframe src="pencil.html" width="320" height="490" scrolling="no"
           title="pencil"></iframe>
         </div>
-      <div class="footer"></div>
-    </div>
-  </div>
+
+
 
 
     <!--Documentaiton-->
@@ -122,7 +126,11 @@
       <hr class="sectionDivider">
 
       <h1>User Manual</h1>
-        <p>This resource was created in order to aid in the process of informing inexperienced and uneducated voters about the voting process. Here, you can find a guide to the different parts of the website, that will help orient you. Here are the specific functionalities you will see on the site:
+        <p>This resource was created in order to aid in the process of
+          informing inexperienced and uneducated voters about the voting process.
+          Here, you can find a guide to the different parts of the website, that
+          will help orient you. Here are the specific functionalities you will
+          see on the site:
         </p>
         <ol>
           <li>Navigation Bar</li>
@@ -134,63 +142,90 @@
           <li>Ballot Bubble Simulator</li>
         </ol>
       <h2>Navigation Bar</h2>
-      <p>The navigation bar serves to help you find your way around the site. You will see there are four sections to our
-        navigation bar. These sections are home, about, index, and documentation. Clicking "Home" will take you to the top of our page.
-        Clicking "About" will take you to the about section of our website. This section will give you a better idea of what our website's
-        purpose is and who it is meant for. Clicking "Index" will take you to the section of our website that holds all the main functionalities
-        of our website. You will be able to scroll through and find the ballot candidate table, the translation button, the search bar, the
-        polling places list, the vote count simulator, and the ballot bubble simulator. Finally, clicking "Documentation"
-        will take you to the part of our website with any instructions one would need to use the site.
+      <p>The navigation bar serves to help you find your way around the site.
+        You will see there are four sections to our navigation bar. These
+        sections are home, about, ballot, and documentation. Clicking "Home"
+        will take you to the top of our page. Clicking "About" will take you to
+        the about section of our website. This section will give you a better
+        idea of what our website's purpose is and who it is meant for. Clicking
+        "Ballot" will take you to the section of our website that holds all the
+        main functionalities of our website. You will be able to scroll through
+        and find the ballot candidate table, the translation button, the search
+        bar, the polling places list, the vote count simulator, and the ballot
+        bubble simulator. Finally, clicking "Documentation" will take you to the
+        part of our website with any instructions one would need to use the site.
       </p>
       <img src="img/navigationbarpic.png" alt="navbar" height="400" width="300">
       <h2>Ballot Candidate Table</h2>
-        <p>In the Ballot Candidate table, you will find all of the candidates running for office, as they would appear in the ballot. You will also see their political party.
-          You will see that they are separated by the position that there are running for. You can scroll within this box the same
-          as you would for any page. You can click on some of the elements in this box for more resources. For instance, you can click on
-          the position title, for information about what that position is and what they do. You can also click on any candidate to
-          navigate to that candidate's page. You will also see a write in input box in this section. This is meant to appear as it would
-          on a real ballot, but it is not meant to be submitted. At this point in time, link functionality is not in place for the Spanish
-          version of the ballot. All ballot data contained on this site reflects the 2018 Gubernatorial Ballot in the state of Maryland.
+        <p>In the Ballot Candidate table, you will find all of the candidates
+          running for office, as they would appear in the ballot. You will also
+          see their political party. You will see that they are separated by the
+          position that there are running for. You can scroll within this box
+          the same as you would for any page. You can click on some of the
+          elements in this box for more resources. For instance, you can click
+          on the position title, for information about what that position is and
+          what they do. You can also click on any candidate to navigate to that
+          candidate's page. You will also see a write in input box in this
+          section. This is meant to appear as it would on a real ballot, but it
+          is not meant to be submitted. At this point in time, link
+          functionality is not in place for the Spanish version of the ballot.
+          All ballot data contained on this site reflects the 2018 Gubernatorial
+          Ballot in the state of Maryland.
         </p>
         <img src="img/BallotCandidateTable.png" alt=BallotCandidateTable height="300" width="300">
       <h2>Translation Button</h2>
-      <p>The translation button allows you to see the candidate table in spanish. This functionality is quite simple. You will see
-        a button over the ballot candidate table with the prompt, "Haga clic para traducir la boleta al Español." Clicking this will allow you to
-        see all of the candidates and titles in spanish. Once translated to Spanish, the button will appear with the text, "Click to translate ballot to English";
+      <p>The translation button allows you to see the candidate table in
+        spanish. This functionality is quite simple. You will see a button over
+        the ballot candidate table with the prompt, "Haga clic para traducir la
+        boleta al Español." Clicking this will allow you to see all of the
+        candidates and titles in spanish. Once translated to Spanish, the
+        button will appear with the text, "Click to translate ballot to English";
         once clicked the ballot will revert to the English version.
       </p>
       <button class="button" id="reps" alt="Translation button (display only)">
         Haga clic para traducir la boleta al Español</button>
       <h2>Search Bar</h2>
-      <p>The search bar is meant to search through all of the polling places in Prince George's County.
-        If you know of a polling place in the county, you can type it in to the search bar, and it will display all of the relevant
-        places in the search. If what you type in does not match a polling place on the list, nothing will show up.
+      <p>The search bar is meant to search through all of the polling places in
+        Prince George's County. If you know of a polling place in the county,
+        you can type it in to the search bar, and it will display all of the
+        relevant places in the search. If what you type in does not match a
+        polling place on the list, nothing will show up.
       </p>
       <img src="img/SeacrhbarAndlist.png" alt=SearchBar height="350" width="450">
       <h2>Polling Places List</h2>
-      <p>The polling place lists all of the polling places available in Prince George's county. Each place has a
-        District/Precinct number, location name, Address, City, Zip Code, and number of Ballots. As seen previously,
-        the polling places are searchable through the search bar above. Additionally, the list is filterable. CLicking any of the
-        headings at the top of the list will give you a different filter. Clicking "Dist/Prec" will list all of the places based on the
-        district and precinct. Clicking "Polling Place" will sort all of the places by name alphabetically. Clicking "Address"
-        will sort everything by address. Cicking city will sort all places by city. Clicking by Zip will sort all polling places by
+      <p>The polling place lists all of the polling places available in Prince
+        George's county. Each place has a District/Precinct number, location
+        name, Address, City, Zip Code, and number of Ballots. As seen previously,
+        the polling places are searchable through the search bar above.
+        Additionally, the list is filterable. Clicking any of the headings at
+        the top of the list will give you a different filter. Clicking "Dist/Prec"
+        will list all of the places based on the district and precinct. Clicking
+        "Polling Place" will sort all of the places by name alphabetically.
+        Clicking "Address" will sort everything by address. Cicking city will
+        sort all places by city. Clicking by Zip will sort all polling places by
         zip code. Finally, clicking ballot will sort places by number of ballots.
       </p>
       <img src="img/SeacrhbarAndlist1.png" alt=Placelist height="350" width="450">
       <h2>Vote Count Simulator</h2>
-      <p>The Voting Count Simulator is a resource that is publically provided by ncase and company. This resource
-        allows you to play arounf and illustrate how a candidate wins an election over other candidates. As you move the different
-        shapes around, you will find that their respective colors will cover different areas of the square. The area covered by colors
-        simulates how many votes a candidate has. You will be able to see a numerical representation of this at the bottom.
-        This will illustrate that the candidate who has the most color, or most votes, will
+      <p>The Voting Count Simulator is a resource that is publically provided
+        by ncase and company. This resource allows you to play arounf and
+        illustrate how a candidate wins an election over other candidates.
+        As you move the different shapes around, you will find that their
+        respective colors will cover different areas of the square. The area
+        covered by colors simulates how many votes a candidate has. You will be
+        able to see a numerical representation of this at the bottom. This will
+        illustrate that the candidate who has the most color, or most votes, will
         win.
       </p>
       <img src="img/VotingCountSimulator.png" alt=VotingCountSimulator height="350" width="300">
       <h2>Ballot Bubble Simulator</h2>
-      <p>The Ballot Bubble Simulator is meant to practice fillinf in the bubbles that you will find when voting.
-        As you hold your screen over the box, you will see a pencil appear. You can hold down the mouse and drag through the box
-        to fill in the inner circle. If you fill in correctly, the box will turn green. If you overfill or underfill, the box will turn red.
-        You can reset the box by pressing the reset button located to the right of the box.
+      <p>The Ballot Bubble Simulator is meant to practice fillinf in the bubbles
+        that you will find when voting. As you hold your screen over the box,
+        you will see a pencil appear. You can hold down the mouse and drag
+        through the box to fill in the inner circle. If you fill in correctly,
+        the box will turn green. If you overfill or underfill, the box will turn
+        red. You can reset the box by pressing the reset button located to the
+        right of the box.
       </p>
       <img src="img/Bubblesimulator.png" alt=Bubblesimulator height="300" width="350">
 
@@ -201,12 +236,17 @@
 
       <h2><a href="https://www.linkedin.com/in/joshua-may-5a213712b/">Josh May</a></h2>
         <img src="img/josh.png" alt="Josh with his kids">
-        <p>I had a great time working on this project and excercising skills learned in web development this semester.
-        I am looking forward to graduating in the Spring of 2020 and hope to make a career with and continually build upon the things I have learned at
-        the University of Maryland. Coding and development is not something I envisioned enjoying, but it has truly become a passion of mine.
-        There has been little I've experienced in higher education that felt as satisfying to accomplish than putting together
-        the "Bubble-Fill Simulator" on this page. It is an honor to have anyone look at the work I have been a part of,
-        so please <a href="https://github.com/joshwmay">check out my GitHub</a> and/or
+        <p>I had a great time working on this project and excercising skills
+          learned in web development this semester. I am looking forward to
+          graduating in the Spring of 2020 and hope to make a career with and
+          continually build upon the things I have learned at the University of
+          Maryland. Coding and development is not something I envisioned
+          enjoying, but it has truly become a passion of mine. There has been
+          little I've experienced in higher education that felt as satisfying to
+          accomplish than putting together the "Bubble-Fill Simulator" on this
+          page. It is an honor to have anyone look at the work I have been a
+          part of, so please <a href="https://github.com/joshwmay">check out my
+          GitHub</a> and/or
         <a href="https://www.linkedin.com/in/joshua-may-5a213712b/">LinkedIn.</a>
       </p>
       <h2>Lorraine Siochi</h2>
