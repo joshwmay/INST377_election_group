@@ -106,20 +106,13 @@ Forces top title bar to appear
 	}
 }
 
-#sim-fill .caption {
+.w3-sidebar img {
+  margin-top: 15%;
+  margin-left: 25%;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  align-self: flex-end;
-}
-
-.sim-intro {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
-  align-items: flex-end;
-
+  align-self: center;
+  height: 50%;
+  width: 50%;
 }
 
 .wrapper {
@@ -160,7 +153,7 @@ Forces top title bar to appear
 }
 
 .content input[type=text] {
-  width: 10px auto;
+  width: 125px;
 }
 
 .content p {
@@ -252,10 +245,10 @@ tbody tr {
   justify-content: space-between;
   align-content: space-between;
   border-style: solid;
-  height:10%;
+  height: auto;
   padding-top: 2%;
-  padding-bottom: 5%;
-  column-count: 5;
+  padding-bottom: 2%;
+  column-count: 4;
   column-gap: space;
 }
 
@@ -284,7 +277,7 @@ td:nth-child(1), th:nth-child(1) {
   justify-content: center; font-size: 12px auto; }
 td:nth-child(2), th:nth-child(2) {
   width: 40%; min-width: 5%; overflow-wrap: break-word;word-wrap: break-word;
-  font-size: 12px; justify-content: center;}
+  font-size: 12px auto; justify-content: center;}
 td:nth-child(3), th:nth-child(3) {
   width: 15%; min-width: 5%; font-size: 12px auto;
 justify-content: center;}
@@ -292,19 +285,10 @@ td:nth-child(4), th:nth-child(4) {
   width: 12%; display: flex; justify-content: center; font-size: 12px auto;}
 
 
-
-
-#sim-fill {
-  padding-top: .025;
-}
-
 iframe{
   padding-top:10%;
-  padding-left, padding-right: 15;
   padding-bottom: 5%;
 	border:none;
-	display: block;
-	margin: 0px auto 25px auto;
 }
 
 
