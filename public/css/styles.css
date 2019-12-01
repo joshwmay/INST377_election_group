@@ -23,6 +23,7 @@
   display: flex;
   align-items: flex-start;
   display: block;
+  font-style: oblique;
 }
 
 #about {
@@ -48,7 +49,7 @@
 
 body,h1,h2,h3,h4,h5 {
   font-family: "Poppins", sans-serif
-} 
+}
 
 h2 {
   font-size: 30px;
@@ -72,7 +73,7 @@ h2 {
 h1,
 h2,
 h3 {
-  line-height: 1.2
+  line-height: 1.2;
 }
 
 .container {
@@ -92,7 +93,7 @@ h3 {
 Collapses menu into a navigation button
 Forces top title bar to appear
 */
-@media (max-width:992px) { 
+@media (max-width:992px) {
 	.w3-sidebar.w3-collapse {
 		display: none
 	}
@@ -152,36 +153,34 @@ Forces top title bar to appear
 .content {
   display: flex;
   flex-direction: column;
+  align-items: center;
   background: #fff;
   border: 3px dotted #1A4287;
-  flex-grow: auto;
-  padding: 2%;
-  overflow-wrap: break-word;
-  margin-right: auto;
-  margin-bottom: 20px;
-  max-width: 40%;
-  max-height: 400px;
+  padding-top: 10px;
+  padding-left: 4%;
+  padding-right: 4%;
+  max-width: 80%;
+  max-height: 500px;
   overflow: scroll;
-
 }
 
-.content li {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  padding: 2%;
-  color: #1A4287;
-  
+.content div {
+  font-size: 1em auto;
+  word-wrap: break-word;
 }
 
 .content p {
-  font-size: 1.5em;
+  display: flex;
+  align-items: center;
+  font-size: 1.5em auto;
   -moz-border-radius: 11px;
   -webkit-border-radius: 11px;
   color: #CC6116;
   font-style: oblique;
   font-weight: bold;
 }
+
+
 ::-webkit-scrollbar {
   width: 0px;
 }
@@ -241,7 +240,7 @@ thead tr {
   justify-content: space-between;
 
   column-count: 5;
-  font-size: 25px;
+  font-size: 25px auto;
   height:20px;
 }
 
@@ -255,8 +254,6 @@ tbody {
   overflow: scroll;
 }
 
-
-
 tbody tr {
   display:flex;
   justify-content: space-between;
@@ -264,7 +261,6 @@ tbody tr {
   height:10%;
   padding-top: 2%;
   padding-bottom: 2%;
-
   column-count: 5;
   column-gap: space;
 }
@@ -306,20 +302,29 @@ tbody p {
 }
 
 .w3-bar-block a:hover{
-  background-color: #CC6116;
-}
-.button {
-  background-color: #CC6116;
-  margin-right: 605px;
-  color: #1A4287;
-  border: 3px dotted #1A4287;
-  border-radius: 25px;
-  margin-bottom:20px;
+  background-color: #deac2f;
 }
 
-.contributors{
-  margin-right:auto;
+.button {
+  background-color: #deac2f;
+  color: #1A4287;
+  border: 7px dotted #1A4287;
+  border-radius: 30px;
+  margin-bottom:2%;
 }
-.scroll{
+
+#trans, #reps {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 10%;
+  width: 50%;
+  font-size: 20px auto;
+  cursor: pointer;
+}
+
+#clock {
   margin-top: 20px;
+  color: #CC6116;
+
 }

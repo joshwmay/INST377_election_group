@@ -18,7 +18,10 @@
     <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
 
     <div class="w3-container">
-      <h3 class="w3-padding-64"><b>PGC County<br>Election Hub</b></h3>
+       <br> <img src="img/PJ_flag.png" alt=BallotCandidateTable style="height:110px; width:100px; margin-left:40px;">
+      <h3 class="w3-padding-64">
+      <b>PGC County<br>Election Hub</b>
+      </h3>
     </div>
 
     <div class="w3-bar-block">
@@ -27,7 +30,7 @@
       <a href="#index" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">Index</a>
       <a href="#documentation" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">Documentation</a>
       <a href="#contributors" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">Page Contributors</a>
-      <iframe src="clock2.html" height="auto"></iframe>
+      <div id="clock"></div>
     </div>
 
   </nav>
@@ -59,7 +62,7 @@
           and candidate information all accessible in one place! </p>
 
       <h2>Who's our target?</h2>
-      <p>This website targets Prince George's County citizens, ages 18 and up, who can vote. We especially hope to reach young voters, ages 18-29, since they have statiscally 
+      <p>This website targets Prince George's County citizens, ages 18 and up, who can vote. We especially hope to reach young voters, ages 18-29, since they have statiscally
         had lower voting turnouts.
       </p>
 
@@ -75,7 +78,7 @@
       <div class="wrapper">
         <button class="button" id="trans" onclick="loadData(stringer('lang'))">
           Haga clic para traducir la boleta al Español</button>
-        <div class="content" id="content"><script>loadData(stringer("lang"))</script></div>
+        <div class="content"><script>loadData(stringer("lang"))</script></div>
         <form  method="post">
         <input type="text" id="month" placeholder="Month"></input>
         <input type="text" id="day" placeholder="Day"></input>
@@ -140,14 +143,14 @@
         </ol>
       <h2>Navigation Bar</h2>
       <p>The navigation bar serves to help you find your way around the site. You will see there are four sections to our
-        navigation bar. These sections are home, about, index, and documentation. Clicking "Home" will take you to the top of our page. 
+        navigation bar. These sections are home, about, index, and documentation. Clicking "Home" will take you to the top of our page.
         Clicking "About" will take you to the about section of our website. This section will give you a better idea of what our website's
         purpose is and who it is meant for. Clicking "Index" will take you to the section of our website that holds all the main functionalities
-        of our website. You will be able to scroll through and find the ballot candidate table, the translation button, the search bar, the 
+        of our website. You will be able to scroll through and find the ballot candidate table, the translation button, the search bar, the
         polling places list, the vote count simulator, and the ballot bubble simulator. Finally, clicking "Documentation"
-        will take you to the part of our website with any instructions one would need to use the site. 
+        will take you to the part of our website with any instructions one would need to use the site.
       </p>
-      <img src="img/navigationbarpic.png" alt="navbar" height="400" width="300"> 
+      <img src="img/navigationbarpic.png" alt="navbar" height="400" width="300">
       <h2>Ballot Candidate Table</h2>
         <p>In the Ballot Candidate table, you will find all of the candidates running for office, as they would appear in the ballot. You will also see their political party.
           You will see that they are separated by the position that there are running for. You can scroll within this box the same
@@ -164,34 +167,35 @@
         see all of the candidates and titles in spanish. Once translated to Spanish, the button will appear with the text, "Click to translate ballot to English";
         once clicked the ballot will revert to the English version.
       </p>
-      <img src="img/TranslationButton.png" alt=TranslationButton height="300" width="800">
+      <button class="button" id="reps" alt="Translation button (display only)">
+        Haga clic para traducir la boleta al Español</button>
       <h2>Search Bar</h2>
       <p>The search bar is meant to search through all of the polling places in Prince George's County.
         If you know of a polling place in the county, you can type it in to the search bar, and it will display all of the relevant
-        places in the search. If what you type in does not match a polling place on the list, nothing will show up. 
+        places in the search. If what you type in does not match a polling place on the list, nothing will show up.
       </p>
       <img src="img/SeacrhbarAndlist.png" alt=SearchBar height="350" width="450">
       <h2>Polling Places List</h2>
-      <p>The polling place lists all of the polling places available in Prince George's county. Each place has a 
+      <p>The polling place lists all of the polling places available in Prince George's county. Each place has a
         District/Precinct number, location name, Address, City, Zip Code, and number of Ballots. As seen previously,
-        the polling places are searchable through the search bar above. Additionally, the list is filterable. CLicking any of the 
+        the polling places are searchable through the search bar above. Additionally, the list is filterable. CLicking any of the
         headings at the top of the list will give you a different filter. Clicking "Dist/Prec" will list all of the places based on the
         district and precinct. Clicking "Polling Place" will sort all of the places by name alphabetically. Clicking "Address"
-        will sort everything by address. Cicking city will sort all places by city. Clicking by Zip will sort all polling places by 
-        zip code. Finally, clicking ballot will sort places by number of ballots. 
+        will sort everything by address. Cicking city will sort all places by city. Clicking by Zip will sort all polling places by
+        zip code. Finally, clicking ballot will sort places by number of ballots.
       </p>
-      <img src="img/SearchbarAndlist.png" alt=Placelist height="350" width="450">
+      <img src="img/SeacrhbarAndlist1.png" alt=Placelist height="350" width="450">
       <h2>Vote Count Simulator</h2>
       <p>The Voting Count Simulator is a resource that is publically provided by ncase and company. This resource
         allows you to play arounf and illustrate how a candidate wins an election over other candidates. As you move the different
         shapes around, you will find that their respective colors will cover different areas of the square. The area covered by colors
         simulates how many votes a candidate has. You will be able to see a numerical representation of this at the bottom.
         This will illustrate that the candidate who has the most color, or most votes, will
-        win. 
+        win.
       </p>
       <img src="img/VotingCountSimulator.png" alt=VotingCountSimulator height="350" width="300">
       <h2>Ballot Bubble Simulator</h2>
-      <p>The Ballot Bubble Simulator is meant to practice fillinf in the bubbles that you will find when voting. 
+      <p>The Ballot Bubble Simulator is meant to practice fillinf in the bubbles that you will find when voting.
         As you hold your screen over the box, you will see a pencil appear. You can hold down the mouse and drag through the box
         to fill in the inner circle. If you fill in correctly, the box will turn green. If you overfill or underfill, the box will turn red.
         You can reset the box by pressing the reset button located to the right of the box.
@@ -204,7 +208,15 @@
       <hr class="sectionDivider">
 
       <h2><a href="https://www.linkedin.com/in/joshua-may-5a213712b/">Josh May</a></h2>
-        <p>~~~~~</p>
+        <img src="img/josh.png">
+        <p>I had a great time working on this project and excercising skills learned in web development this semester.
+        I am looking forward to graduating in the Spring of 2020 and hope to make a career with and continually build upon the things I have learned at
+        the University of Maryland. Coding and development is not something I envisioned enjoying, but it has truly become a passion of mine.
+        There has been little I've experienced in higher education that felt as satisfying to accomplish than putting together
+        the "Bubble-Fill Simulator" on this page. It is an honor to have anyone look at the work I have been a part of,
+        so please <a href="https://github.com/joshwmay">check out my GitHub</a> and/or
+        <a href="https://www.linkedin.com/in/joshua-may-5a213712b/">LinkedIn.</a>
+      </p>
       <h2>Lorraine Siochi</h2>
         <p>~~~~</p>
       <h2><a href="https://www.linkedin.com/in/ayesha-raza">Ayesha Raza</a></h2>
