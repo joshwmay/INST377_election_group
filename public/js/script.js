@@ -119,20 +119,19 @@ function JSONtable(str) {
         col1 = row.insertCell(1);
         col2 = row.insertCell(2);
         col3 = row.insertCell(3);
-
         let add_sub, a, map_link;
-
         add_sub = address[i].toString();
+        city_sub = city[i].toString();
         a = document.createElement('a');
         map_link = document.createTextNode(add_sub);
         a.title = "View " + add_sub + " on map";
-        a.href = search_string(address[i], city[i]);
+        a.href = search_string(add_sub, city_sub);
         map_link.innerHTML = add_sub;
         a.appendChild(map_link);
 
         col0.innerHTML = title[i];
         col1.appendChild(a);
-        col2.innerHTML = city[i];
+        col2.innerHTML = city_sub;
         col3.innerHTML = zip[i];
                             }
         console.log(table_search())
@@ -168,18 +167,18 @@ function JSONtable(str) {
                           col3 = row.insertCell(3);
 
                           let a, add_sub, map_link;
-
+                          city_sub = city[i].toString();
                           add_sub = address[i].toString();
                           a = document.createElement('a');
                           map_link = document.createTextNode(add_sub);
                           map_link.innerHTML = add_sub;
                           a.title = "View " + add_sub + " on map";
-                          a.href = search_string(address[i], city[i]);
+                          a.href = search_string(add_sub, city_sub);
                           a.appendChild(map_link);
 
                           col0.innerHTML = title[i];
                           col1.appendChild(a);
-                          col2.innerHTML = city[i];
+                          col2.innerHTML = city_sub;
                           col3.innerHTML = zip[i];
                         }
                    })
@@ -330,7 +329,6 @@ function search_string(string1, string2) {
       res += comb[i]
       }
     }
-  res += string2;
   res = res.replace("U+MARLBORO","UPPER+MARLBORO");
   res = res.replace("Fort+Wash","Fort+Washington");
   res += "+MARYLAND";
