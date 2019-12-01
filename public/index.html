@@ -18,7 +18,8 @@
     <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
 
     <div class="w3-container">
-      <a id="PGCPic" href="https://www.princegeorgescountymd.gov/"><img src="img/PJ_flag.png" title="Seal of Prince George's County Maryland"></a>
+      <a href="https://www.princegeorgescountymd.gov/"><img src="img/PJ_flag.png"
+      title="Seal of Prince George's County Maryland"></a>
       <h3 class="w3-padding-64"><b>PGC County<br>Election Hub</b></h3>
     </div>
 
@@ -101,7 +102,7 @@
             <script>JSONtable(stringer("/s1"))</script></tbody>
           </table>
         </div>
-        <div class="sim-intro" rel = "stylesheet" href = "css/index.css">
+        <div class="sim-intro" id="electionSim" rel = "stylesheet" href = "css/index.css">
           <p class="caption">
           <iframe src="election.html" width="320" height="500" scrolling="no"
           title="election"></iframe>
@@ -154,8 +155,7 @@
         bubble simulator. Finally, clicking "Documentation" will take you to the
         part of our website with any instructions one would need to use the site.
       </p>
-      <a href="#ballot" onclick="closeNav()"
-      class="w3-bar-item w3-button w3-hover-white">
+      <a href="#ballot" class="w3-bar-item w3-button w3-hover-white">
         <h2>Ballot Candidate Table</h2>
       </a>
         <p>In the Ballot Candidate table, you will find all of the candidates
@@ -173,11 +173,9 @@
           All ballot data contained on this site reflects the 2018 Gubernatorial
           Ballot in the state of Maryland.
         </p>
-        <a id="ballotTable" href="#ballot" onclick="closeNav()"
-        class="w3-bar-item w3-button w3-hover-white">
-          <img src="img/BallotCandidateTable.png" alt=BallotCandidateTable>
         </a>
-      <h2>Translation Button</h2>
+      <h2><a href="#trans" title="Go to translation button"
+        class="w3-bar-item w3-button w3-hover-white">Translation Button</a></h2>
       <p>The translation button allows you to see the candidate table in
         spanish. This functionality is quite simple. You will see a button over
         the ballot candidate table with the prompt, "Haga clic para traducir la
@@ -186,18 +184,19 @@
         button will appear with the text, "Click to translate ballot to English";
         once clicked the ballot will revert to the English version.
       </p>
-
-        <button class="button" id="reps" alt="Translation button (go to section)">
-          <a href="#trans" onclick="closeNav()">Haga clic para traducir la boleta al Español</a></button>
-      <h2>Search Bar</h2>
+      <button class="button" id="reps" title="Translation button (go to section)">
+        <a href="#trans">Haga clic para traducir la boleta al Español</a>
+      </button>
+      <h2><a href="#filter" title="Go to table search box"
+        class="w3-bar-item w3-button w3-hover-white">Search Bar</a></h2>
       <p>The search bar is meant to search through all of the polling places in
         Prince George's County. If you know of a polling place in the county,
         you can type it in to the search bar, and it will display all of the
         relevant places in the search. If what you type in does not match a
         polling place on the list, nothing will show up.
       </p>
-      <a id="searchList"><img src="img/SeacrhbarAndlist.png" alt=SearchBar></a>
-      <h2>Polling Places List</h2>
+      <h2><a href="#table" title="Go to polling place table"
+      class="w3-bar-item w3-button w3-hover-white">Polling Places List</a></h2>
       <p>The polling place lists all of the polling places available in Prince
         George's county. Each place has a District/Precinct number, location
         name, Address, City, Zip Code, and number of Ballots. As seen previously,
@@ -210,8 +209,8 @@
         sort all places by city. Clicking by Zip will sort all polling places by
         zip code. Finally, clicking ballot will sort places by number of ballots.
       </p>
-      <img src="img/SeacrhbarAndlist1.png" alt=Placelist>
-      <h2>Vote Count Simulator</h2>
+      <h2><a href="#electionSim" title="Go to election simulator"
+      class="w3-bar-item w3-button w3-hover-white">Vote Count Simulator</a></h2>
       <p>The Voting Count Simulator is a resource that is publically provided
         by ncase and company. This resource allows you to play arounf and
         illustrate how a candidate wins an election over other candidates.
@@ -222,10 +221,8 @@
         illustrate that the candidate who has the most color, or most votes, will
         win.
       </p>
-      <div id="countSim">
-        <img src="img/VotingCountSimulator.png" alt=VotingCountSimulator>
-      </div>
-      <h2>Ballot Bubble Simulator</h2>
+      <h2><a href="#sim-fill" title="Go to bubble simulator"
+      class="w3-bar-item w3-button w3-hover-white">Ballot Bubble Simulator</a></h2>
       <p>The Ballot Bubble Simulator is meant to practice fillinf in the bubbles
         that you will find when voting. As you hold your screen over the box,
         you will see a pencil appear. You can hold down the mouse and drag
@@ -234,9 +231,6 @@
         red. You can reset the box by pressing the reset button located to the
         right of the box.
       </p>
-      <div id="bubbleSim">
-        <img src="img/Bubblesimulator.png" alt=Bubblesimulator height="300" width="350">
-      </div>
     </div>
     <div id="contributors">
       <h1 class="sectionName"><b>Page Contributors.</b></h1>
