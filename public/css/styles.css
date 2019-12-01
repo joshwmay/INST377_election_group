@@ -11,6 +11,7 @@
   font-weight:bold;
   color: white;
   background-color: rgb(78, 99, 136);
+  margin-bottom: 40px;
 }
 
 #title {
@@ -26,9 +27,6 @@
   font-style: oblique;
 }
 
-#about {
-  margin-top:80px;
-}
 
 .main {
   margin-left:340px;
@@ -51,14 +49,10 @@ body,h1,h2,h3,h4,h5 {
   font-family: "Poppins", sans-serif
 }
 
+
 h2 {
   font-size: 30px;
-  margin-top: 25px;
   color: #CC6116;
-}
-
-p, ol {
-  font-size: 20px;
 }
 
 @media (max-width:992px) {
@@ -66,8 +60,8 @@ p, ol {
 		display: none
 	}
 	.main {
-		margin-left: 40px!important;
-		margin-right: 40px!important
+		margin-left: 40px;
+		margin-right: 40px;
 	}
 	.w3-auto {
 		max-width: 100%
@@ -111,32 +105,14 @@ Forces top title bar to appear
 	}
 }
 
-#sim-fill .caption {
+.w3-sidebar img {
+  margin-top: 15%;
+  margin-left: 25%;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  align-self: flex-end;
+  align-self: center;
+  height: 50%;
+  width: 50%;
 }
-
-.sim-intro {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-
-}
-
-.caption {
-  align-self: space-between;
-}
-
-
-.box {
-  margin-left: 20px;
-
-
-}
-
 
 .wrapper {
   min-height: 100%;
@@ -169,13 +145,14 @@ Forces top title bar to appear
   overflow: scroll;
 }
 
+
 .content div {
   font-size: 1em auto;
   padding-top: 1%;
 }
 
 .content input[type=text] {
-  width: 20px auto;
+  width: 125px;
 }
 
 .content p {
@@ -220,13 +197,21 @@ Forces top title bar to appear
   top: 1px;
 }
 
+#table {
+  margin-bottom: 30px;
+}
+
 .scroll {
   display: grid;
   grid-gap: 10%;
   grid-template-columns: repeat(15%);
   grid-template-rows: repeat(5%);
-  width: 90%;
+  width: 100%;
   margin-right: auto;
+}
+
+table {
+  width: 100%;
 }
 
 thead{
@@ -266,10 +251,11 @@ tbody tr {
   display:flex;
   justify-content: space-between;
   align-content: space-between;
-  height:10%;
+  border-style: solid;
+  height: auto;
   padding-top: 2%;
   padding-bottom: 2%;
-  column-count: 5;
+  column-count: 4;
   column-gap: space;
 }
 
@@ -283,8 +269,6 @@ tbody tr:hover {
 	border-bottom-color:#CC6116;
 }
 
-
-
 tbody td{
   display: flex;
   justify-content: left;
@@ -295,13 +279,34 @@ tbody td{
   column-gap: 2rem;
 }
 
+td:nth-child(1), th:nth-child(1) {
+  width: 32%; display: flex; overflow-wrap: break-word; word-wrap: break-word;
+  justify-content: left; font-size: 12px auto; }
+td:nth-child(2), th:nth-child(2) {
+  width: 30%; min-width: 5%; overflow-wrap: break-word; word-wrap: break-word;
+  font-size: 12px auto; justify-content: left;}
+td:nth-child(3), th:nth-child(3) {
+  width: 25%; min-width: 5%; font-size: 12px auto; overflow-wrap: wrap; word-wrap: break-word;
+justify-content: left;}
+td:nth-child(4), th:nth-child(4) {
+  width: 13%; display: flex; justify-content: right; font-size: 12px auto;
+overflow-wrap: break-word; word-wrap: break-word;}
+
+#documentation img, #contributors img, #references img {
+  height: 70%;
+  width: 70%;
+}
+
 iframe{
+<<<<<<< HEAD
   padding-top:7.5%;
-  padding-left, padding-right: 15;
+  padding-left: 15;
+   padding-right: 15;
+=======
+  padding-top:10%;
+>>>>>>> 302913e8ee6d69f42681c282ecdb351496dbd9ad
   padding-bottom: 5%;
 	border:none;
-	display: block;
-	margin: 0px auto 25px auto;
 }
 
 
@@ -316,9 +321,13 @@ tbody p {
 .button {
   background-color: #deac2f;
   color: #1A4287;
-  border: 1px dotted #1A4287;
+  border: 7px dotted #1A4287;
   border-radius: 30px;
   margin-bottom:2%;
+}
+
+#reps a {
+  text-decoration: none;
 }
 
 #trans, #reps {
@@ -333,10 +342,9 @@ tbody p {
 
 #clock {
   margin-top: 20px;
-  margin-left: 20px;
   color: #CC6116;
-
 }
+<<<<<<< HEAD
 
 .sectionWImage img {
   float:right;
@@ -361,5 +369,6 @@ tbody p {
 .sectionWImage {
   clear:both;
   zoom:1;
-  margin-left: 15px;
 }
+=======
+>>>>>>> 302913e8ee6d69f42681c282ecdb351496dbd9ad
