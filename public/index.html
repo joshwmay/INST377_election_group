@@ -78,11 +78,17 @@
         <button class="button" id="trans" onclick="loadData(stringer('lang'))">
           Haga clic para traducir la boleta al Español</button>
         <div class="content"><script>loadData(stringer("lang"))</script></div>
-        <form  method="post">
+        <form id="form"  action="http://localhost:3000/#" method="post">
+        <input type="text" id="name" placeholder="Name">
+        <br>
         <input type="text" id="month" placeholder="Month"></input>
+        <br>
         <input type="text" id="day" placeholder="Day"></input>
+        <br>
         <input type="text" id="year" placeholder="Year"></input>
+        <br>
         <input type="text" id="zip" placeholder="Zip"></input>
+        <br>
         <button type="submit" id="submit">Submit</button>
           </form>
 
