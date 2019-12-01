@@ -57,7 +57,7 @@ h2 {
   color: #CC6116;
 }
 
-p {
+p, ol {
   font-size: 20px;
 }
 
@@ -338,14 +338,28 @@ tbody p {
 
 }
 
-#documentation img {
+.sectionWImage img {
   float:right;
-  margin:20px
-  
+  margin:20px; 
+}
+
+.sectionWImage h2 {
+  color: #CCA916;
+
+}
+
+.sectionWImage::before,
+.sectionWImage::after {
+  content: "";
+  display: table;
 }
 
 .sectionWImage::after {
-  content: "";
-  clear: both;
-  display: table;
+  clear:both;
+}
+
+.sectionWImage {
+  clear:both;
+  zoom:1;
+  margin-left: 15px;
 }
