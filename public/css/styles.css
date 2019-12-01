@@ -282,22 +282,20 @@ td:nth-child(1), th:nth-child(1) {
   width: 29%; display: flex; overflow-wrap: break-word; word-wrap: break-word;
   justify-content: left; font-size: 12px auto; }
 td:nth-child(2), th:nth-child(2) {
-  width: 29%; min-width: 5%; overflow-wrap: break-word; word-wrap: break-word;
+  width: 28%; min-width: 5%; overflow-wrap: break-word; word-wrap: break-word;
   font-size: 12px auto; justify-content: left;}
 td:nth-child(3), th:nth-child(3) {
-  width: 26%; min-width: 5%; font-size: 12px auto; overflow-wrap: wrap; word-wrap: break-word;
+  width: 25%; min-width: 5%; font-size: 12px auto; overflow-wrap: wrap; word-wrap: break-word;
 justify-content: left;}
 td:nth-child(4), th:nth-child(4) {
-  width: 16%; display: flex; justify-content: right; font-size: 12px auto;
+  width: 18%; display: flex; justify-content: right; font-size: 12px auto;
 overflow-wrap: break-word; word-wrap: break-word;}
 
 
 iframe{
-  padding-top:7.5%;
+  padding-top:1%;
   padding-left, padding-right: 15;
-  padding-top:10%;
-
-  padding-bottom: 5%;
+  padding-bottom: 1%;
 	border:none;
 }
 
