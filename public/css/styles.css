@@ -298,17 +298,10 @@ overflow-wrap: break-word; word-wrap: break-word;}
 }
 
 iframe{
-<<<<<<< HEAD
-<<<<<<< HEAD
   padding-top:7.5%;
-  padding-left: 15;
-   padding-right: 15;
-=======
+  padding-left, padding-right: 15;
   padding-top:10%;
->>>>>>> 302913e8ee6d69f42681c282ecdb351496dbd9ad
-=======
-  padding-top:10%;
->>>>>>> 302913e8ee6d69f42681c282ecdb351496dbd9ad
+
   padding-bottom: 5%;
 	border:none;
 }
