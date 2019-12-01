@@ -290,8 +290,8 @@ td:nth-child(4), th:nth-child(4) {
 overflow-wrap: break-word; word-wrap: break-word;}
 
 #documentation img, #contributors img, #references img {
-  height: 50%;
-  width: 50%;
+  height: 70%;
+  width: 70%;
 }
 
 iframe{
@@ -315,6 +315,10 @@ tbody p {
   border: 7px dotted #1A4287;
   border-radius: 30px;
   margin-bottom:2%;
+}
+
+#reps a {
+  text-decoration: none;
 }
 
 #trans, #reps {
