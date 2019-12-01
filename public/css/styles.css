@@ -291,16 +291,6 @@ td:nth-child(4), th:nth-child(4) {
   width: 16%; display: flex; justify-content: right; font-size: 12px auto;
 overflow-wrap: break-word; word-wrap: break-word;}
 
-#documentation img, #contributors img, #references img, #ballotTable img,
-#searchList img{
-  height: 60% auto;
-  width: 60% auto;
-}
-
-#countSim img, #bubbleSim img {
-  height: 100px auto;
-  width: 100px auto;
-}
 
 iframe{
   padding-top:7.5%;
