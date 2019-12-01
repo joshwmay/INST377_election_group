@@ -10,19 +10,18 @@
   font-size: 24px;
   font-weight:bold;
   color: white;
-  background-color: rgb(78, 99, 136);
+  background-color: #1A4287;
   margin-bottom: 40px;
 }
 
 #title {
-  font-size: 64px;
-  margin: 10px;
+  font-size: 50px;
   margin-top:85px;
   right: 0;
   left: 0;
   justify-content: center;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   display: block;
   font-style: oblique;
 }
@@ -35,7 +34,7 @@
 
 .sectionName {
   margin-top: 75px;
-  font-size:48px;
+  font-size:35px;
   color: #1A4287;
 }
 
@@ -51,7 +50,7 @@ body,h1,h2,h3,h4,h5 {
 
 
 h2 {
-  font-size: 30px;
+  font-size: 20px;
   color: #CC6116;
 }
 
@@ -345,10 +344,9 @@ tbody p {
 
 #clock {
   margin-top: 20px;
+  margin-left:20px;
   color: #CC6116;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 .sectionWImage img {
   float:right;
@@ -359,7 +357,6 @@ tbody p {
   color: #CCA916;
 
 }
-
 .sectionWImage::before,
 .sectionWImage::after {
   content: "";
@@ -374,7 +371,3 @@ tbody p {
   clear:both;
   zoom:1;
 }
-=======
->>>>>>> 302913e8ee6d69f42681c282ecdb351496dbd9ad
-=======
->>>>>>> 302913e8ee6d69f42681c282ecdb351496dbd9ad
