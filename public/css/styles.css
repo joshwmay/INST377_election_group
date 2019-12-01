@@ -279,16 +279,16 @@ tbody td{
 }
 
 td:nth-child(1), th:nth-child(1) {
-  width: 32%; display: flex; overflow-wrap: break-word; word-wrap: break-word;
+  width: 29%; display: flex; overflow-wrap: break-word; word-wrap: break-word;
   justify-content: left; font-size: 12px auto; }
 td:nth-child(2), th:nth-child(2) {
-  width: 30%; min-width: 5%; overflow-wrap: break-word; word-wrap: break-word;
+  width: 29%; min-width: 5%; overflow-wrap: break-word; word-wrap: break-word;
   font-size: 12px auto; justify-content: left;}
 td:nth-child(3), th:nth-child(3) {
-  width: 25%; min-width: 5%; font-size: 12px auto; overflow-wrap: wrap; word-wrap: break-word;
+  width: 26%; min-width: 5%; font-size: 12px auto; overflow-wrap: wrap; word-wrap: break-word;
 justify-content: left;}
 td:nth-child(4), th:nth-child(4) {
-  width: 13%; display: flex; justify-content: right; font-size: 12px auto;
+  width: 16%; display: flex; justify-content: right; font-size: 12px auto;
 overflow-wrap: break-word; word-wrap: break-word;}
 
 #documentation img, #contributors img, #references img, #ballotTable img,
