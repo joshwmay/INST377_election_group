@@ -293,8 +293,8 @@ overflow-wrap: break-word; word-wrap: break-word;}
 
 #documentation img, #contributors img, #references img, #ballotTable img,
 #searchList img{
-  height: 60%;
-  width: 60% ;
+  height: 60% auto;
+  width: 60% auto;
 }
 
 #countSim img, #bubbleSim img {
