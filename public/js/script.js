@@ -512,3 +512,31 @@ var x = setInterval(function() {
   document.getElementById("clock").innerHTML = days + " Days" + "<br>" + hours + " Hours" + "<br>"
   + minutes + " Minutes" + "<br>" + seconds + " seconds";
 }, 1000);
+
+
+window.addEventListener("load", function () {
+  function sendData() {
+    var XHR = new XMLHttpRequest();
+
+    var FD = new FormData(form);
+
+    XHR.addEventListener("load", function(event) {
+      alert(event.target.responseText);
+    });
+
+    XHR.addEventListener("error", function(event) {
+      alert('Oops! Something went wrong.');
+    });
+
+    XHR.open("POST", "http://localhost:3000/#");
+    XHR.send(FD);
+  }
+  var form = document.getElementById("form");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    sendData();
+  });
+});
+
+
