@@ -1,28 +1,25 @@
 <!doctype html>
-<html lang="en-US">
-
+<html lang = "en-US">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
   <title> PGC Voter Info Project</title>
-  <meta name="Tamia Green, Joshua May, Tony Persaud, Ayesha Raza,
-  Lorraine Siochi" content="Group Project for INST 377">
-  <link rel="stylesheet" href="css/styles.css">
+  <meta name = "Tamia Green, Joshua May, Tony Persaud, Ayesha Raza,
+  Lorraine Siochi" content = "Group Project for INST 377">
+  <link rel  = "stylesheet" href  = "css/styles.css">
   <script src="js/script.js"></script>
 </head>
-
 <body>
 
   <!-- Sidebar/menu -->
   <nav class="w3-sidebar w3-collapse w3-top w3-large w3-padding" id="mySidebar"><br>
-    <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-hide-large w3-display-topleft"
-      style="width:100%;font-size:22px">Close Menu</a>
+    <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
 
     <div class="w3-container">
       <a href="https://www.princegeorgescountymd.gov/"><img src="img/PJ_flag.png"
-          title="Seal of Prince George's County Maryland"></a>
+      title="Seal of Prince George's County Maryland"></a>
       <h3 class="w3-padding-64"><b>PGC County<br>Election Hub</b></h3>
     </div>
 
@@ -46,8 +43,7 @@
   </header>
 
   <!-- Overlay effect when opening sidebar on small screens -->
-  <div class="w3-overlay w3-hide-large" onclick="closeNav()" style="cursor:pointer" title="Close Side Menu"
-    id="myOverlay"></div>
+  <div class="w3-overlay w3-hide-large" onclick="closeNav()" style="cursor:pointer" title="Close Side Menu" id="myOverlay"></div>
 
   <!--START OF PAGE CONTENT-->
   <div class="main">
@@ -61,227 +57,223 @@
       <hr class="sectionDivider">
 
       <h2>What's the problem?</h2>
-      <p>Even though the voting process is crucial to determining the leaders of our communities, states, and country
-        the voting turn out in most communities is under 50%.
-        This is largely due to the undereducation and miseducation of certain populations on the voting process.
-        Especially younger voters and those with limited accessibility.
-        PGC Election Hub strives to address voting withing Prince George's County elections by educating voters about
-        the voting process through an interactive sample ballot, simulations,
-        and candidate information all accessible in one place! </p>
+      <p>Even though the voting process is crucial to determining the leaders of our communities, states, and country the voting turn out in most communities is under 50%.
+          This is largely due to the undereducation and miseducation of certain populations on the voting process. Especially younger voters and those with limited accessibility.
+          PGC Election Hub strives to address voting withing Prince George's County elections by educating voters about the voting process through an interactive sample ballot, simulations,
+          and candidate information all accessible in one place! </p>
 
       <h2>Who's our target?</h2>
-      <p>This website targets Prince George's County citizens, ages 18 and up, who can vote. We especially hope to reach
-        young voters, ages 18-29, since they have statiscally
+      <p>This website targets Prince George's County citizens, ages 18 and up, who can vote. We especially hope to reach young voters, ages 18-29, since they have statiscally
         had lower voting turnouts.
       </p>
     </div>
 
-    <!--ballot-->
-    <div id="ballot">
-      <h1 class="sectionName"><b>Ballot.</b></h1>
-      <hr class="sectionDivider">
+  <!--ballot-->
+  <div id="ballot">
+    <h1 class="sectionName"><b>Ballot.</b></h1>
+    <hr class="sectionDivider">
 
-      <div class="container">
-        <div class="wrapper">
-          <button class="button" id="trans" onclick="loadData(stringer('lang'))">
-            Haga clic para traducir la boleta al Español</button>
-          <div class="content">
-            <script>loadData(stringer("lang"))</script>
-          </div>
-          <form method="post">
-            <input type="text" id="month" placeholder="Month"></input>
-            <input type="text" id="day" placeholder="Day"></input>
-            <input type="text" id="year" placeholder="Year"></input>
-            <input type="text" id="zip" placeholder="Zip"></input>
-            <button type="submit" id="submit">Submit</button>
+    <div class="container">
+      <div class="wrapper">
+        <button class="button" id="trans" onclick="loadData(stringer('lang'))">
+          Haga clic para traducir la boleta al Español</button>
+        <div class="content"><script>loadData(stringer("lang"))</script></div>
+        <form  method="post">
+        <input type="text" id="streetNumber" placeholder="Street Number"></input>
+        <input type="text" id="streetName" placeholder="Street Name"></input>
+        <input type="text" id="zip" placeholder="Zip Code"></input>
           </form>
 
-          <div class="scroll">
-            <input type="text" id="filter" onkeyup="table_search()" placeholder="Search for polling place"></input>
-            <table class="fixed" id="table">
-              <thead>
-                <tr>
-                  <th onclick='JSONtable(stringer("/s1"))'>Polling Place</th>
-                  <th onclick='JSONtable(stringer("/s3"))'>Address</th>
-                  <th onclick='JSONtable(stringer("/s5"))'>City</th>
-                  <th onclick='JSONtable(stringer("/s7"))'>Zip</th>
-                </tr>
-              </thead>
-              <tbody id="body">
-                <script>JSONtable(stringer("/s1"))</script>
-              </tbody>
-            </table>
-          </div>
-          <div class="sim-intro" id="electionSim" rel="stylesheet" href="css/index.css">
-            <p class="caption">
-              <iframe src="election.html" width="320" height="500" scrolling="no" title="election"></iframe>
-              <div class="box" id="thanks"> <a href="https://ncase.me/ballot/"
-                  title="Click here for more voting visualizations and information">
-                </a>
-              </div>
-          </div>
-          <div id="sim-fill" class="sim-intro" rel="stylesheet" href="css/index.css">
-            <p class="caption">
-              <iframe src="pencil.html" width="320" height="490" scrolling="no" title="pencil"></iframe>
-          </div>
-
-
-          <!--Documentaiton-->
-          <div id="documentation">
-            <h1 class="sectionName"><b>Documentation.</b></h1>
-            <hr class="sectionDivider">
-
-            <h1>User Manual</h1>
-            <p>This resource was created in order to aid in the process of
-              informing inexperienced and uneducated voters about the voting process.
-              Here, you can find a guide to the different parts of the website, that
-              will help orient you. Here are the specific functionalities you will
-              see on the site:
-            </p>
-            <ol>
-              <li>Navigation Bar</li>
-              <li>Ballot Candidate Table</li>
-              <li>Translation Button</li>
-              <li>Search Bar</li>
-              <li>Polling Places List</li>
-              <li>Vote Count Simulator</li>
-              <li>Ballot Bubble Simulator</li>
-            </ol>
-            <a href="javascript:void(0)" class="w3-button w3-margin-right" onclick="openNav()">
-              <h2>Navigation Bar</h2>
+        <div class="scroll">
+          <input type="text" id="filter" onkeyup="table_search()"
+          placeholder="Search for polling place"></input>
+          <table class="fixed" id="table">
+            <thead>
+              <tr>
+                <th onclick='JSONtable(stringer("/s1"))'>Polling Place</th>
+                <th onclick='JSONtable(stringer("/s3"))'>Address</th>
+                <th onclick='JSONtable(stringer("/s5"))'>City</th>
+                <th onclick='JSONtable(stringer("/s7"))'>Zip</th>
+              </tr>
+            </thead>
+            <tbody id="body">
+            <script>JSONtable(stringer("/s1"))</script></tbody>
+          </table>
+        </div>
+        <div class="sim-intro" id="electionSim" rel = "stylesheet" href = "css/index.css">
+          <p class="caption">
+          <iframe src="election.html" width="320" height="500" scrolling="no"
+          title="election"></iframe>
+          <div class="box" id="thanks"> <a href = "https://ncase.me/ballot/"
+            title="Click here for more voting visualizations and information">
             </a>
-            <p>The navigation bar serves to help you find your way around the site.
-              You will see there are four sections to our navigation bar. These
-              sections are home, about, ballot, and documentation. Clicking "Home"
-              will take you to the top of our page. Clicking "About" will take you to
-              the about section of our website. This section will give you a better
-              idea of what our website's purpose is and who it is meant for. Clicking
-              "Ballot" will take you to the section of our website that holds all the
-              main functionalities of our website. You will be able to scroll through
-              and find the ballot candidate table, the translation button, the search
-              bar, the polling places list, the vote count simulator, and the ballot
-              bubble simulator. Finally, clicking "Documentation" will take you to the
-              part of our website with any instructions one would need to use the site.
-            </p>
-            <a href="#ballot" class="w3-bar-item w3-button w3-hover-white">
-              <h2>Ballot Candidate Table</h2>
-            </a>
-            <p>In the Ballot Candidate table, you will find all of the candidates
-              running for office, as they would appear in the ballot. You will also
-              see their political party. You will see that they are separated by the
-              position that there are running for. You can scroll within this box
-              the same as you would for any page. You can click on some of the
-              elements in this box for more resources. For instance, you can click
-              on the position title, for information about what that position is and
-              what they do. You can also click on any candidate to navigate to that
-              candidate's page. You will also see a write in input box in this
-              section. This is meant to appear as it would on a real ballot, but it
-              is not meant to be submitted. At this point in time, link
-              functionality is not in place for the Spanish version of the ballot.
-              All ballot data contained on this site reflects the 2018 Gubernatorial
-              Ballot in the state of Maryland.
-            </p>
-            </a>
-            <h2><a href="#trans" title="Go to translation button"
-                class="w3-bar-item w3-button w3-hover-white">Translation Button</a></h2>
-            <p>The translation button allows you to see the candidate table in
-              spanish. This functionality is quite simple. You will see a button over
-              the ballot candidate table with the prompt, "Haga clic para traducir la
-              boleta al Español." Clicking this will allow you to see all of the
-              candidates and titles in spanish. Once translated to Spanish, the
-              button will appear with the text, "Click to translate ballot to English";
-              once clicked the ballot will revert to the English version.
-            </p>
-            <h2><a href="#filter" title="Go to table search box" class="w3-bar-item w3-button w3-hover-white">Search
-                Bar</a></h2>
-            <p>The search bar is meant to search through all of the polling places in
-              Prince George's County. If you know of a polling place in the county,
-              you can type it in to the search bar, and it will display all of the
-              relevant places in the search. If what you type in does not match a
-              polling place on the list, nothing will show up.
-            </p>
-            <h2><a href="#table" title="Go to polling place table" class="w3-bar-item w3-button w3-hover-white">Polling
-                Places List</a></h2>
-            <p>The polling place lists all of the polling places available in Prince
-              George's county. Each place has a District/Precinct number, location
-              name, Address, City, Zip Code, and number of Ballots. As seen previously,
-              the polling places are searchable through the search bar above.
-              Additionally, the list is filterable. Clicking any of the headings at
-              the top of the list will give you a different filter. Clicking "Dist/Prec"
-              will list all of the places based on the district and precinct. Clicking
-              "Polling Place" will sort all of the places by name alphabetically.
-              Clicking "Address" will sort everything by address. Cicking city will
-              sort all places by city. Clicking by Zip will sort all polling places by
-              zip code. Finally, clicking ballot will sort places by number of ballots.
-            </p>
-            <h2><a href="#electionSim" title="Go to election simulator"
-                class="w3-bar-item w3-button w3-hover-white">Vote Count Simulator</a></h2>
-            <p>The Voting Count Simulator is a resource that is publically provided
-              by ncase and company. This resource allows you to play arounf and
-              illustrate how a candidate wins an election over other candidates.
-              As you move the different shapes around, you will find that their
-              respective colors will cover different areas of the square. The area
-              covered by colors simulates how many votes a candidate has. You will be
-              able to see a numerical representation of this at the bottom. This will
-              illustrate that the candidate who has the most color, or most votes, will
-              win.
-            </p>
-            <h2><a href="#sim-fill" title="Go to bubble simulator" class="w3-bar-item w3-button w3-hover-white">Ballot
-                Bubble Simulator</a></h2>
-            <p>The Ballot Bubble Simulator is meant to practice fillinf in the bubbles
-              that you will find when voting. As you hold your screen over the box,
-              you will see a pencil appear. You can hold down the mouse and drag
-              through the box to fill in the inner circle. If you fill in correctly,
-              the box will turn green. If you overfill or underfill, the box will turn
-              red. You can reset the box by pressing the reset button located to the
-              right of the box.
-            </p>
-          </div>
-          <div id="contributors">
-            <h1 class="sectionName"><b>Page Contributors.</b></h1>
-            <hr class="sectionDivider">
-
-            <h2><a href="https://www.linkedin.com/in/joshua-may-5a213712b/">Josh May</a></h2>
-            <img src="img/josh.png" alt="Josh with his kids">
-            <p>I had a great time working on this project and excercising skills
-              learned in web development this semester. I am looking forward to
-              graduating in the Spring of 2020 and hope to make a career with and
-              continually build upon the things I have learned at the University of
-              Maryland. Coding and development is not something I envisioned
-              enjoying, but it has truly become a passion of mine. There has been
-              little I've experienced in higher education that felt as satisfying to
-              accomplish than putting together the "Bubble-Fill Simulator" on this
-              page. It is an honor to have anyone look at the work I have been a
-              part of, so please <a href="https://github.com/joshwmay">check out my
-                GitHub</a> and/or
-              <a href="https://www.linkedin.com/in/joshua-may-5a213712b/">LinkedIn.</a>
-            </p>
-            <h2>Lorraine Siochi</h2>
-            <p>~~~~</p>
-            <h2><a href="https://www.linkedin.com/in/ayesha-raza">Ayesha Raza</a></h2>
-            <p>~~~~</p>
-            <h2>Tony Persaud</h2>
-            <p>~~~~</p>
-            <h2>Tamia Green</h2>
-            <p>~~~~</p>
-          </div>
-          <div id="references">
-            <h1 class="sectionName"><b>References.</b></h1>
-            <hr class="sectionDivider">
-            <p>1) GitHub user ncase et al. for dynamic election simulator</p>
-            <a href="https://github.com/ncase/ballot">View their work here</a>
-            <a href="https://ncase.me/ballot/">or here</a>
-            <p>2) YouTube account Dev Ed for teaching us how to build an interactive
-              drawing tool<p>
-                <a href="https://www.youtube.com/watch?v=3GqUM4mEYKA">Watch the video here</a>
-                <p>3) Table searching and sorting achieved through a variety of methods
-                  learned in lectures, labs, or found in resources including
-                  <a href="https://www.w3schools.com/">w3schools</a>,
-                  <a href="https://stackoverflow.com/">stackoverflow</a>,
-                  <a href="https://youtube.com/"> YouTube</a>, and google(no-link just
-                  "google it").
           </div>
         </div>
-</body>
+        <div id="sim-fill" class="sim-intro" rel = "stylesheet" href = "css/index.css">
+          <p class="caption">
+          <iframe src="pencil.html" width="320" height="490" scrolling="no"
+          title="pencil"></iframe>
+        </div>
 
+
+    <!--Documentaiton-->
+    <div id="documentation">
+      <h1 class="sectionName"><b>Documentation.</b></h1>
+      <hr class="sectionDivider">
+
+      <h1>User Manual</h1>
+        <p>This resource was created in order to aid in the process of
+          informing inexperienced and uneducated voters about the voting process.
+          Here, you can find a guide to the different parts of the website, that
+          will help orient you. Here are the specific functionalities you will
+          see on the site:
+        </p>
+        <ol>
+          <li>Navigation Bar</li>
+          <li>Ballot Candidate Table</li>
+          <li>Translation Button</li>
+          <li>Search Bar</li>
+          <li>Polling Places List</li>
+          <li>Vote Count Simulator</li>
+          <li>Ballot Bubble Simulator</li>
+        </ol>
+      <a href="javascript:void(0)" class="w3-button w3-margin-right"
+      onclick="openNav()"><h2>Navigation Bar</h2>
+    </a>
+      <p>The navigation bar serves to help you find your way around the site.
+        You will see there are four sections to our navigation bar. These
+        sections are home, about, ballot, and documentation. Clicking "Home"
+        will take you to the top of our page. Clicking "About" will take you to
+        the about section of our website. This section will give you a better
+        idea of what our website's purpose is and who it is meant for. Clicking
+        "Ballot" will take you to the section of our website that holds all the
+        main functionalities of our website. You will be able to scroll through
+        and find the ballot candidate table, the translation button, the search
+        bar, the polling places list, the vote count simulator, and the ballot
+        bubble simulator. Finally, clicking "Documentation" will take you to the
+        part of our website with any instructions one would need to use the site.
+      </p>
+      <a href="#ballot" class="w3-bar-item w3-button w3-hover-white">
+        <h2>Ballot Candidate Table</h2>
+      </a>
+        <p>In the Ballot Candidate table, you will find all of the candidates
+          running for office, as they would appear in the ballot. You will also
+          see their political party. You will see that they are separated by the
+          position that there are running for. You can scroll within this box
+          the same as you would for any page. You can click on some of the
+          elements in this box for more resources. For instance, you can click
+          on the position title, for information about what that position is and
+          what they do. You can also click on any candidate to navigate to that
+          candidate's page. You will also see a write in input box in this
+          section. This is meant to appear as it would on a real ballot, but it
+          is not meant to be submitted. At this point in time, link
+          functionality is not in place for the Spanish version of the ballot.
+          All ballot data contained on this site reflects the 2018 Gubernatorial
+          Ballot in the state of Maryland.
+        </p>
+        </a>
+      <h2><a href="#trans" title="Go to translation button"
+        class="w3-bar-item w3-button w3-hover-white">Translation Button</a></h2>
+      <p>The translation button allows you to see the candidate table in
+        spanish. This functionality is quite simple. You will see a button over
+        the ballot candidate table with the prompt, "Haga clic para traducir la
+        boleta al Español." Clicking this will allow you to see all of the
+        candidates and titles in spanish. Once translated to Spanish, the
+        button will appear with the text, "Click to translate ballot to English";
+        once clicked the ballot will revert to the English version.
+      </p>
+      <button class="button" id="reps" title="Translation button (go to section)">
+        <a href="#trans">Haga clic para traducir la boleta al Español</a>
+      </button>
+      <h2><a href="#filter" title="Go to table search box"
+        class="w3-bar-item w3-button w3-hover-white">Search Bar</a></h2>
+      <p>The search bar is meant to search through all of the polling places in
+        Prince George's County. If you know of a polling place in the county,
+        you can type it in to the search bar, and it will display all of the
+        relevant places in the search. If what you type in does not match a
+        polling place on the list, nothing will show up.
+      </p>
+      <h2><a href="#table" title="Go to polling place table"
+      class="w3-bar-item w3-button w3-hover-white">Polling Places List</a></h2>
+      <p>The polling place lists all of the polling places available in Prince
+        George's county. Each place has a District/Precinct number, location
+        name, Address, City, Zip Code, and number of Ballots. As seen previously,
+        the polling places are searchable through the search bar above.
+        Additionally, the list is filterable. Clicking any of the headings at
+        the top of the list will give you a different filter. Clicking "Dist/Prec"
+        will list all of the places based on the district and precinct. Clicking
+        "Polling Place" will sort all of the places by name alphabetically.
+        Clicking "Address" will sort everything by address. Cicking city will
+        sort all places by city. Clicking by Zip will sort all polling places by
+        zip code. Finally, clicking ballot will sort places by number of ballots.
+      </p>
+      <h2><a href="#electionSim" title="Go to election simulator"
+      class="w3-bar-item w3-button w3-hover-white">Vote Count Simulator</a></h2>
+      <p>The Voting Count Simulator is a resource that is publically provided
+        by ncase and company. This resource allows you to play arounf and
+        illustrate how a candidate wins an election over other candidates.
+        As you move the different shapes around, you will find that their
+        respective colors will cover different areas of the square. The area
+        covered by colors simulates how many votes a candidate has. You will be
+        able to see a numerical representation of this at the bottom. This will
+        illustrate that the candidate who has the most color, or most votes, will
+        win.
+      </p>
+      <h2><a href="#sim-fill" title="Go to bubble simulator"
+      class="w3-bar-item w3-button w3-hover-white">Ballot Bubble Simulator</a></h2>
+      <p>The Ballot Bubble Simulator is meant to practice fillinf in the bubbles
+        that you will find when voting. As you hold your screen over the box,
+        you will see a pencil appear. You can hold down the mouse and drag
+        through the box to fill in the inner circle. If you fill in correctly,
+        the box will turn green. If you overfill or underfill, the box will turn
+        red. You can reset the box by pressing the reset button located to the
+        right of the box.
+      </p>
+    </div>
+    <div id="contributors">
+      <h1 class="sectionName"><b>Page Contributors.</b></h1>
+      <hr class="sectionDivider">
+
+      <h2><a href="https://www.linkedin.com/in/joshua-may-5a213712b/">Josh May</a></h2>
+        <img src="img/josh.png" alt="Josh with his kids">
+        <p>I had a great time working on this project and excercising skills
+          learned in web development this semester. I am looking forward to
+          graduating in the Spring of 2020 and hope to make a career with and
+          continually build upon the things I have learned at the University of
+          Maryland. Coding and development is not something I envisioned
+          enjoying, but it has truly become a passion of mine. There has been
+          little I've experienced in higher education that felt as satisfying to
+          accomplish than putting together the "Bubble-Fill Simulator" on this
+          page. It is an honor to have anyone look at the work I have been a
+          part of, so please <a href="https://github.com/joshwmay">check out my
+          GitHub</a> and/or
+        <a href="https://www.linkedin.com/in/joshua-may-5a213712b/">LinkedIn.</a>
+      </p>
+      <h2>Lorraine Siochi</h2>
+        <p>~~~~</p>
+      <h2><a href="https://www.linkedin.com/in/ayesha-raza">Ayesha Raza</a></h2>
+        <p>~~~~</p>
+      <h2>Tony Persaud</h2>
+        <p>~~~~</p>
+      <h2>Tamia Green</h2>
+        <p>~~~~</p>
+    </div>
+    <div id="references">
+      <h1 class="sectionName"><b>References.</b></h1>
+      <hr class="sectionDivider">
+        <p>1) GitHub user ncase et al. for dynamic election simulator</p>
+        <a href="https://github.com/ncase/ballot">View their work here</a>
+        <a href="https://ncase.me/ballot/">or here</a>
+        <p>2) YouTube account Dev Ed for teaching us how to build an interactive
+          drawing tool<p>
+        <a href="https://www.youtube.com/watch?v=3GqUM4mEYKA">Watch the video here</a>
+        <p>3) Table searching and sorting achieved through a variety of methods
+          learned in lectures, labs, or found in resources including
+          <a href="https://www.w3schools.com/">w3schools</a>,
+          <a href="https://stackoverflow.com/">stackoverflow</a>,
+          <a href="https://youtube.com/"> YouTube</a>, and google(no-link just
+          "google it").
+    </div>
+  </div>
+  </body>
 </html>
