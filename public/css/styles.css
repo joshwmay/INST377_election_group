@@ -209,12 +209,20 @@ Forces top title bar to appear
 }
 
 table {
-  width: 100%;
+  width: 108%;
 }
 
 thead {
   display: block;
   cursor: pointer;
+}
+
+thead tr th {
+  font-family: serif;
+  text-decoration: underline;
+  font-style: oblique;
+  size: auto 5% auto;
+  margin-bottom: 15px;
 }
 
 thead th:hover {
@@ -276,6 +284,7 @@ tbody td {
   column-gap: 2rem;
 }
 
+
 td:nth-child(1),
 th:nth-child(1) {
   width: 26%;
@@ -292,7 +301,7 @@ th:nth-child(2) {
   overflow-wrap: break-word;
   word-wrap: break-word;
   font-size: 12px auto;
-  justify-content: left;
+  justify-content: right;
 }
 td:nth-child(3),
 th:nth-child(3) {
