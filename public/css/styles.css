@@ -1,22 +1,22 @@
 #mySidebar {
-  z-index:3;
-  width:250px;
-  font-weight:bold;
+  z-index: 3;
+  width: 250px;
+  font-weight: bold;
   color: white;
-  background-color: #1A4287;
+  background-color: #1a4287;
 }
 
 #topBar {
   font-size: 24px;
-  font-weight:bold;
+  font-weight: bold;
   color: white;
-  background-color: #1A4287;
+  background-color: #1a4287;
   margin-bottom: 40px;
 }
 
 #title {
   font-size: 50px;
-  margin-top:85px;
+  margin-top: 85px;
   right: 0;
   left: 0;
   justify-content: center;
@@ -26,45 +26,48 @@
   font-style: oblique;
 }
 
-
 .main {
-  margin-left:340px;
-  margin-right:40px
+  margin-left: 340px;
+  margin-right: 40px;
 }
 
 .sectionName {
   margin-top: 75px;
-  font-size:35px;
-  color: #1A4287;
+  font-size: 35px;
+  color: #1a4287;
 }
 
 .sectionDivider {
   border-radius: 5px;
-  width:50px;
-  border:5px solid #1A4287;
+  width: 50px;
+  border: 5px solid #1a4287;
 }
 
-body,h1,h2,h3,h4,h5 {
-  font-family: "Poppins", sans-serif
+body,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Poppins", sans-serif;
 }
-
 
 h2 {
   font-size: 20px;
-  color: #CC6116;
+  color: #cc6116;
 }
 
-@media (max-width:992px) {
-	.w3-sidebar.w3-collapse {
-		display: none
-	}
-	.main {
-		margin-left: 40px;
-		margin-right: 40px;
-	}
-	.w3-auto {
-		max-width: 100%
-	}
+@media (max-width: 992px) {
+  .w3-sidebar.w3-collapse {
+    display: none;
+  }
+  .main {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .w3-auto {
+    max-width: 100%;
+  }
 }
 
 /* Set document default styles for text */
@@ -82,26 +85,25 @@ h3 {
   justify-content: center;
   align-items: flex-start;
   font-family: "Poppins", sans-serif;
-  margin-left:300px;
-  margin-right:40px;
-
+  margin-left: 300px;
+  margin-right: 40px;
 }
 
 /*Used when changing width of browser
 Collapses menu into a navigation button
 Forces top title bar to appear
 */
-@media (max-width:992px) {
-	.w3-sidebar.w3-collapse {
-		display: none
-	}
-	.container {
-		margin-left: 0;
-		margin-right: 0;
-	}
-	.w3-auto {
-		max-width: 100%
-	}
+@media (max-width: 992px) {
+  .w3-sidebar.w3-collapse {
+    display: none;
+  }
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .w3-auto {
+    max-width: 100%;
+  }
 }
 
 .w3-sidebar img {
@@ -129,13 +131,12 @@ Forces top title bar to appear
   border-radius: 25px;
 }
 
-
 .content {
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #fff;
-  border: 3px dotted #1A4287;
+  border: 3px dotted #1a4287;
   padding-top: 10px;
   padding-left: 4%;
   padding-right: 4%;
@@ -144,13 +145,12 @@ Forces top title bar to appear
   overflow: scroll;
 }
 
-
 .content div {
   font-size: 1em auto;
   padding-top: 1%;
 }
 
-.content input[type=text] {
+.content input[type="text"] {
   width: 125px;
 }
 
@@ -160,11 +160,10 @@ Forces top title bar to appear
   font-size: 1.5em auto;
   -moz-border-radius: 11px;
   -webkit-border-radius: 11px;
-  color: #CC6116;
+  color: #cc6116;
   font-style: oblique;
   font-weight: bold;
 }
-
 
 ::-webkit-scrollbar {
   width: 0px;
@@ -213,27 +212,27 @@ table {
   width: 100%;
 }
 
-thead{
+thead {
   display: block;
   cursor: pointer;
 }
 
 thead th:hover {
   background: #bbb;
-	border-bottom-color: #999;
+  border-bottom-color: #999;
 }
 
 thead th:active {
   background: #4334eb;
-	border-bottom-color: #999;
+  border-bottom-color: #999;
 }
 
 thead tr {
-  display:flex;
+  display: flex;
   justify-content: space-between;
   column-count: 5;
   font-size: 25px auto;
-  height:20px;
+  height: 20px;
 }
 
 tbody {
@@ -247,7 +246,7 @@ tbody {
 }
 
 tbody tr {
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-content: space-between;
   border-style: solid;
@@ -258,17 +257,16 @@ tbody tr {
   column-gap: space;
 }
 
-
 tbody tr td {
   display: flex;
   text-align: left;
 }
 tbody tr:hover {
-  background: #CC6116;
-	border-bottom-color:#CC6116;
+  background: #cc6116;
+  border-bottom-color: #cc6116;
 }
 
-tbody td{
+tbody td {
   display: flex;
   justify-content: left;
   align-content: center;
@@ -278,49 +276,72 @@ tbody td{
   column-gap: 2rem;
 }
 
-td:nth-child(1), th:nth-child(1) {
-  width: 26%; display: flex; overflow-wrap: break-word; word-wrap: break-word;
-  justify-content: left; font-size: 12px auto; }
-td:nth-child(2), th:nth-child(2) {
-  width: 26%; min-width: 5%; overflow-wrap: break-word; word-wrap: break-word;
-  font-size: 12px auto; justify-content: left;}
-td:nth-child(3), th:nth-child(3) {
-  width: 28%; min-width: 5%; font-size: 12px auto; overflow-wrap: wrap; word-wrap: break-word;
-justify-content: center;}
-td:nth-child(4), th:nth-child(4) {
-  width: 20%; display: flex; justify-content: right; font-size: 12px auto;
-overflow-wrap: break-word; word-wrap: break-word;}
-
-
-iframe{
-  padding-top:1%;
-  padding-left, padding-right: 15;
-  padding-bottom: 1%;
-	border:none;
+td:nth-child(1),
+th:nth-child(1) {
+  width: 26%;
+  display: flex;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  justify-content: left;
+  font-size: 12px auto;
+}
+td:nth-child(2),
+th:nth-child(2) {
+  width: 26%;
+  min-width: 5%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  font-size: 12px auto;
+  justify-content: left;
+}
+td:nth-child(3),
+th:nth-child(3) {
+  width: 28%;
+  min-width: 5%;
+  font-size: 12px auto;
+  overflow-wrap: wrap;
+  word-wrap: break-word;
+  justify-content: center;
+}
+td:nth-child(4),
+th:nth-child(4) {
+  width: 20%;
+  display: flex;
+  justify-content: right;
+  font-size: 12px auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
+iframe {
+  padding-top: 1%;
+  padding-left,padding-right: 15;
+  padding-bottom: 1%;
+  border: none;
+}
 
 tbody p {
   cursor: pointer;
 }
 
-.w3-bar-block a:hover{
+.w3-bar-block a:hover {
   background-color: #deac2f;
 }
 
 .button {
   background-color: #deac2f;
-  color: #1A4287;
-  border: 7px dotted #1A4287;
+  color: #1a4287;
+  border: 7px dotted #1a4287;
   border-radius: 30px;
-  margin-bottom:2%;
+  margin-bottom: 2%;
 }
 
 #reps a {
   text-decoration: none;
 }
 
-#trans, #reps {
+#trans,
+#reps {
   display: flex;
   justify-content: center;
   align-self: center;
@@ -332,18 +353,17 @@ tbody p {
 
 #clock {
   margin-top: 20px;
-  margin-left:20px;
-  color: #CC6116;
+  margin-left: 20px;
+  color: #cc6116;
 }
 
 .sectionWImage img {
-  float:right;
-  margin:20px;
+  float: right;
+  margin: 20px;
 }
 
 .sectionWImage h2 {
-  color: #CCA916;
-
+  color: #cca916;
 }
 .sectionWImage::before,
 .sectionWImage::after {
@@ -352,10 +372,10 @@ tbody p {
 }
 
 .sectionWImage::after {
-  clear:both;
+  clear: both;
 }
 
 .sectionWImage {
-  clear:both;
-  zoom:1;
+  clear: both;
+  zoom: 1;
 }
