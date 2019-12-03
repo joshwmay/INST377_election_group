@@ -15,8 +15,9 @@
 }
 
 #title {
-  font-size: 50px;
-  margin-top: 85px;
+  font-size: 30px auto;
+  padding-top: 105px;
+  margin-top: 85px auto;
   right: 0;
   left: 0;
   justify-content: center;
@@ -24,8 +25,15 @@
   align-items: center;
   display: block;
   font-style: oblique;
+  text-decoration: underline;
 }
 
+#filter {
+  margin-top: 19px;
+  height: 30px;
+  outline: solid;
+  outline-color: teal;
+}
 .main {
   margin-left: 340px;
   margin-right: 40px;
@@ -77,6 +85,10 @@ h3 {
   line-height: 1.2;
 }
 
+h1 {
+  padding-top: 10px;
+  font-size: +20;
+}
 .container {
   position: absolute;
   right: 0;
@@ -145,9 +157,13 @@ Forces top title bar to appear
   overflow: scroll;
 }
 
+.content a {
+  padding-bottom: 1%;
+}
+
 .content div {
   font-size: 1em auto;
-  padding-top: 1%;
+  padding-top: 10px auto;
 }
 
 .content input[type="text"] {
@@ -215,14 +231,15 @@ table {
 thead {
   display: block;
   cursor: pointer;
+  padding-bottom: 12px;
+  font-size: 20px;
 }
 
 thead tr th {
   font-family: serif;
   text-decoration: underline;
   font-style: oblique;
-  size: auto 5% auto;
-  margin-bottom: 15px;
+
 }
 
 thead th:hover {
@@ -255,14 +272,9 @@ tbody {
 
 tbody tr {
   display: flex;
-  justify-content: space-between;
-  align-content: space-between;
   border-style: solid;
-  height: auto;
-  padding-top: 2%;
-  padding-bottom: 2%;
+  height: 40px auto 80px;
   column-count: 4;
-  column-gap: space;
 }
 
 tbody tr td {
@@ -323,11 +335,12 @@ th:nth-child(4) {
 }
 
 iframe {
-  padding-top: 1%;
-  padding-left,padding-right: 15;
-  padding-bottom: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: none;
 }
+
 
 tbody p {
   cursor: pointer;
