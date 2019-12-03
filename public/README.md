@@ -41,6 +41,11 @@ Once you have cloned the repository, here are the instructions to get the websit
 
     5. Now you can access the website. You will see a prompt in the terminal that says "Example app listening on port 3000!"
 
-    6. Navigate to a browser and type in "localhost:3000" and you should see a working version of the website.
+    6. Navigate to a Google Chrome browser and type in "localhost:3000" and you should see a working version of the website.
 
-    
+Some Organizational Notes:
+
+- The Ncase Ballot repository that we used came along with a lot of css and js files. 
+
+- 
+
