@@ -11,18 +11,6 @@
 		"zip": "20744"
 	},
 	{
-		"title": "FRIENDLY HIGH SCHOOL",
-		"address": "10000 ALLENTOWN RD",
-		"city": "FORT WASH",
-		"zip": "20744"
-	},
-	{
-		"title": "CHARLES H FLOWERS HIGH SCHOOL",
-		"address": "10001 ARDWICK ARDMORE RD",
-		"city": "U MARLBORO",
-		"zip": "20774"
-	},
-	{
 		"title": "CHARLES H FLOWERS HIGH SCHOOL",
 		"address": "10001 ARDWICK ARDMORE RD",
 		"city": "U MARLBORO",
@@ -54,7 +42,7 @@
 	},
 	{
 		"title": "CLINTON UNITED METHODIST CHURCH",
-		"address": "10700 BRANDYWINE RD",
+		"address": "10700BRANDYWINE RD",
 		"city": "CLINTON",
 		"zip": "20735"
 	},
@@ -101,19 +89,7 @@
 		"zip": "20769"
 	},
 	{
-		"title": "REID TEMPLE AME CHURCH",
-		"address": "11400GLENN DALE BLVD",
-		"city": "GLENN DALE",
-		"zip": "20769"
-	},
-	{
-		"title": "TABERNACLE OFLAUREL",
-		"address": "11601 SLAUREL DR",
-		"city": "LAUREL",
-		"zip": "20708"
-	},
-	{
-		"title": "TABERNACLE OFLAUREL ",
+		"title": "TABERNACLE OF LAUREL ",
 		"address": "11601 SLAUREL DR",
 		"city": "LAUREL",
 		"zip": "20708"
@@ -133,18 +109,6 @@
 	{
 		"title": "GLENN DALE COMMUNITY CNTR",
 		"address": "11901GLENN DALE BLVD",
-		"city": "GLENN DALE",
-		"zip": "20769"
-	},
-	{
-		"title": "GLENN DALE COMMUNITY CNTR",
-		"address": "11901GLENN DALE BLVD",
-		"city": "GLENN DALE",
-		"zip": "20769"
-	},
-	{
-		"title": "GLENN DALE COMMUNITY CNTR",
-		"address": "11901GLENN DALE BLVD",
 		"city": "GLENN DALE ",
 		"zip": "20769"
 	},
@@ -153,24 +117,6 @@
 		"address": "1200 GLEN WILLOW DR",
 		"city": "CAPITOL HEIGHTS",
 		"zip": "20743"
-	},
-	{
-		"title": "CEDAR HEIGHTS COMMUNITY CNTR",
-		"address": "1200 GLEN WILLOW DR",
-		"city": "CAPITOL HEIGHTS",
-		"zip": "20743"
-	},
-	{
-		"title": "WOODMORE ELEMENTARY",
-		"address": "12500 WOODMORE RD",
-		"city": "MITCHELLVILLE",
-		"zip": "20721"
-	},
-	{
-		"title": "WOODMORE ELEMENTARY",
-		"address": "12500 WOODMORE RD",
-		"city": "MITCHELLVILLE",
-		"zip": "20721"
 	},
 	{
 		"title": "WOODMORE ELEMENTARY",
@@ -215,12 +161,6 @@
 		"zip": "20720"
 	},
 	{
-		"title": "ASCENSION CATHOLIC",
-		"address": "12700 LANHAM-SEVERN RD",
-		"city": "BOWIE",
-		"zip": "20720"
-	},
-	{
 		"title": "ERNEST EVERETT JUST MIDDLE SCHOOL",
 		"address": "1300 CAMPUS WAY ",
 		"city": "NMITCHELLVILLE",
@@ -231,18 +171,6 @@
 		"address": "1300 FILLMORE RD",
 		"city": "FORT WASH",
 		"zip": "20744"
-	},
-	{
-		"title": "FT WASH FOREST ELEMENTARY",
-		"address": "1300 FILLMORE RD",
-		"city": "FORT WASH",
-		"zip": "20744"
-	},
-	{
-		"title": "DEERFIELD RUN ELEMENTARY",
-		"address": "13000 LAUREL-BOWIE RD",
-		"city": "LAUREL",
-		"zip": "20708"
 	},
 	{
 		"title": "DEERFIELD RUN ELEMENTARY",
@@ -291,12 +219,6 @@
 		"address": "13901 CENTRAL AVE",
 		"city": "U MARLBORO",
 		"zip": "20774"
-	},
-	{
-		"title": "BOWIE STATE STUDENT CNTR",
-		"address": "14000 JERICHO PARK RD",
-		"city": "BOWIE",
-		"zip": "20715"
 	},
 	{
 		"title": "BOWIE STATE STUDENT CNTR",
@@ -401,14 +323,8 @@
 		"zip": "20785"
 	},
 	{
-		"title": "COLUMBIA PARK ELEMENTARY",
-		"address": "1901 KENT VILLAGE DR",
-		"city": "LANDOVER",
-		"zip": "20785"
-	},
-	{
 		"title": "VILLAGE BAPTIST",
-		"address": "1950MITCHELLVILLE RD",
+		"address": "1950 MITCHELLVILLE RD",
 		"city": "BOWIE",
 		"zip": "20716"
 	},
@@ -465,12 +381,6 @@
 		"address": "2215 CHADWICK ST",
 		"city": "TEMPLE HILLS",
 		"zip": "20748"
-	},
-	{
-		"title": "JUDITH P HOYER EARLY CHILD CNTR",
-		"address": "2300 BELLEVIEW AVE",
-		"city": "CHEVERLY",
-		"zip": "20785"
 	},
 	{
 		"title": "JUDITH P HOYER EARLY CHILD CNTR",
@@ -581,12 +491,6 @@
 		"zip": "20706"
 	},
 	{
-		"title": "SYLVANIA WOODS ELEMENTARY",
-		"address": "3000 CHURCH STR",
-		"city": "GLENARDEN",
-		"zip": "20706"
-	},
-	{
 		"title": "BELAIR ANNEX",
 		"address": "3021 BELAIR DR",
 		"city": "BOWIE",
@@ -623,7 +527,7 @@
 		"zip": "20747"
 	},
 	{
-		"title": "TULIP GROVE ELEMENTARY",
+		"title": "TULIP GROVE ELEMENTARY @ MEADOWBROOK",
 		"address": "3501 MOYLAN DR",
 		"city": "BOWIE",
 		"zip": "20715"
@@ -647,22 +551,10 @@
 		"zip": "20716"
 	},
 	{
-		"title": "NORTHVIEW ELEMENTARY",
-		"address": "3700 NORTHVIEW DR",
-		"city": "BOWIE",
-		"zip": "20716"
-	},
-	{
 		"title": "COLMAR MANOR TOWN HALL",
 		"address": "3701 LAWRENCE ST",
 		"city": "COLMAR MANOR",
 		"zip": "20722"
-	},
-	{
-		"title": "COLLINGTON STATION REC ASSOC",
-		"address": "375 JOHNSBERG LN",
-		"city": "BOWIE",
-		"zip": "20721"
 	},
 	{
 		"title": "COLLINGTON STATION REC ASSOC",
@@ -693,12 +585,6 @@
 		"address": "4011 32ND ST",
 		"city": "MOUNT RAINIER",
 		"zip": "20712"
-	},
-	{
-		"title": "SAINT MARGARET CATHOLIC SCHOOL",
-		"address": "408 ADDISON RD",
-		"city": "SEAT PLEASANT",
-		"zip": "20743"
 	},
 	{
 		"title": "SAINT MARGARET CATHOLIC SCHOOL",
@@ -761,12 +647,6 @@
 		"zip": "20772"
 	},
 	{
-		"title": "PATUXENT ELEMENTARY",
-		"address": "4410 BISHOPMILL DR",
-		"city": "U MARLBORO",
-		"zip": "20772"
-	},
-	{
 		"title": "THOMAS S STONE ELEMENTARY",
 		"address": "4500 34TH ST",
 		"city": "MOUNT RAINIER",
@@ -792,7 +672,7 @@
 	},
 	{
 		"title": "ST MARY OF ASSUMPTION SCHOOL",
-		"address": "4610LARGO RD",
+		"address": "4610 LARGO RD",
 		"city": "U MARLBORO",
 		"zip": "20772"
 	},
@@ -807,18 +687,6 @@
 		"address": "4818SUITLAND RD",
 		"city": "SUITLAND",
 		"zip": "20746"
-	},
-	{
-		"title": "BENJAMIN TASKER MIDDLE SCHOOL",
-		"address": "4901 COLLINGTON RD",
-		"city": "BOWIE",
-		"zip": "20715"
-	},
-	{
-		"title": "BENJAMIN TASKER MIDDLE SCHOOL",
-		"address": "4901 COLLINGTON RD",
-		"city": "BOWIE",
-		"zip": "20715"
 	},
 	{
 		"title": "BENJAMIN TASKER MIDDLE SCHOOL",
@@ -923,12 +791,6 @@
 		"zip": "20748"
 	},
 	{
-		"title": "TEMPLE HILLS COMMUNITY CNTR",
-		"address": "5300 TEMPLE HILL RD",
-		"city": "TEMPLE HILLS",
-		"zip": "20748"
-	},
-	{
 		"title": "U MARLBORO COMMUNITY CNTR",
 		"address": "5400 MARLBORO RACE TRACK RD",
 		"city": "U MARLBORO",
@@ -939,12 +801,6 @@
 		"address": "5401 BARKER PL",
 		"city": "LANHAM",
 		"zip": "20706"
-	},
-	{
-		"title": "MT RONA MISSIONARY BAPTIST",
-		"address": "5408 BRINKLEY RD",
-		"city": "TEMPLE HILLS",
-		"zip": "20748"
 	},
 	{
 		"title": "MT RONA MISSIONARY BAPTIST",
@@ -977,12 +833,6 @@
 		"zip": "20743"
 	},
 	{
-		"title": "SEAT PLEASANT ACTIVITY CNTR",
-		"address": "5720 ADDISON RD",
-		"city": "SEAT PLEASANT",
-		"zip": "20743"
-	},
-	{
 		"title": "SPAULDINGS BRANCH LIBRARY",
 		"address": "5811 OLD SILVER HILL RD",
 		"city": "DISTRICT HEIGHTS",
@@ -1001,7 +851,7 @@
 		"zip": "20706"
 	},
 	{
-		"title": "FIRST BAPTIST OF GLENARDEN",
+		"title": "FIRST BAPTIST OFGLENARDEN",
 		"address": "600 WATKINS PARK DR",
 		"city": "U MARLBORO",
 		"zip": "20774"
@@ -1011,12 +861,6 @@
 		"address": "6001 42ND AVE",
 		"city": "HYATTSVILLE",
 		"zip": "20781"
-	},
-	{
-		"title": "TEMPLETON ELEMENTARY",
-		"address": "6001 CARTER'S LN",
-		"city": "RIVERDALE",
-		"zip": "20737"
 	},
 	{
 		"title": "TEMPLETON ELEMENTARY",
@@ -1053,12 +897,6 @@
 		"address": "6100 EDITORS PARK DR",
 		"city": "HYATTSVILLE",
 		"zip": "20782"
-	},
-	{
-		"title": "PRINCETON ELEMENTARY",
-		"address": "6101 BAXTER DR",
-		"city": "SUITLAND",
-		"zip": "20746"
 	},
 	{
 		"title": "PRINCETON ELEMENTARY",
@@ -1145,12 +983,6 @@
 		"zip": "20743"
 	},
 	{
-		"title": "SEAT PLEASANT ELEMENTARY",
-		"address": "6411 G STR",
-		"city": "SEAT PLEASANT",
-		"zip": "20743"
-	},
-	{
 		"title": "KETTERING MIDDLE SCHOOL",
 		"address": "65 HERRINGTON DR",
 		"city": "U MARLBORO",
@@ -1161,12 +993,6 @@
 		"address": "6501 LOWLAND DR",
 		"city": "LANDOVER",
 		"zip": "20785"
-	},
-	{
-		"title": "THE WORD OF GOD BAPTIST",
-		"address": "6513 QUEENS CHAPEL RD",
-		"city": "HYATTSVILLE",
-		"zip": "20782"
 	},
 	{
 		"title": "THE WORD OF GOD BAPTIST",
@@ -1253,12 +1079,6 @@
 		"zip": "20707"
 	},
 	{
-		"title": "JOHN H BAYNE ELEMENTARY",
-		"address": "7010 WALKER MILL RD",
-		"city": "CAPITOL HEIGHTS",
-		"zip": "20743"
-	},
-	{
 		"title": "JOHN BAYNE ELEMENTARY",
 		"address": "7010 WALKER MILL RD",
 		"city": "CAPITOL HEIGHTS",
@@ -1269,12 +1089,6 @@
 		"address": "7011 HIGH BRIDGE RD",
 		"city": "BOWIE",
 		"zip": "20720"
-	},
-	{
-		"title": "MELWOOD ELEMENTARY",
-		"address": "7100 WOODYARD RD",
-		"city": "U MARLBORO",
-		"zip": "20772"
 	},
 	{
 		"title": "MELWOOD ELEMENTARY",
@@ -1307,12 +1121,6 @@
 		"zip": "20706"
 	},
 	{
-		"title": "COMMUNITY BIBLE BAPTIST",
-		"address": "7309 RIVERDALE RD",
-		"city": "LANHAM",
-		"zip": "20706"
-	},
-	{
 		"title": "APPLE GROVE ELEMENTARY",
 		"address": "7400 BELLEFIELD AVE",
 		"city": "FORT WASH",
@@ -1326,13 +1134,7 @@
 	},
 	{
 		"title": "ST MARK EVANGELIST",
-		"address": "7501ADELPHI RD",
-		"city": "HYATTSVILLE",
-		"zip": "20783"
-	},
-	{
-		"title": "ST MARK EVANGELIST",
-		"address": "7501ADELPHI RD",
+		"address": "7501 ADELPHI RD",
 		"city": "HYATTSVILLE",
 		"zip": "20783"
 	},
@@ -1373,12 +1175,6 @@
 		"zip": "20784"
 	},
 	{
-		"title": "UNITED BAPTIST",
-		"address": "7701 RIVERDALE RD",
-		"city": "NEW CARROLLTON",
-		"zip": "20784"
-	},
-	{
 		"title": "TRINITY ASSEMBLY OF GOD",
 		"address": "7800 GOOD LUCK RD",
 		"city": "LANHAM",
@@ -1395,18 +1191,6 @@
 		"address": "7901 CYPRESS ST",
 		"city": "LAUREL",
 		"zip": "20707"
-	},
-	{
-		"title": "EXCEL ACADEMY",
-		"address": "7910 SCOTT RD",
-		"city": "LANDOVER",
-		"zip": "20785"
-	},
-	{
-		"title": "EXCEL ACADEMY",
-		"address": "7910 SCOTT RD",
-		"city": "LANDOVER",
-		"zip": "20785"
 	},
 	{
 		"title": "EXCEL ACADEMY",
@@ -1499,12 +1283,6 @@
 		"zip": "20744"
 	},
 	{
-		"title": "ISAAC GOURDINE MIDDLE SCHOOL",
-		"address": "8700 ALLENTOWN RD",
-		"city": "FORT WASH",
-		"zip": "20744"
-	},
-	{
 		"title": "CLINTON BAPTIST",
 		"address": "8701 WOODYARD RD",
 		"city": "CLINTON",
@@ -1571,12 +1349,6 @@
 		"zip": "20706"
 	},
 	{
-		"title": "ST MATHIAS APOSTLE CATHOLIC",
-		"address": "9473 ANNAPOLIS RD",
-		"city": "LANHAM",
-		"zip": "20706"
-	},
-	{
 		"title": "INDIAN QUEEN ELEMENTARY",
 		"address": "9551 FORT FOOTE RD",
 		"city": "FORT WASH",
@@ -1605,12 +1377,6 @@
 		"address": "9704 RHODE ISLAND AVE",
 		"city": "COLLEGE PARK",
 		"zip": "20740"
-	},
-	{
-		"title": "LINCOLN VISTA COMMUNITY BLDG",
-		"address": "9800 RIDGE ST",
-		"city": "LANHAM",
-		"zip": "20706"
 	},
 	{
 		"title": "LINCOLN VISTA COMMUNITY BLDG",

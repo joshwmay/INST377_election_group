@@ -3,7 +3,6 @@ const fetch = require('node-fetch');
 
 const app = express();
 const port = process.env.PORT || 3000;
-
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -45,7 +44,7 @@ app.use(express.static('public'));
 
 
 app.get('/s1', (req, res) => {
-  const baseURL = 'https://joshwmay.github.io/pgc_election_group/public/json/places0.json';
+  const baseURL = 'http://localhost:' + port + '/json/places0.json';
   fetch(baseURL)
     .then(res => res.json())
     .then(data => {
@@ -59,7 +58,7 @@ app.get('/s1', (req, res) => {
 });
 
 app.get('/s2', (req, res) => {
-  const baseURL = 'https://joshwmay.github.io/pgc_election_group/public/json/places0_.json';
+  const baseURL = 'http://localhost:' + port + '/json/places0_.json';
   fetch(baseURL)
     .then(res => res.json())
     .then(data => {
@@ -73,7 +72,7 @@ app.get('/s2', (req, res) => {
 });
 
 app.get('/s3', (req, res) => {
-  const baseURL = 'https://joshwmay.github.io/pgc_election_group/public/json/places1.json';
+  const baseURL = 'http://localhost:' + port + '/json/places1.json';
   fetch(baseURL)
     .then(res => res.json())
     .then(data => {
@@ -87,7 +86,7 @@ app.get('/s3', (req, res) => {
 });
 
 app.get('/s4', (req, res) => {
-  const baseURL = 'https://joshwmay.github.io/pgc_election_group/public/json/places1_.json';
+  const baseURL = 'http://localhost:' + port + '/json/places1_.json';
   fetch(baseURL)
     .then(res => res.json())
     .then(data => {
@@ -101,7 +100,7 @@ app.get('/s4', (req, res) => {
 });
 
 app.get('/s5', (req, res) => {
-  const baseURL = 'https://joshwmay.github.io/pgc_election_group/public/json/places2.json';
+  const baseURL = 'http://localhost:' + port + '/json/places2.json';
   fetch(baseURL)
     .then(res => res.json())
     .then(data => {
@@ -115,7 +114,7 @@ app.get('/s5', (req, res) => {
 });
 
 app.get('/s6', (req, res) => {
-  const baseURL = 'https://joshwmay.github.io/pgc_election_group/public/json/places2_.json';
+  const baseURL = 'http://localhost:' + port + '/json/places2_.json';
   fetch(baseURL)
     .then(res => res.json())
     .then(data => {
@@ -129,7 +128,7 @@ app.get('/s6', (req, res) => {
 });
 
 app.get('/s7', (req, res) => {
-  const baseURL = 'https://joshwmay.github.io/pgc_election_group/public/json/places3.json';
+  const baseURL = 'http://localhost:' + port + '/json/places3.json';
   fetch(baseURL)
     .then(res => res.json())
     .then(data => {
@@ -143,7 +142,7 @@ app.get('/s7', (req, res) => {
 });
 
 app.get('/s8', (req, res) => {
-  const baseURL = 'https://joshwmay.github.io/pgc_election_group/public/json/places3_.json';
+  const baseURL = 'http://localhost:' + port + '/json/places3_.json';
   fetch(baseURL)
     .then(res => res.json())
     .then(data => {

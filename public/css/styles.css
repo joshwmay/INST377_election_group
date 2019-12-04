@@ -152,18 +152,18 @@ Forces top title bar to appear
   padding-top: 10px;
   padding-left: 4%;
   padding-right: 4%;
-  max-width: 80%;
+  max-width: 100%;
   max-height: 500px;
   overflow: scroll;
 }
 
 .content a {
-  padding-bottom: 1%;
+  padding-bottom: 5%;
 }
 
-.content div {
+.content li {
   font-size: 1em auto;
-  padding-top: 10px auto;
+  padding-top: 40px auto;
 }
 
 .content input[type="text"] {
@@ -204,6 +204,11 @@ Forces top title bar to appear
 .p:hover {
   background-color: coral;
   border: 2px solid rgb(216, 91, 46);
+}
+
+h1:hover, h2:hover {
+    cursor: pointer;
+    text-decoration: none;
 }
 
 .p:active {
@@ -376,6 +381,7 @@ tbody p {
 #clock {
   margin-top: 20px;
   margin-left: 20px;
+  font-size: 25px;
   color: #cc6116;
 }
 
