@@ -249,8 +249,8 @@ thead tr th {
 }
 
 thead th:hover {
-  background: #1a4287;
-  border-bottom-color: #999;
+  background: #cc6116;
+  border-bottom-color: #cc6116;
 }
 
 thead th:active {
