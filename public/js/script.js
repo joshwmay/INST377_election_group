@@ -522,45 +522,6 @@ function loadData(str) {
   })
 };
 
-function sort_by_column(n) {
-  var table = document.getElementById("table");
-  var shouldSwitch = true;
-  var switching = true;
-  var switchcount = 0;
-  var dir = "asc";
-  while(switching == true) {
-    switching = false;
-    var rows = table.rows;
-    for (i = 1; i < (rows.length - 1); i += 1) {
-      var shouldSwitch = false;
-      var x = rows[i].getElementsByTagName("td")[n];
-      var y = rows[i + 1].getElementsByTagName("td")[n];
-      if (dir === "asc") {
-        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-          shouldSwitch = true;
-          break;
-        }
-      }
-      else if (dir === "desc") {
-        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-          shouldSwitch = true;
-          break;
-        }
-      }
-    }
-    if (shouldSwitch) {
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-      switchcount += 1;
-    } else {
-      if (switchcount == 0 && dir == "asc") {
-        dir = "desc";
-        switching = true;
-      }
-    }
-  }
-};
-
 var countDownDate = new Date("Dec 16, 2019 00:00:00").getTime();
 
 // set refresh interval of count
@@ -604,29 +565,4 @@ window.addEventListener("load", function () {
     sendData();
   });
   sendData();
-});
-
-window.addEventListener("offline", () => {
-    var col0, col1, col2, col3, tbody;
-    col0 = document.getElementsByTagName("th")[0];
-    col1 = document.getElementsByTagName("th")[1];
-    col2 = document.getElementsByTagName("th")[2];
-    col3 = document.getElementsByTagName("th")[3];
-    col0.onclick = sort_by_column(1);
-    col1.onclick = sort_by_column(2);
-    col2.onclick = sort_by_column(3);
-    col3.onclick = sort_by_column(4);
-});
-
-window.addEventListener("online", () => {
-    var col0, col1, col2, col3, tbody;
-    col0 = document.getElementsByTagName("th")[0];
-    col1 = document.getElementsByTagName("th")[1];
-    col2 = document.getElementsByTagName("th")[2];
-    col3 = document.getElementsByTagName("th")[3];
-    tbody.script = JSONtable(stringer('/s1'));
-    col0.onclick = JSONtable(stringer("/s1"));
-    col1.onclick = JSONtable(stringer("/s3"));
-    col2.onclick = JSONtable(stringer("/s5"));
-    col3.onclick = JSONtable(stringer("/s7"));
 });
