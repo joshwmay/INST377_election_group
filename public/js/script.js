@@ -335,6 +335,7 @@ function search_string(string1, string2) {
     }
     else {
       res += comb[i]
+
       }
     }
   res = res.replace("U+MARLBORO","UPPER+MARLBORO");
@@ -520,14 +521,16 @@ function loadData(str) {
     })
   })
 };
+
 function sort_by_column(n) {
   var table = document.getElementById("table");
-  var rows = table.rows;
+  var shouldSwitch = true;
   var switching = true;
   var switchcount = 0;
   var dir = "asc";
   while(switching == true) {
     switching = false;
+    var rows = table.rows;
     for (i = 1; i < (rows.length - 1); i += 1) {
       var shouldSwitch = false;
       var x = rows[i].getElementsByTagName("td")[n];
@@ -556,7 +559,7 @@ function sort_by_column(n) {
       }
     }
   }
-}
+};
 
 var countDownDate = new Date("Dec 16, 2019 00:00:00").getTime();
 
@@ -610,9 +613,9 @@ window.addEventListener("offline", () => {
     col2 = document.getElementsByTagName("th")[2];
     col3 = document.getElementsByTagName("th")[3];
     col0.onclick = sort_by_column(1);
-    col1.onclick = sort_by_column(2);;
-    col2.onclick = sort_by_column(3);;
-    col3.onclick = sort_by_column(4);;
+    col1.onclick = sort_by_column(2);
+    col2.onclick = sort_by_column(3);
+    col3.onclick = sort_by_column(4);
 });
 
 window.addEventListener("online", () => {
@@ -626,4 +629,4 @@ window.addEventListener("online", () => {
     col1.onclick = JSONtable(stringer("/s3"));
     col2.onclick = JSONtable(stringer("/s5"));
     col3.onclick = JSONtable(stringer("/s7"));
-})
+});
