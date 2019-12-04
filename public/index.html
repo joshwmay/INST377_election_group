@@ -28,9 +28,10 @@
       <a href="#about" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">About</a>
       <a href="#ballot" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">Ballot</a>
       <a href="#sim-fill" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">Tools</a>
-      <a href="#documentation" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">Docs</a>
+      <a href="#documentation" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">Documentation</a>
       <a href="#contributors" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">Contributors</a>
       <a href="#references" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">References</a>
+      <a href="#navInfo" onclick="closeNav()" class="w3-bar-item w3-button w3-hover-white">Navigation Help</a>
       <p> <i>Polls close in...</i> </p>
       <div id="clock"></div>
     </div>
@@ -70,20 +71,20 @@
 
   <!--ballot-->
   <div id="ballot">
-    <h1 class="sectionName"><b>Ballot.</b></h1>
+    <h1 class="sectionName"><a href="#ballotInfo"><b>Ballot.</b></a></h1>
     <hr class="sectionDivider">
-
     <div class="container">
       <div class="wrapper">
         <button class="button" id="trans" onclick="loadData(stringer('lang'))">
           Haga clic para traducir la boleta al Español</button>
         <div class="content"><script>loadData(stringer("lang"))</script></div>
         <form  method="post">
-        <input type="text" id="streetNumber" placeholder="Street Number"></input>
-        <input type="text" id="streetName" placeholder="Street Name"></input>
-        <input type="text" id="zip" placeholder="Zip Code"></input>
-          </form>
-
+          <input type="text" id="streetNumber" placeholder="Street Number"></input>
+          <input type="text" id="streetName" placeholder="Street Name"></input>
+          <input type="text" id="zip" placeholder="Zip Code"></input>
+        </form>
+        <h1 class="sectionName"><a href="#tableInfo"><b>Polling Place Table & Search Box.</b></a></h1>
+        <hr class="sectionDivider">
         <div class="scroll">
           <input type="text" id="filter" onkeyup="table_search()"
           placeholder="Search for polling place"></input>
@@ -100,6 +101,8 @@
             <script>JSONtable(stringer("/s1"))</script></tbody>
           </table>
         </div>
+        <h1 class="sectionName"><a href="#toolInfo"><b>Election Simulator & Bubble-In Simulator.</b></a></h1>
+        <hr class="sectionDivider">
         <div class="sim-intro" id="electionSim" rel = "stylesheet" href = "css/index.css">
           <p class="caption">
           <iframe src="election.html" width="320" height="500" scrolling="no"
@@ -109,7 +112,7 @@
             </a>
           </div>
         </div>
-        <h2> Prepare for election day by practicing your bubble fill-in's with this interactive tool </h2>
+        <h2><a href="#bubbleInfo"> Prepare for election day by practicing your bubble fill-in's with this interactive tool </a></h2>
         <div id="sim-fill" class="sim-intro" rel = "stylesheet" href = "css/index.css">
           <p class="caption">
           <iframe src="pencil.html" width="320" height="490" marginwidth="35" scrolling="no"
@@ -139,7 +142,7 @@
           <li>Ballot Bubble Simulator</li>
         </ol>
       <a href="javascript:void(0)" class="w3-button w3-margin-right"
-      onclick="openNav()"><h2>Navigation Bar</h2>
+      onclick="openNav()"><h2 id="navInfo">Navigation Bar</h2>
     </a>
       <p>The navigation bar serves to help you find your way around the site.
         You will see there are four sections to our navigation bar. These
@@ -155,7 +158,7 @@
         part of our website with any instructions one would need to use the site.
       </p>
       <a href="#ballot" class="w3-bar-item w3-button w3-hover-white">
-        <h2>Ballot Candidate Table</h2>
+        <h2 id="ballotInfo">Ballot Candidate Table</h2>
       </a>
         <p>In the Ballot Candidate table, you will find all of the candidates
           running for office, as they would appear in the ballot. You will also
@@ -194,7 +197,7 @@
         relevant places in the search. If what you type in does not match a
         polling place on the list, nothing will show up.
       </p>
-      <h2><a href="#table" title="Go to polling place table"
+      <h2 id="tableInfo"><a href="#table" title="Go to polling place table"
       class="w3-bar-item w3-button w3-hover-white">Polling Places List</a></h2>
       <p>The polling place lists all of the polling places available in Prince
         George's county. Each place has a District/Precinct number, location
@@ -208,7 +211,7 @@
         sort all places by city. Clicking by Zip will sort all polling places by
         zip code. Finally, clicking ballot will sort places by number of ballots.
       </p>
-      <h2><a href="#electionSim" title="Go to election simulator"
+      <h2 id="toolInfo"><a href="#electionSim" title="Go to election simulator"
       class="w3-bar-item w3-button w3-hover-white">Vote Count Simulator</a></h2>
       <p>The Voting Count Simulator is a resource that is publically provided
         by ncase and company. This resource allows you to play arounf and
@@ -220,7 +223,7 @@
         illustrate that the candidate who has the most color, or most votes, will
         win.
       </p>
-      <h2><a href="#sim-fill" title="Go to bubble simulator"
+      <h2 id="bubbleInfo"><a href="#sim-fill" title="Go to bubble simulator"
       class="w3-bar-item w3-button w3-hover-white">Ballot Bubble Simulator</a></h2>
       <p>The Ballot Bubble Simulator is meant to practice fillinf in the bubbles
         that you will find when voting. As you hold your screen over the box,
@@ -230,11 +233,9 @@
         red. You can reset the box by pressing the reset button located to the
         right of the box.
       </p>
-    </div>
     <div id="contributors">
       <h1 class="sectionName"><b>Page Contributors.</b></h1>
       <hr class="sectionDivider">
-
       <h2><a href="https://www.linkedin.com/in/joshua-may-5a213712b/">Josh May</a></h2>
         <img src="img/josh.png" alt="Josh with his kids">
         <p>I had a great time working on this project and excercising skills
@@ -276,6 +277,7 @@
         <p>4) <a href="https://www.princegeorgescountymd.gov/1691/Voter-Information">
           Prince George's County Voter Information Page</a> contains the ballot
           data used in this site along with a bevvy of other helpful information
+    </div>
     </div>
   </div>
   </body>

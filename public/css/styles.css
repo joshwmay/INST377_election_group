@@ -206,6 +206,11 @@ Forces top title bar to appear
   border: 2px solid rgb(216, 91, 46);
 }
 
+h1:hover, h2:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
 .p:active {
   position: relative;
   top: 1px;
