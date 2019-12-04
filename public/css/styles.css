@@ -158,12 +158,12 @@ Forces top title bar to appear
 }
 
 .content a {
-  padding-bottom: 1%;
+  padding-bottom: 5%;
 }
 
-.content div {
+.content li {
   font-size: 1em auto;
-  padding-top: 10px auto;
+  padding-top: 20px auto;
 }
 
 .content input[type="text"] {
