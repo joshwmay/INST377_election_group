@@ -152,7 +152,7 @@ Forces top title bar to appear
   padding-top: 10px;
   padding-left: 4%;
   padding-right: 4%;
-  max-width: 80%;
+  max-width: 100%;
   max-height: 500px;
   overflow: scroll;
 }
@@ -376,6 +376,7 @@ tbody p {
 #clock {
   margin-top: 20px;
   margin-left: 20px;
+  font-size: 25px;
   color: #cc6116;
 }
 
