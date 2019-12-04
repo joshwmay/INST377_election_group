@@ -6,6 +6,7 @@
   background-color: #1a4287;
 }
 
+
 #topBar {
   font-size: 24px;
   font-weight: bold;
@@ -31,8 +32,9 @@
 #filter {
   margin-top: 19px;
   height: 30px;
+  width: 500px;
   outline: solid;
-  outline-color: #1a4287;
+  outline-color: #1a4287;;
 }
 .main {
   margin-left: 340px;
@@ -249,8 +251,8 @@ thead tr th {
 }
 
 thead th:hover {
-  background: #cc6116;
-  border-bottom-color: #cc6116;
+  background: #bbb;
+  border-bottom-color: #999;
 }
 
 thead th:active {
