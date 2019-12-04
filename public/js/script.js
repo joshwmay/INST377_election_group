@@ -388,7 +388,7 @@ function loadData_() {
             content.appendChild(p);
             for(let v = 0; v < options[i].length; v += 1) {
               var op, inp, sub;
-              op = document.createElement("div");
+              op = document.createElement("li");
               inp = document.createElement("input")
               sub = options[i][v].toString();
               if (sub === "o escribir en") {
@@ -450,7 +450,7 @@ function loadData(str) {
                 content.appendChild(p);
                 for(let v = 0; v < options[i].length; v += 1) {
                   var op, a, inp, sub, br;
-                  op = document.createElement("div");
+                  op = document.createElement("li");
                   op.class = "ball_lines";
                   a = document.createElement("a");
                   inp = document.createElement("input")
@@ -494,7 +494,6 @@ function loadData(str) {
     })
   })
 };
-
 var countDownDate = new Date("Dec 16, 2019 00:00:00").getTime();
 
 // set refresh interval of count
@@ -513,7 +512,6 @@ var x = setInterval(function() {
   + minutes + " Minutes" + "<br>" + seconds + " seconds";
 }, 1000);
 
-
 window.addEventListener("load", function () {
   function sendData() {
     var XHR = new XMLHttpRequest();
@@ -528,7 +526,8 @@ window.addEventListener("load", function () {
       alert('Oops! Something went wrong.');
     });
 
-    XHR.open("POST", "http://localhost:3000/#");
+    XHR.open(
+    "POST", "https://voterservices.elections.maryland.gov/PollingPlaceSearch");
     XHR.send(FD);
   }
   var form = document.getElementById("form");
@@ -537,6 +536,5 @@ window.addEventListener("load", function () {
     event.preventDefault();
     sendData();
   });
+  sendData();
 });
-
-
