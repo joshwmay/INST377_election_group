@@ -32,7 +32,7 @@
   margin-top: 19px;
   height: 30px;
   outline: solid;
-  outline-color: teal;
+  outline-color: #1a4287;
 }
 .main {
   margin-left: 340px;
@@ -238,6 +238,7 @@ thead {
   cursor: pointer;
   padding-bottom: 12px;
   font-size: 20px;
+  color: #1a4287;
 }
 
 thead tr th {
@@ -248,8 +249,8 @@ thead tr th {
 }
 
 thead th:hover {
-  background: #bbb;
-  border-bottom-color: #999;
+  background: #cc6116;
+  border-bottom-color: #cc6116;
 }
 
 thead th:active {
