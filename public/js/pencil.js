@@ -2,8 +2,8 @@ window.addEventListener('load', () => {
   const canvas = document.querySelector("#pencil");
   const ctx = canvas.getContext("2d");
   const scale = window.devicePixelRatio;
-  canvas.height = 150;
-  canvas.width = 150;
+  canvas.height = 250;
+  canvas.width = 250;
   var h, w, area, area_updates;
   h = canvas.height;
   w = canvas.width;
@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
   area_updates = 0;
   canvas.style.backgroundImage = "url('img/circle.png')";
   ctx.strokeStyle = "grey";
-  ctx.strokeRect(0, 0, 150,150);
+  ctx.strokeRect(0, 0, 250,250);
   ctx.stroke();
   function start() {
     painting = true;
@@ -41,12 +41,12 @@ window.addEventListener('load', () => {
     e.preventDefault();
   }
   function updateArea() {
-    var data = ctx.getImageData(0, 0, 150, 150);
+    var data = ctx.getImageData(0, 0, 250, 250);
     data = data.data;
     for (let t=0, i=0, len=data.length; i<len; i+=10) {
       if (data[i] > 127) {
         t += 1;
-        var out = (t / (150 * 150));
+        var out = (t / (250 * 250));
         if(out > .17 && out < .2) {
           canvas.style.backgroundImage = "url('img/green_circle.png')";
         } else if (out > .2) {
@@ -66,9 +66,9 @@ window.addEventListener('load', () => {
 function reset() {
   const canvas = document.querySelector("#pencil");
   const ctx = canvas.getContext("2d");
-  canvas.height = (150);
-  canvas.width = (150);
+  canvas.height = (250);
+  canvas.width = (250);
   canvas.style.backgroundImage = "url('img/circle.png')";
   ctx.strokeStyle = "grey";
-  ctx.strokeRect(0, 0, 150,150);
+  ctx.strokeRect(0, 0, 250,250);
 };
