@@ -315,7 +315,7 @@ th:nth-child(1) {
 }
 td:nth-child(2),
 th:nth-child(2) {
-  width: 26%;
+  width: 23.5%;
   min-width: 5%;
   overflow-wrap: break-word;
   word-wrap: break-word;
