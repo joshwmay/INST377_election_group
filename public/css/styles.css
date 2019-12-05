@@ -306,7 +306,7 @@ tbody td {
 
 td:nth-child(1),
 th:nth-child(1) {
-  width: 27%;
+  width: 29%;
   display: flex;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -315,7 +315,7 @@ th:nth-child(1) {
 }
 td:nth-child(2),
 th:nth-child(2) {
-  width: 24%;
+  width: 26%;
   min-width: 5%;
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -331,7 +331,7 @@ th:nth-child(3) {
 }
 td:nth-child(4),
 th:nth-child(4) {
-  width: 16%;
+  width: 18%;
   display: flex;
   font-size: 12px auto;
   overflow-wrap: break-word;
