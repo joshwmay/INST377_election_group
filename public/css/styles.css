@@ -356,11 +356,15 @@ tbody p {
 }
 
 .button {
-  background-color: #deac2f;
-  color: #1a4287;
-  border: 7px dotted #1a4287;
-  border-radius: 30px;
+  background-color:coral;
+  color: black;
+  border: 1px coral solid ;
+  border-radius: 10px;
+  box-shadow: 5px lightcoral;
   margin-bottom: 2%;
+  padding: 12px 33px;
+  font-size: 18px;
+  text-decoration: bold;
 }
 
 #reps a {
