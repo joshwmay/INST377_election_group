@@ -193,15 +193,23 @@ function candidate_info(string) {
   // Will be able to automatically open a landing page on ballotpedia.org
   var res = "https://ballotpedia.org/";
   var str = string.replace("Republican", "9");
+  str = str.replace("Juez de la Corte de Huérfanos", "Judge of the Orphans' Court")
   str = string.replace("Democratic", "9");
   str = str.replace("Green", "9");
   str = str.replace("Libertarian", "9");
   str = str.replace("Unaffiliated", "9");
+  str = str.replace("Republicano", "9");
+  str = str.replace("Democrático", "9");
+  str = str.replace("Libertarian", "9");
   str = str.replace(".", "");
   str = str.replace(",", "9");
   str = str.replace("/", "9");
   str = str.replace("and", "9");
+  str = str.replace(" y ", "9");
+  str = str.replace(" de ", "9");
+  str = str.replace(" del ", "9");
   str = str.replace(" Charter", "9");
+  str = str.replace(" Referéndum", "9");
   for (let i=0; i<str.length; i+= 1) {
     if(str[i] === " " && str[i+1] != "9"){
       res += "_"}
@@ -238,73 +246,73 @@ function candidate_info(string) {
       else if (res === "https://ballotpedia.org/Vicky_L_Ivory-Orem") {
         res = "https://ballotpedia.org/Vicky_L._Ivory-Orem"
       }
-      else if (res === "https://ballotpedia.org/Governor") {
+      else if (res === "https://ballotpedia.org/Governor" || res === "https://ballotpedia.org/Gobernador") {
         res = "https://ballotpedia.org/Governor_of_Maryland";
       }
-      else if (res === "https://ballotpedia.org/Comptroller") {
+      else if (res === "https://ballotpedia.org/Comptroller" || res === "https://ballotpedia.org/Contralor") {
         res = "https://ballotpedia.org/Maryland_Comptroller";
       }
-      else if (res === "https://ballotpedia.org/Attorney_General") {
+      else if (res === "https://ballotpedia.org/Attorney_General" || res === "https://ballotpedia.org/Procurador_General") {
         res = "https://ballotpedia.org/Attorney_General_of_Maryland";
       }
-      else if (res === "https://ballotpedia.org/US._Senator") {
+      else if (res === "https://ballotpedia.org/US._Senator" || res === "https://ballotpedia.org/Senador") {
         res = "https://ballotpedia.org/United_States_Senate";
       }
-      else if (res === "https://ballotpedia.org/County_Executive") {
+      else if (res === "https://ballotpedia.org/County_Executive" || res === "https://ballotpedia.org/Ejecutivo") {
         res = "https://www.princegeorgescountymd.gov/775/About-Us";
       }
-      else if (res === "https://ballotpedia.org/County_Council_At_Large") {
+      else if (res === "https://ballotpedia.org/County_Council_At_Large" || res ==="https://ballotpedia.org/Miembro") {
         res = "https://pgccouncil.us/27/The-Council";
       }
-      else if (res === "https://ballotpedia.org/State's_Attorney") {
+      else if (res === "https://ballotpedia.org/State's_Attorney" || res === "https://ballotpedia.org/Fiscal") {
         res = "https://www.princegeorgescountymd.gov/712/States-Attorney";
       }
       else if (res === "https://ballotpedia.org/Judge_of_the_Orphans'_Court") {
         res = "https://www.princegeorgescourts.org/257/Orphans-Court"
       }
-      else if (res === "https://ballotpedia.org/Clerk_of_the_Circuit_Court") {
+      else if (res === "https://ballotpedia.org/Clerk_of_the_Circuit_Court" || res === "https://ballotpedia.org/Secretario") {
         res = "https://www.princegeorgescourts.org/178/Clerk-of-the-Circuit-Court"
       }
-      else if (res === "https://ballotpedia.org/Register_of_Wills") {
+      else if (res === "https://ballotpedia.org/Register_of_Wills" || res === "https://ballotpedia.org/Registrador_Testamentario") {
         res = "http://registers.maryland.gov/main/";
       }
-      else if (res === "https://ballotpedia.org/Question_A") {
+      else if (res === "https://ballotpedia.org/Question_A" || res === "https://ballotpedia.org/Pregunta_A") {
         res = "https://bit.ly/2NWop9S";
       }
-      else if (res === "https://ballotpedia.org/Question_B") {
+      else if (res === "https://ballotpedia.org/Question_B"  || res === "https://ballotpedia.org/Pregunta_B") {
         res = "https://bit.ly/2O18h7j";
       }
-      else if (res === "https://ballotpedia.org/Judge") {
+      else if (res === "https://ballotpedia.org/Judge" || res === "https://ballotpedia.org/Juez") {
         res = "https://www.courts.state.md.us/cosappeals"
       }
-      else if (res === "https://ballotpedia.org/Question_C") {
+      else if (res === "https://ballotpedia.org/Question_C"  || res === "https://ballotpedia.org/Pregunta_C") {
         res = "https://bit.ly/340qTJZ";
       }
-      else if (res === "https://ballotpedia.org/Question_D") {
+      else if (res === "https://ballotpedia.org/Question_D" || res === "https://ballotpedia.org/Pregunta_D") {
         res = "https://bit.ly/2QuInuc";
       }
-      else if (res === "https://ballotpedia.org/Question_E") {
+      else if (res === "https://ballotpedia.org/Question_E" || res === "https://ballotpedia.org/Pregunta_E") {
         res = "https://bit.ly/32RjhrW";
       }
-      else if (res === "https://ballotpedia.org/Question_F") {
+      else if (res === "https://ballotpedia.org/Question_F" || res === "https://ballotpedia.org/Pregunta_F") {
         res = "https://bit.ly/35eA35W";
       }
-      else if (res === "https://ballotpedia.org/Question_G") {
+      else if (res === "https://ballotpedia.org/Question_G" || res === "https://ballotpedia.org/Pregunta_G") {
         res = "https://bit.ly/2NVGYeq";
       }
-      else if (res === "https://ballotpedia.org/Question_H") {
+      else if (res === "https://ballotpedia.org/Question_H" || res === "https://ballotpedia.org/Pregunta_H") {
         res = "https://bit.ly/2QsJfPN";
       }
-      else if (res === "https://ballotpedia.org/Question_I") {
+      else if (res === "https://ballotpedia.org/Question_I" || res === "https://ballotpedia.org/Pregunta_I") {
         res = "https://bit.ly/2CVGajq";
       }
-      else if (res === "https://ballotpedia.org/Question_J") {
+      else if (res === "https://ballotpedia.org/Question_J" || res === "https://ballotpedia.org/Pregunta_J") {
         res = "https://bit.ly/2qsnTr8";
       }
-      else if (res === "https://ballotpedia.org/Question_K") {
+      else if (res === "https://ballotpedia.org/Question_K" || res === "https://ballotpedia.org/Pregunta_K") {
         res = "https://bit.ly/2QqlckG";
       }
-      else if (res === "https://ballotpedia.org/Sheriff") {
+      else if (res === "https://ballotpedia.org/Sheriff" || res === "https://ballotpedia.org/Alguacil") {
         res = "https://www.princegeorgescountymd.gov/622/Sheriff";
       }
       return res
@@ -327,6 +335,7 @@ function search_string(string1, string2) {
     }
     else {
       res += comb[i]
+
       }
     }
   res = res.replace("U+MARLBORO","UPPER+MARLBORO");
@@ -381,15 +390,20 @@ function loadData_() {
         .then(res => res.map(c => c.options))
         .then(options => {
           for(let i=0; i<measure.length; i+= 1) {
-            var p, sub, line;
+            var p, sub, line, link;
             p = document.createElement("p");
+            link = document.createElement("a")
             sub = measure[i].toString();
-            p.innerHTML = sub;
+            link.innerHTML = sub;
+            link.href = candidate_info(sub);
+            link.title = "Aprender más acerca de " + sub;
+            p.appendChild(link);
             content.appendChild(p);
             for(let v = 0; v < options[i].length; v += 1) {
-              var op, inp, sub;
+              var op, inp, sub, a;
               op = document.createElement("li");
-              inp = document.createElement("input")
+              inp = document.createElement("input");
+              a = document.createElement("a")
               sub = options[i][v].toString();
               if (sub === "o escribir en") {
                 inp.type = "text";
@@ -402,9 +416,22 @@ function loadData_() {
                   let br = document.createElement("br");
                   content.appendChild(br);
                     }
-                 }
+                }
+                else if (
+                  sub === "Si" || sub === "No" ||
+                  sub.includes("A favor del") === true ||
+                  sub.includes("En Contra del") === true) {
+                      op.innerHTML = sub;
+                      content.appendChild(op);
+                      if((v+1) === options[i].length){
+                        let br = document.createElement("p");
+                        content.appendChild(br);
+                        }
+                }
                else {
-                  op.innerHTML = sub;
+                  a.innerHTML = sub;
+                  a.href = candidate_info(sub);
+                  op.appendChild(a);
                   content.appendChild(op);
                   if((v+1) === options[i].length){
                     let br = document.createElement("p");
@@ -494,43 +521,6 @@ function loadData(str) {
     })
   })
 };
-function sort_by_column(n) {
-  var table = document.getElementById("table");
-  var rows = table.rows;
-  var switching = true;
-  var switchcount = 0;
-  var dir = "asc";
-  while(switching == true) {
-    switching = false;
-    for (i = 1; i < (rows.length - 1); i += 1) {
-      var shouldSwitch = false;
-      var x = rows[i].getElementsByTagName("td")[n];
-      var y = rows[i + 1].getElementsByTagName("td")[n];
-      if (dir === "asc") {
-        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
-          shouldSwitch = true;
-          break;
-        }
-      }
-      else if (dir === "desc") {
-        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
-          shouldSwitch = true;
-          break;
-        }
-      }
-    }
-    if (shouldSwitch) {
-      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
-      switching = true;
-      switchcount += 1;
-    } else {
-      if (switchcount == 0 && dir == "asc") {
-        dir = "desc";
-        switching = true;
-      }
-    }
-  }
-}
 
 var countDownDate = new Date("Dec 16, 2019 00:00:00").getTime();
 

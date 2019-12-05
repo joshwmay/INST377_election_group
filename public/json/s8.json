@@ -5,12 +5,6 @@
 		"zip": "20912"
 	},
 	{
-		"title": "CAROLE HIGHLANDS ELEMENTARY",
-		"address": "1610 HANNON ST",
-		"city": "TAKOMA PARK",
-		"zip": "20912"
-	},
-	{
 		"title": "RIDERWOOD RETIREMENT VILLAGE",
 		"address": "3140 GRACEFIELD RD",
 		"city": "SILVER SPRING",
@@ -315,12 +309,6 @@
 		"address": "9601 PRINCE PL",
 		"city": "U MARLBORO",
 		"zip": "20774"
-	},
-	{
-		"title": "ARROWHEAD ELEMENTARY",
-		"address": "2300 SANSBURY RD",
-		"city": "U MARLBORO",
-		"zip": "20772"
 	},
 	{
 		"title": "ARROWHEAD ELEMENTARY",
@@ -930,7 +918,7 @@
 	},
 	{
 		"title": "CLINTON UNITED METHODIST CHURCH",
-		"address": "10700BRANDYWINE RD",
+		"address": "10700 BRANDYWINE RD",
 		"city": "CLINTON",
 		"zip": "20735"
 	},
@@ -1133,7 +1121,7 @@
 		"zip": "20715"
 	},
 	{
-		"title": "TULIP GROVE ELEMENTARY @ MEADOWBROOK",
+		"title": "TULIP GROVE ELEMENTARY",
 		"address": "3501 MOYLAN DR",
 		"city": "BOWIE",
 		"zip": "20715"

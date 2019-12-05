@@ -47,5 +47,30 @@ Some Organizational Notes:
 
 - The Ncase Ballot repository that we used came along with a lot of css and js files. 
 
-- 
+- All CSS and JS files, with the exception of pencil.css, styles.css, pencil.js, and script.js come from Ncase
 
+- We have integrated clock2.html into our script.js. The purpose is to show where the code comes from.
+
+- The POST request code is the only unfunctional part of code we have thus far.
+
+
+Libraries and their dependencies
+
+node.js - This is the library that allowed us to build the web server for our website. We chose this
+library because it was the recommended one, and it somes with powerful tools like express, that make managing
+the framework a lot more feasible.
+
+
+express - Express is a web application wirefram by node.js. This is what helps us organize the back end
+our application on the server side. Specific things that express does for our site ishandling requests and 
+views. 
+
+
+Fetch - fetch allows one to make network requests, with the use of promises, to enable a clean API.
+We primarily used fetch as it we were able to practice a lot with it in class. This practice made us
+confident that we could use fetch to obtain the data we needed to for the purpose of the assignment. 
+
+
+Heroku - Heroku is the application that we are using to host our website. This was fairly simple for 
+us to use, making it the perfect host for the purpose of the assignment. Additionally, this was a recommended
+service.
