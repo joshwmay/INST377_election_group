@@ -327,6 +327,11 @@ function search_string(string1, string2) {
   // This function is used to create map links
   // string1 should represent an address
   // string2 should represent a city
+  if (string2 === "U MARLBORO") {
+    string2 = "UPPER+MARLBORO";
+  } else if (string2 === "FORT WASH") {
+    string2 = "FORT+WASHINGTON"
+  }
   var comb = string1 + " " + string2;
   var res = "https://www.google.com/maps/place/";
   for(let i = 0; i < comb.length; i += 1) {
@@ -335,11 +340,8 @@ function search_string(string1, string2) {
     }
     else {
       res += comb[i]
-
       }
     }
-  res = res.replace("U+MARLBORO","UPPER+MARLBORO");
-  res = res.replace("Fort+Wash","Fort+Washington");
   res += "+MARYLAND";
   return res
 }
