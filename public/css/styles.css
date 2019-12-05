@@ -32,7 +32,7 @@
 #filter {
   margin-top: 19px;
   height: 30px;
-  width: 500px;
+  width: 75%;
   outline: solid;
   outline-color: #1a4287;;
 }
@@ -232,7 +232,7 @@ h1:hover, h2:hover {
 }
 
 table {
-  width: 95%;
+  width: 100%;
 }
 
 thead {
@@ -240,6 +240,7 @@ thead {
   cursor: pointer;
   padding-bottom: 12px;
   font-size: 20px;
+  width: 100%;
   color: #1a4287;
 }
 
@@ -247,7 +248,6 @@ thead tr th {
   font-family: serif;
   text-decoration: underline;
   font-style: oblique;
-
 }
 
 thead th:hover {
@@ -263,7 +263,6 @@ thead th:active {
 thead tr {
   display: flex;
   justify-content: space-between;
-  column-count: 5;
   font-size: 25px auto;
   height: 20px;
 }
@@ -273,8 +272,8 @@ tbody {
   height: 400px;
   width: 100%;
   flex-direction: column;
-  column-count: 5;
-  column-gap: space;
+  column-count: 4;
+  column-gap: 1%;
   overflow: scroll;
 }
 
@@ -307,39 +306,38 @@ tbody td {
 
 td:nth-child(1),
 th:nth-child(1) {
-  width: 28%;
+  width: 27%;
   display: flex;
   overflow-wrap: break-word;
   word-wrap: break-word;
-  justify-content: left;
+  justify-content: right;
   font-size: 12px auto;
 }
 td:nth-child(2),
 th:nth-child(2) {
-  width: 28%;
+  width: 27%;
   min-width: 5%;
   overflow-wrap: break-word;
   word-wrap: break-word;
   font-size: 12px auto;
-  justify-content: right;
 }
 td:nth-child(3),
 th:nth-child(3) {
-  width: 29%;
+  width: 28%;
   min-width: 5%;
   font-size: 12px auto;
-  overflow-wrap: wrap;
   word-wrap: break-word;
-  justify-content: center;
+  justify-content: flex-end;
 }
 td:nth-child(4),
 th:nth-child(4) {
-  width: 15%;
+  width: 16%;
   display: flex;
-  justify-content: right;
   font-size: 12px auto;
   overflow-wrap: break-word;
   word-wrap: break-word;
+  justify-content: flex-start;
+  padding-left: 1.5%;
 }
 
 iframe {
