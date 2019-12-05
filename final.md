@@ -27,7 +27,9 @@ When we were reviewing _PGC.gov_ pages, we identified certain problems related t
 #
 ## Stakeholders/target browsers:
 
-Within the scope of our project, major stakeholders are the _Prince George’s County Voting System_ and voters within this Jurisdiction. We targeted younger and less experienced voters in particular. Since candidates themselves are also our potential stakeholders, we ensured that our content is maintained as objectively and unbiased as possible. 
+Within the scope of our project, major stakeholders are the _Prince George’s County Voting System_ and voters within this Jurisdiction. We targeted younger and less experienced voters in particular. Since candidates themselves are also our potential stakeholders, we ensured that our content is maintained as objectively and unbiased as possible. We expect users of our website to be using browsers on either laptops or iOS/Android devices. This means that laptops, iPhones, and Android devices are the targer devices. Users who are on a laptop should use browsers such as Firefox, Google Chrome or safari. These are the best working browsers compatible with a laptop. Internet Explorer 8 and 9 are a little out of date. As for iOS/Android devices, the default browser can be used. We have styled our CSS so that the display and functionalities of our website can work for these browsers.
+
+ 
 #
 ## Data we chose to work with:
 
