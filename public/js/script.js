@@ -28,44 +28,52 @@ function stringer(str) {
   if (str === "/s1") {
     if (sx1 === 0) {
       sx1 += 1;
+      document.addEventListener('offline', str = "url('json"+ str + ".json')");
       return str;
     }
     else {
       sx1 = 0;
       str = "/s2";
+      document.addEventListener('offline', str = "url('json"+ str + ".json')");
       return str;
     }
   }
   else if (str === "/s3") {
     if (sx3 === 0) {
       sx3 += 1;
+      document.addEventListener('offline', str = "url('json"+ str + ".json')");
       return str;
     }
     else {
       sx3 = 0;
       str = "/s4";
+      document.addEventListener('offline', str = "url('json"+ str + ".json')");
       return str;
     }
   }
   else if (str === "/s5") {
     if (sx5 === 0) {
       sx5 += 1;
+      document.addEventListener('offline', str = "url('json"+ str + ".json')");
       return str;
     }
     else {
       sx5 = 0;
       str = "/s6";
+      document.addEventListener('offline', str = "url('json"+ str + ".json')");
       return str;
     }
   }
   else if (str === "/s7") {
     if (sx7 === 0) {
       sx7 += 1;
+      document.addEventListener('offline', str = "url('json"+ str + ".json')");
       return str;
     }
     else {
       sx7 = 0;
       str = "/s8";
+      document.addEventListener('offline', str = "url('json"+ str + ".json')");
       return str;
     }
   }
