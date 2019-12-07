@@ -15,6 +15,10 @@
   margin-bottom: 40px;
 }
 
+body {
+  background-color: #EEF0F0;
+}
+
 #title {
   font-size: 30px auto;
   padding-top: 105px;
