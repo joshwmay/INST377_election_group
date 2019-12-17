@@ -1,4 +1,4 @@
-## INST 377 Project: PGC Election
+## INST 377 Project: Prince George’s County (PGC) Election
 
 
 - This repository is intended to be used in completing a group project in INST 377 DUE IN DECEMBER 2019
