@@ -1,3 +1,6 @@
+## INST 377 Project: PGC Election
+
+
 - This repository is intended to be used in completing a group project in INST 377 DUE IN DECEMBER 2019
 
 - Our group decided to work with Maryland's Prince George's County voting information and attempt to create an informative         prototype webpage allowing users to use an interactive ballot that also presents information about the contents of a ballot      measure.
