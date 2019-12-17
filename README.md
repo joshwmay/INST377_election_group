@@ -5,3 +5,5 @@
 #### View the final website at [pgcelection.herokuapp.com](https://pgcelection.herokuapp.com/)
 
 ##### All work documentation can be found through links on site or within this repository
+
+Further work can additionally be found at  [pgcelection.herokuapp.com/presentation_report.pdf](http://pgcelection.herokuapp.com/presentation_report.pdf http://pgcelection.herokuapp.com/README.md) and  [pgcelection.herokuapp.com/README.md] (http://pgcelection.herokuapp.com/README.md)
