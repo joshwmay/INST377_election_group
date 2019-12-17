@@ -26,8 +26,9 @@ Target Browsers:
 
 We expect users of our website to be using browsers on either laptops or iOS/Android devices. This means that laptops, iPhones, and Android devices are the targer devices. Users who are on a laptop should use browsers such as Firefox, Google Chrome or safari. These are the best working browsers compatible with a laptop. Internet Explorer 8 and 9 are a little out of date. As for iOS/Android devices, the default browser can be used.  We have styled our CSS so that the display and functionalities of our website can work for these browsers. 
 
+## Developers Manual:
 
-Developers Manual:
+
 
 Once you have cloned the repository, here are the instructions to get the website running in a local environment:
     
