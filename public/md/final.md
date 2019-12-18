@@ -11,7 +11,8 @@
 | Names          | Contributions|
 | :---           |    :----:   |
 | Ayesha Raza    | HTML, POST request, CSS, file.md, Powerpoint, Powerpoint notes|
-| Josh May       |  JavaScript, Server, HTML, CSS, Configurations & Tools| 
+| Josh May       |  Project Manager, JavaScript, Server Configurations, HTML, CSS,
+                    Widget Installation & Development, Editing, Stack Management | 
 | Lorraine Siochi|  CSS, Meeting Notes, Wireframes|
 | Tony Persaud   |  HTML, POST request, CSS, README.md|
 | Tamia Green    |  CSS|
