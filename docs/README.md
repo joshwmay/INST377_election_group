@@ -1,7 +1,14 @@
 ## INST 377 Project: Prince George’s County (PGC) Election
 
+### This project was completed in December 2019
 
-- This repository is intended to be used in completing a group project in INST 377 DUE IN DECEMBER 2019
+#### View the final website at [pgcelection.herokuapp.com](https://pgcelection.herokuapp.com/)
+
+##### All work documentation can be found through links on site or within this repository
+
+Further work can additionally be found at http://pgcelection.herokuapp.com/presentation_report.pdf and http://pgcelection.herokuapp.com/README.md
+
+- This repository is intended to be used in completing a group project in INST 377
 
 - Our group decided to work with Maryland's Prince George's County voting information and attempt to create an informative         prototype webpage allowing users to use an interactive ballot that also presents information about the contents of a ballot      measure.
 
