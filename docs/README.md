@@ -6,7 +6,7 @@
 
 ##### All work documentation can be found through links on site or within this repository
 
-Further work can additionally be found at http://pgcelection.herokuapp.com/presentation_report.pdf and http://pgcelection.herokuapp.com/README.md
+Further work can additionally be found at http://pgcelection.herokuapp.com/docs/presentation_report.pdf and http://pgcelection.herokuapp.com/README.md
 
 - This repository is intended to be used in completing a group project in INST 377
 
