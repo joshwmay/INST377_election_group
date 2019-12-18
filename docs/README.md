@@ -30,7 +30,7 @@ The topic of this project is voting in Prince George’s County (PGC) elections,
 
 Link to site:
 
-http//www.pgcelection.herokuapp.com
+https://www.pgcelection.herokuapp.com
 
 Target Browsers:
 
