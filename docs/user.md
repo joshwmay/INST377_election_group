@@ -14,7 +14,7 @@ This resource was created in order to aid in the process of informing inexperien
 
 #
 ## Navigation Bar ##
-#
+
 ![](public/img/navigation_bar.png)
 
 The navigation bar serves to help you find your way around the site. You will see there are four sections to our navigation bar. These sections are home, about, ballot, and documentation. Clicking "Home" will take you to the top of our page. Clicking "About" will take you to the about section of our website. This section will give you a better idea of what our website's purpose is and who it is meant for. Clicking "Ballot" will take you to the section of our website that holds all the main functionalities of our website. You will be able to scroll through and find the ballot candidate table, the translation button, the search bar, the polling places list, the vote count simulator, and the ballot bubble simulator. Finally, clicking "Documentation" will take you to the part of our website with any instructions one would need to use the site.
