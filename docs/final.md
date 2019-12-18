@@ -1,4 +1,4 @@
-![](public/img/PJ_flag.png)
+![](/img/PJ_flag.png)
 #  PGC Election Hub 
 
 > Providing Interactive Sample Ballots
