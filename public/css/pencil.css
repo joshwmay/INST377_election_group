@@ -4,3 +4,9 @@
 canvas {
   cursor: url("/img/pencilright.png"), auto;
 }
+#column {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  width: 250px;
+}
