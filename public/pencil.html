@@ -11,13 +11,15 @@
     <script src="js/pencil.js"></script>
   </head>
   <body>
-    <p id="p"></p>
+    <div id="column">
     <canvas
       id="pencil"
       title="This tool is best practiced with using a stylus*"
+      ondblclick="reset"
     >
       <script src="reset()"></script>
     </canvas>
     <button onclick="reset()">Reset</button>
+  </div>
   </body>
 </html>
