@@ -10,3 +10,15 @@ canvas {
   height: 300px;
   width: 250px;
 }
+
+body {
+  width: 250px;
+}
+
+html {
+  width: 250px;
+}
+
+button {
+  margin-top: 10px;
+}
